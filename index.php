@@ -27,10 +27,10 @@
 						<?php get_template_part( 'content', ( post_type_supports( get_post_type(), 'post-formats' ) ? get_post_format() : get_post_type() ) ); ?>
 					<?php endwhile; ?>
 						<ul class="pager">
-						<?php if( get_previous_posts_link() ): ?>
+						<?php if( get_previous_posts_link() ) : ?>
 							<li class="previous"><?php previous_posts_link(); ?></li>
 						<?php endif; ?>
-						<?php if( get_next_posts_link() ): ?>
+						<?php if( get_next_posts_link() ) : ?>
 							<li class="next"><?php next_posts_link(); ?></li>
 						<?php endif; ?>
 						</ul>

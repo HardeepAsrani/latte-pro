@@ -22,7 +22,7 @@
 				<?php else: ?>
 					<?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => -1 ) ); ?>
 				<?php endif; ?>
-				<?php if ( $loop->have_posts() ): ?>
+				<?php if ( $loop->have_posts() ) : ?>
 					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 					<div data-sr="ease-in-out wait 0.25s" class="col-md-4 col-sm-6 portfolio-item">
 						<a href="<?php the_permalink(); ?>" class="portfolio-link" >
@@ -31,7 +31,7 @@
 									<i class="fa fa-plus fa-3x"></i>
 								</div>
 							</div>
-							<?php if ( has_post_thumbnail($post->ID) ): ?>
+							<?php if ( has_post_thumbnail($post->ID) ) : ?>
 								<?php echo get_the_post_thumbnail($post->ID, 'latte-portfolio', array( 'class' => "img-responsive")); ?>
 							<?php else: ?>
 								<img src="<?php echo get_template_directory_uri().'/assets/images/400x289.png'; ?>" class="img-responsive"/>

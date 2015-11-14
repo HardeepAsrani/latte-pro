@@ -22,11 +22,11 @@
 				<?php else: ?>
 					<?php $loop = new WP_Query( array( 'posts_per_page' => -1 ) ); ?>
 				<?php endif; ?>
-				<?php if ( $loop->have_posts() ): ?>
+				<?php if ( $loop->have_posts() ) : ?>
 					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 					<div data-sr="ease-in-out wait 0.25s" class="col-md-4 col-sm-6 col-xs-12 blog-item">
 						<div class="item">
-							<?php if ( has_post_thumbnail($post->ID) ): ?>
+							<?php if ( has_post_thumbnail($post->ID) ) : ?>
 								<a class="item-featured-image" href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail($post->ID, 'latte-blogposts'); ?></a>
 							<?php else: ?>
 								<a class="item-featured-image" href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri().'/assets/images/423x339.png'; ?>"/></a>
