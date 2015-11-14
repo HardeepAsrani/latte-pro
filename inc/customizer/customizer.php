@@ -86,20 +86,6 @@ function latte_customize_register($wp_customize) {
 			echo '</textarea>';
 		}
 	}
-	class Latte_Layout_Picker extends WP_Customize_Control {
-		public function render_content() {
-			?>
-				<label>
-				  <span class="customize-layout-control"><?php echo esc_html( $this->label ); ?></span>
-				  <ul>
-					<li>2<img src="/1col.png" alt="Full Width" /><input type="radio" name="<?php echo $this->id; ?>" id="<?php echo $this->id; ?>[full_width]" value="1" /></li>
-					<li>22<img src="/2cl.png" alt="Left Sidebar" /><input type="radio" name="<?php echo $this->id; ?>" id="<?php echo $this->id; ?>[left_sidebar]" value="1" /></li>
-					<li>222<img src="/2cr.png" alt="Right Sidebar" /><input type="radio" name="<?php echo $this->id; ?>" id="<?php echo $this->id; ?>[right_sidebar]" value="1" /></li>
-				  </ul>
-				</label>
-			<?php
-	   }
-	}
 
 	$wp_customize->add_panel( 'latte_general_settings', array(
 		'priority'	   => 10,

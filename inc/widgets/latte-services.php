@@ -29,7 +29,7 @@ class latte_services_widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_id('icon'); ?>"><?php _e('Icon', 'latte'); ?></label>
 			<select class='widefat' id="<?php echo $this->get_field_id('icon'); ?>" name="<?php echo $this->get_field_name('icon'); ?>">
 			<?php foreach($fontawesome as $item): ?>
-				<option value="<?php echo $item; ?>" <?php if ($instance['icon'] == $item) echo 'selected="selected"'; ?>><?php echo $item; ?></span></option>
+				<option value="<?php echo $item; ?>" <?php if ($instance['icon'] == $item) echo 'selected="selected"'; ?>><?php echo $item; ?></option>
 			<?php endforeach; ?>
 			</select>
 			<label><a target="_blank" href="http://fortawesome.github.io/Font-Awesome/icons/"><?php _e('Click here to see a list of icons.', 'latte'); ?></a></label>
