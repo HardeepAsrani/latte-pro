@@ -14,13 +14,13 @@
 	$latte_menu_display = get_theme_mod('latte_menu_display');
 ?>
 
-<?php if( isset($latte_preloader_display) && $latte_preloader_display != 1 ): ?>
+<?php if( isset($latte_preloader_display) && $latte_preloader_display != 1 ) : ?>
 	<div class="preloader"><div class="status">&nbsp;</div></div>
 <?php endif; ?>
 
 	<div class="site-wrapper">
 
-	<?php if( isset($latte_menu_display) && $latte_menu_display != 1 ): ?>
+	<?php if( isset($latte_menu_display) && $latte_menu_display != 1 ) : ?>
 
 		<nav class="pmenu pmenu-vertical pmenu-left" id="pmenu">
 			<h3 id="hideLeftPush"><?php _e( 'Menu', 'latte' ); ?> <i class="fa fa-arrow-right"></i></h3>

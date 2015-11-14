@@ -24,19 +24,20 @@ function latte_custom_js() {
 
 <script type="text/javascript">
 jQuery(window).load(function() {
-<?php if( isset($latte_preloader_display) && $latte_preloader_display != 1 ): ?>
+<?php if( isset($latte_preloader_display) && $latte_preloader_display != 1 ) : ?>
 	/* Preloader */
 	jQuery(".status").fadeOut();
 	jQuery(".preloader").delay(1000).fadeOut("slow");
 <?php endif; ?>
 
-<?php if( isset($latte_animations_display) && $latte_animations_display != 1 ): ?>
+<?php if( isset($latte_animations_display) && $latte_animations_display != 1 ) : ?>
 	/* scrollReval */
 	window.sr = new scrollReveal();
 <?php endif; ?>
 });
 jQuery(document).ready(function($) {
 	/* Parallax */
+<?php if( is_page_template( 'template-home.php' ) ) : ?>
 <?php if(!empty($latte_intro_background)) : ?>
 	$('.intro').parallax({imageSrc: '<?php echo $latte_intro_background; ?>', bleed: '10', androidFix: 'false'});
 <?php endif; ?>
@@ -73,8 +74,9 @@ jQuery(document).ready(function($) {
 <?php if(!empty($latte_contact_background)) : ?>
 	$('.contact').parallax({imageSrc: '<?php echo $latte_contact_background; ?>', bleed: '50', androidFix: 'false'});
 <?php endif; ?>
+<?php endif; ?>
 
-<?php if( isset($latte_menu_display) && $latte_menu_display != 1 ): ?>
+<?php if( isset($latte_menu_display) && $latte_menu_display != 1 ) : ?>
 	/* Enable Slideout Menu */
 	var menuLeft = document.getElementById( 'pmenu' ),
 	showLeftPush = document.getElementById( 'showLeftPush' ),
@@ -108,7 +110,8 @@ jQuery(document).ready(function($) {
 	}
 <?php endif; ?>
 
-<?php if( isset($latte_skills_display) && $latte_skills_display != 1 ): ?>
+<?php if( is_page_template( 'template-home.php' ) ) : ?>
+<?php if( isset($latte_skills_display) && $latte_skills_display != 1 ) : ?>
 	/* Skillbar animation speed */
 	jQuery('.skillbar').each(function(){
 		jQuery(this).find('.skillbar-bar').animate({
@@ -117,12 +120,13 @@ jQuery(document).ready(function($) {
 	});
 <?php endif; ?>
 
-<?php if( isset($latte_testimonials_display) && $latte_testimonials_display != 1 ): ?>
+<?php if( isset($latte_testimonials_display) && $latte_testimonials_display != 1 ) : ?>
 	/* Enable Swiper for Testimonials */
 	var mySwiper = new Swiper ('.swiper-container', {
 		loop: true,
 		autoplay:10000
 	})
+<?php endif; ?>
 <?php endif; ?>
 
 

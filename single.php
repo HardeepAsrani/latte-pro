@@ -28,10 +28,10 @@
 					<?php endwhile; ?>
 					<?php if( get_previous_post_link() || get_next_post_link() ) : ?>
 						<ul class="pager">
-						<?php if( get_previous_post_link() ): ?>
+						<?php if( get_previous_post_link() ) : ?>
 							<li class="previous"><?php previous_post_link( '%link', __( '&larr; Previous', 'latte' ) ); ?></li>
 						<?php endif; ?>
-						<?php if( get_next_post_link() ): ?>
+						<?php if( get_next_post_link() ) : ?>
 							<li class="next"><?php next_post_link( '%link', __( 'Next &rarr;', 'latte' ) ); ?></li>
 						<?php endif; ?>
 						</ul>
