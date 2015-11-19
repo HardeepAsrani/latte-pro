@@ -660,11 +660,20 @@ img.alignright,
 .subscribe .sib_signup_form .sib_signup_box_inside .sib-email-area,
 .subscribe .sib_signup_form .sib_signup_box_inside .sib-NAME-area,
 .subscribe .sib_signup_form .sib_signup_box_inside .sib-SURNAME-area,
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-SMS-area,
+.subscribe .sib_signup_form .sib_signup_box_inside .sib-SMS-area {
+	padding: 10px 16px !important;
+	margin: 5px 0px !important;
+	border-radius: 0 !important;
+	display: inline-block;
+	max-width: 300px;
+	height: 40px;
+}
 .subscribe .sib_signup_form .sib_signup_box_inside .sib-default-btn {
 	padding: 10px 16px !important;
 	margin: 5px 0px !important;
 	border-radius: 0 !important;
+	display: inline-block;
+	font-size: 15px;
 }
 .subscribe .sib_signup_form .sib_signup_box_inside .sib-default-btn:hover {
 	background: #222;
