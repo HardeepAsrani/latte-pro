@@ -1,5 +1,5 @@
-# Latte #
-Latte is a one-page parallax WordPress theme for developers, designers & freelancers, to showcase their profile and portfolio. It comes with many options, including services section, portfolio, maps, contact form, testimonials, pricing tables, and more. Plus, it’s easy to customize! You don’t need a page builder or a drag & drop editor. Every thing can be customized straight from the WordPress Customizer.
+# Latte Pro #
+Latte Pro is a one-page parallax WordPress theme for developers, designers & freelancers, to showcase their profile and portfolio. It comes with many options, including services section, portfolio, maps, contact form, testimonials, pricing tables, and more. Plus, it’s easy to customize! You don’t need a page builder or a drag & drop editor. Every thing can be customized straight from the WordPress Customizer.
 
 # Installation #
 1. After downloading the zip file, go to Appearance > Themes and click on the *Install Themes* tab.
@@ -14,8 +14,3 @@ All the images are GPL 2.0 compatible and are taken from: https://pixabay.com/
 
 # Support #
 Please visit http://www.hardeepasrani.com/contact/ if you have any questions about the theme.
-
-# Changelog #
-
-= 0.1 =
-Intial release.
