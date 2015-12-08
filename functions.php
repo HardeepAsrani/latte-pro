@@ -183,6 +183,25 @@ function latte_customizer_js() {
 
 add_action( 'customize_controls_enqueue_scripts', 'latte_customizer_js' );
 
+/// Import options from Latte.
+function latte_import_options() {
+	
+	$latte_mods = get_option('theme_mods_latte');
+	
+	if( !empty($latte_mods) ):
+		
+		foreach($latte_mods as $latte_mod_k => $latte_mod_v):
+			
+			set_theme_mod( $latte_mod_k, $latte_mod_v );
+			
+		endforeach;
+		
+	endif;
+	
+}
+
+add_action('after_switch_theme', 'latte_import_options');
+
 // Default menu for new setups.
 function latte_new_setup() {
 
