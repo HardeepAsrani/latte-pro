@@ -34,6 +34,30 @@ function latte_sanitize_choices( $input, $setting ) {
 	}
 }
 
+function latte_sanitize_section_order( $input, $setting ) {
+	global $wp_customize;
+
+	if ( ! in_array( $input, array(
+			'section_intro',
+			'section_about',
+			'section_social',
+			'section_services',
+			'section_separator',
+			'section_skills',
+			'section_portfolio',
+			'section_subscribe',
+			'section_pricing',
+			'section_testimonials',
+			'section_blogposts',
+			'section_map',
+			'section_contact'
+		) ) ) {
+		$input = $setting->default;
+	}
+
+	return $input;
+}
+
 function latte_customize_register($wp_customize) {
 
 	class Latte_Portfolio_Widgets_Area extends WP_Customize_Control {
@@ -88,7 +112,7 @@ function latte_customize_register($wp_customize) {
 	}
 
 	$wp_customize->add_panel( 'latte_general_settings', array(
-		'priority'	   => 10,
+		'priority'	   => 5,
 		'capability'	 => 'edit_theme_options',
 		'title'		  => __('General Settings', 'latte'),
 		'description'	=> __('This section allows you to configure general settings.', 'latte')
@@ -232,6 +256,12 @@ function latte_customize_register($wp_customize) {
 		'priority' => 25,
 		'title' => __('Footer', 'latte'),
 		'panel'  => 'latte_general_settings'
+	));
+
+	$wp_customize->add_section('latte_sections_order_settings', array(
+		'priority' => 10,
+		'title' => __('Sections Order', 'latte'),
+		'description' => __( 'Here is where you can rearrange the homepage sections.','latte' ),
 	));
 
 	$wp_customize->add_section('latte_intro_settings', array(
@@ -621,6 +651,383 @@ function latte_customize_register($wp_customize) {
 		'priority' => 15,
 		'settings' => 'latte_footer_text'
 	)));
+
+	$wp_customize->add_setting( 'section_intro_order', array( 
+		'default' => 'section_intro',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_section_order'
+	));
+	 
+	$wp_customize->add_control( 'section_intro_order', array(
+		'type' => 'select',
+		'label' => __('First Section','latte'),
+		'section' => 'latte_sections_order_settings',
+		'choices' => array(
+			'section_intro' => __('Intro','latte'),
+			'section_about' => __('About','latte'),
+			'section_social' => __('Social','latte'),
+			'section_services' => __('Services','latte'),
+			'section_separator' => __('Separator','latte'),
+			'section_skills' => __('Skills','latte'),
+			'section_portfolio' => __('Portfolio','latte'),
+			'section_subscribe' => __('Subscribe','latte'),
+			'section_pricing' => __('Pricing','latte'),
+			'section_testimonials' => __('Testimonials','latte'),
+			'section_blogposts' => __('Blog','latte'),
+			'section_map' => __('Map','latte'),
+			'section_contact' => __('Contact','latte')
+		),
+		'priority' => 5,
+		'settings' => 'section_intro_order'
+	));
+
+	$wp_customize->add_setting( 'section_about_order', array( 
+		'default' => 'section_about',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_section_order'
+	));
+	 
+	$wp_customize->add_control( 'section_about_order', array(
+		'type' => 'select',
+		'label' => __('Second Section','latte'),
+		'section' => 'latte_sections_order_settings',
+		'choices' => array(
+			'section_intro' => __('Intro','latte'),
+			'section_about' => __('About','latte'),
+			'section_social' => __('Social','latte'),
+			'section_services' => __('Services','latte'),
+			'section_separator' => __('Separator','latte'),
+			'section_skills' => __('Skills','latte'),
+			'section_portfolio' => __('Portfolio','latte'),
+			'section_subscribe' => __('Subscribe','latte'),
+			'section_pricing' => __('Pricing','latte'),
+			'section_testimonials' => __('Testimonials','latte'),
+			'section_blogposts' => __('Blog','latte'),
+			'section_map' => __('Map','latte'),
+			'section_contact' => __('Contact','latte')
+		),
+		'priority' => 10,
+		'settings' => 'section_about_order'
+	));
+
+	$wp_customize->add_setting( 'section_social_order', array( 
+		'default' => 'section_social',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_section_order'
+	));
+	 
+	$wp_customize->add_control( 'section_social_order', array(
+		'type' => 'select',
+		'label' => __('Third Section','latte'),
+		'section' => 'latte_sections_order_settings',
+		'choices' => array(
+			'section_intro' => __('Intro','latte'),
+			'section_about' => __('About','latte'),
+			'section_social' => __('Social','latte'),
+			'section_services' => __('Services','latte'),
+			'section_separator' => __('Separator','latte'),
+			'section_skills' => __('Skills','latte'),
+			'section_portfolio' => __('Portfolio','latte'),
+			'section_subscribe' => __('Subscribe','latte'),
+			'section_pricing' => __('Pricing','latte'),
+			'section_testimonials' => __('Testimonials','latte'),
+			'section_blogposts' => __('Blog','latte'),
+			'section_map' => __('Map','latte'),
+			'section_contact' => __('Contact','latte')
+		),
+		'priority' => 15,
+		'settings' => 'section_social_order'
+	));
+
+	$wp_customize->add_setting( 'section_services_order', array( 
+		'default' => 'section_services',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_section_order'
+	));
+	 
+	$wp_customize->add_control( 'section_services_order', array(
+		'type' => 'select',
+		'label' => __('Fourth Section','latte'),
+		'section' => 'latte_sections_order_settings',
+		'choices' => array(
+			'section_intro' => __('Intro','latte'),
+			'section_about' => __('About','latte'),
+			'section_social' => __('Social','latte'),
+			'section_services' => __('Services','latte'),
+			'section_separator' => __('Separator','latte'),
+			'section_skills' => __('Skills','latte'),
+			'section_portfolio' => __('Portfolio','latte'),
+			'section_subscribe' => __('Subscribe','latte'),
+			'section_pricing' => __('Pricing','latte'),
+			'section_testimonials' => __('Testimonials','latte'),
+			'section_blogposts' => __('Blog','latte'),
+			'section_map' => __('Map','latte'),
+			'section_contact' => __('Contact','latte')
+		),
+		'priority' => 20,
+		'settings' => 'section_services_order'
+	));
+
+	$wp_customize->add_setting( 'section_separator_order', array( 
+		'default' => 'section_separator',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_section_order'
+	));
+	 
+	$wp_customize->add_control( 'section_separator_order', array(
+		'type' => 'select',
+		'label' => __('Fifth Section','latte'),
+		'section' => 'latte_sections_order_settings',
+		'choices' => array(
+			'section_intro' => __('Intro','latte'),
+			'section_about' => __('About','latte'),
+			'section_social' => __('Social','latte'),
+			'section_services' => __('Services','latte'),
+			'section_separator' => __('Separator','latte'),
+			'section_skills' => __('Skills','latte'),
+			'section_portfolio' => __('Portfolio','latte'),
+			'section_subscribe' => __('Subscribe','latte'),
+			'section_pricing' => __('Pricing','latte'),
+			'section_testimonials' => __('Testimonials','latte'),
+			'section_blogposts' => __('Blog','latte'),
+			'section_map' => __('Map','latte'),
+			'section_contact' => __('Contact','latte')
+		),
+		'priority' => 25,
+		'settings' => 'section_separator_order'
+	));
+
+	$wp_customize->add_setting( 'section_skills_order', array( 
+		'default' => 'section_skills',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_section_order'
+	));
+	 
+	$wp_customize->add_control( 'section_skills_order', array(
+		'type' => 'select',
+		'label' => __('Sixth Section','latte'),
+		'section' => 'latte_sections_order_settings',
+		'choices' => array(
+			'section_intro' => __('Intro','latte'),
+			'section_about' => __('About','latte'),
+			'section_social' => __('Social','latte'),
+			'section_services' => __('Services','latte'),
+			'section_separator' => __('Separator','latte'),
+			'section_skills' => __('Skills','latte'),
+			'section_portfolio' => __('Portfolio','latte'),
+			'section_subscribe' => __('Subscribe','latte'),
+			'section_pricing' => __('Pricing','latte'),
+			'section_testimonials' => __('Testimonials','latte'),
+			'section_blogposts' => __('Blog','latte'),
+			'section_map' => __('Map','latte'),
+			'section_contact' => __('Contact','latte')
+		),
+		'priority' => 30,
+		'settings' => 'section_skills_order'
+	));
+
+	$wp_customize->add_setting( 'section_portfolio_order', array( 
+		'default' => 'section_portfolio',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_section_order'
+	));
+	 
+	$wp_customize->add_control( 'section_portfolio_order', array(
+		'type' => 'select',
+		'label' => __('Seventh Section','latte'),
+		'section' => 'latte_sections_order_settings',
+		'choices' => array(
+			'section_intro' => __('Intro','latte'),
+			'section_about' => __('About','latte'),
+			'section_social' => __('Social','latte'),
+			'section_services' => __('Services','latte'),
+			'section_separator' => __('Separator','latte'),
+			'section_skills' => __('Skills','latte'),
+			'section_portfolio' => __('Portfolio','latte'),
+			'section_subscribe' => __('Subscribe','latte'),
+			'section_pricing' => __('Pricing','latte'),
+			'section_testimonials' => __('Testimonials','latte'),
+			'section_blogposts' => __('Blog','latte'),
+			'section_map' => __('Map','latte'),
+			'section_contact' => __('Contact','latte')
+		),
+		'priority' => 35,
+		'settings' => 'section_portfolio_order'
+	));
+
+	$wp_customize->add_setting( 'section_subscribe_order', array( 
+		'default' => 'section_subscribe',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_section_order'
+	));
+	 
+	$wp_customize->add_control( 'section_subscribe_order', array(
+		'type' => 'select',
+		'label' => __('Eighth Section','latte'),
+		'section' => 'latte_sections_order_settings',
+		'choices' => array(
+			'section_intro' => __('Intro','latte'),
+			'section_about' => __('About','latte'),
+			'section_social' => __('Social','latte'),
+			'section_services' => __('Services','latte'),
+			'section_separator' => __('Separator','latte'),
+			'section_skills' => __('Skills','latte'),
+			'section_portfolio' => __('Portfolio','latte'),
+			'section_subscribe' => __('Subscribe','latte'),
+			'section_pricing' => __('Pricing','latte'),
+			'section_testimonials' => __('Testimonials','latte'),
+			'section_blogposts' => __('Blog','latte'),
+			'section_map' => __('Map','latte'),
+			'section_contact' => __('Contact','latte')
+		),
+		'priority' => 40,
+		'settings' => 'section_subscribe_order'
+	));
+
+	$wp_customize->add_setting( 'section_pricing_order', array( 
+		'default' => 'section_pricing',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_section_order'
+	));
+	 
+	$wp_customize->add_control( 'section_pricing_order', array(
+		'type' => 'select',
+		'label' => __('Ninth Section','latte'),
+		'section' => 'latte_sections_order_settings',
+		'choices' => array(
+			'section_intro' => __('Intro','latte'),
+			'section_about' => __('About','latte'),
+			'section_social' => __('Social','latte'),
+			'section_services' => __('Services','latte'),
+			'section_separator' => __('Separator','latte'),
+			'section_skills' => __('Skills','latte'),
+			'section_portfolio' => __('Portfolio','latte'),
+			'section_subscribe' => __('Subscribe','latte'),
+			'section_pricing' => __('Pricing','latte'),
+			'section_testimonials' => __('Testimonials','latte'),
+			'section_blogposts' => __('Blog','latte'),
+			'section_map' => __('Map','latte'),
+			'section_contact' => __('Contact','latte')
+		),
+		'priority' => 45,
+		'settings' => 'section_pricing_order'
+	));
+
+	$wp_customize->add_setting( 'section_testimonials_order', array( 
+		'default' => 'section_testimonials',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_section_order'
+	));
+	 
+	$wp_customize->add_control( 'section_testimonials_order', array(
+		'type' => 'select',
+		'label' => __('Tenth Section','latte'),
+		'section' => 'latte_sections_order_settings',
+		'choices' => array(
+			'section_intro' => __('Intro','latte'),
+			'section_about' => __('About','latte'),
+			'section_social' => __('Social','latte'),
+			'section_services' => __('Services','latte'),
+			'section_separator' => __('Separator','latte'),
+			'section_skills' => __('Skills','latte'),
+			'section_portfolio' => __('Portfolio','latte'),
+			'section_subscribe' => __('Subscribe','latte'),
+			'section_pricing' => __('Pricing','latte'),
+			'section_testimonials' => __('Testimonials','latte'),
+			'section_blogposts' => __('Blog','latte'),
+			'section_map' => __('Map','latte'),
+			'section_contact' => __('Contact','latte')
+		),
+		'priority' => 50,
+		'settings' => 'section_testimonials_order'
+	));
+
+	$wp_customize->add_setting( 'section_blogposts_order', array( 
+		'default' => 'section_blogposts',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_section_order'
+	));
+	 
+	$wp_customize->add_control( 'section_blogposts_order', array(
+		'type' => 'select',
+		'label' => __('Eleventh Section','latte'),
+		'section' => 'latte_sections_order_settings',
+		'choices' => array(
+			'section_intro' => __('Intro','latte'),
+			'section_about' => __('About','latte'),
+			'section_social' => __('Social','latte'),
+			'section_services' => __('Services','latte'),
+			'section_separator' => __('Separator','latte'),
+			'section_skills' => __('Skills','latte'),
+			'section_portfolio' => __('Portfolio','latte'),
+			'section_subscribe' => __('Subscribe','latte'),
+			'section_pricing' => __('Pricing','latte'),
+			'section_testimonials' => __('Testimonials','latte'),
+			'section_blogposts' => __('Blog','latte'),
+			'section_map' => __('Map','latte'),
+			'section_contact' => __('Contact','latte')
+		),
+		'priority' => 55,
+		'settings' => 'section_blogposts_order'
+	));
+
+	$wp_customize->add_setting( 'section_map_order', array( 
+		'default' => 'section_map',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_section_order'
+	));
+	 
+	$wp_customize->add_control( 'section_map_order', array(
+		'type' => 'select',
+		'label' => __('Twelfth Section','latte'),
+		'section' => 'latte_sections_order_settings',
+		'choices' => array(
+			'section_intro' => __('Intro','latte'),
+			'section_about' => __('About','latte'),
+			'section_social' => __('Social','latte'),
+			'section_services' => __('Services','latte'),
+			'section_separator' => __('Separator','latte'),
+			'section_skills' => __('Skills','latte'),
+			'section_portfolio' => __('Portfolio','latte'),
+			'section_subscribe' => __('Subscribe','latte'),
+			'section_pricing' => __('Pricing','latte'),
+			'section_testimonials' => __('Testimonials','latte'),
+			'section_blogposts' => __('Blog','latte'),
+			'section_map' => __('Map','latte'),
+			'section_contact' => __('Contact','latte')
+		),
+		'priority' => 60,
+		'settings' => 'section_map_order'
+	));
+
+	$wp_customize->add_setting( 'section_contact_order', array( 
+		'default' => 'section_contact',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_section_order'
+	));
+	 
+	$wp_customize->add_control( 'section_contact_order', array(
+		'type' => 'select',
+		'label' => __('Thirteenth Section','latte'),
+		'section' => 'latte_sections_order_settings',
+		'choices' => array(
+			'section_intro' => __('Intro','latte'),
+			'section_about' => __('About','latte'),
+			'section_social' => __('Social','latte'),
+			'section_services' => __('Services','latte'),
+			'section_separator' => __('Separator','latte'),
+			'section_skills' => __('Skills','latte'),
+			'section_portfolio' => __('Portfolio','latte'),
+			'section_subscribe' => __('Subscribe','latte'),
+			'section_pricing' => __('Pricing','latte'),
+			'section_testimonials' => __('Testimonials','latte'),
+			'section_blogposts' => __('Blog','latte'),
+			'section_map' => __('Map','latte'),
+			'section_contact' => __('Contact','latte')
+		),
+		'priority' => 65,
+		'settings' => 'section_contact_order'
+	));
 
 	$wp_customize->add_setting( 'latte_intro_display', array(
 		'capability' => 'edit_theme_options',
