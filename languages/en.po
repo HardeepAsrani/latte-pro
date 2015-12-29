@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Latte\n"
-"POT-Creation-Date: 2015-12-18 18:24+0530\n"
-"PO-Revision-Date: 2015-12-18 18:24+0530\n"
+"POT-Creation-Date: 2015-12-29 05:42+0530\n"
+"PO-Revision-Date: 2015-12-29 05:42+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -205,35 +205,35 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:97
+#: functions.php:100
 msgid "Sidear"
 msgstr ""
 
-#: functions.php:106 inc/customizer/customizer.php:145
+#: functions.php:109 inc/customizer/customizer.php:145
 msgid "Services Section"
 msgstr ""
 
-#: functions.php:115 inc/customizer/customizer.php:159
+#: functions.php:118 inc/customizer/customizer.php:159
 msgid "Skills Section"
 msgstr ""
 
-#: functions.php:124 inc/customizer/customizer.php:173
+#: functions.php:127 inc/customizer/customizer.php:173
 msgid "Subscribe Section"
 msgstr ""
 
-#: functions.php:133 inc/customizer/customizer.php:180
+#: functions.php:136 inc/customizer/customizer.php:180
 msgid "Pricing Section"
 msgstr ""
 
-#: functions.php:142 inc/customizer/customizer.php:187
+#: functions.php:145 inc/customizer/customizer.php:187
 msgid "Testimonials Section"
 msgstr ""
 
-#: functions.php:206
+#: functions.php:208
 msgid "Home"
 msgstr ""
 
-#: functions.php:207 inc/customizer/customizer.php:667
+#: functions.php:209 inc/customizer/customizer.php:667
 #: inc/customizer/customizer.php:696 inc/customizer/customizer.php:725
 #: inc/customizer/customizer.php:754 inc/customizer/customizer.php:783
 #: inc/customizer/customizer.php:812 inc/customizer/customizer.php:841
@@ -243,7 +243,7 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: functions.php:208 inc/customizer/customizer.php:668
+#: functions.php:210 inc/customizer/customizer.php:668
 #: inc/customizer/customizer.php:697 inc/customizer/customizer.php:726
 #: inc/customizer/customizer.php:755 inc/customizer/customizer.php:784
 #: inc/customizer/customizer.php:813 inc/customizer/customizer.php:842
@@ -254,7 +254,7 @@ msgstr ""
 msgid "Social"
 msgstr ""
 
-#: functions.php:209 inc/customizer/customizer.php:669
+#: functions.php:211 inc/customizer/customizer.php:669
 #: inc/customizer/customizer.php:698 inc/customizer/customizer.php:727
 #: inc/customizer/customizer.php:756 inc/customizer/customizer.php:785
 #: inc/customizer/customizer.php:814 inc/customizer/customizer.php:843
@@ -265,7 +265,7 @@ msgstr ""
 msgid "Services"
 msgstr ""
 
-#: functions.php:210 inc/customizer/customizer.php:670
+#: functions.php:212 inc/customizer/customizer.php:670
 #: inc/customizer/customizer.php:699 inc/customizer/customizer.php:728
 #: inc/customizer/customizer.php:757 inc/customizer/customizer.php:786
 #: inc/customizer/customizer.php:815 inc/customizer/customizer.php:844
@@ -275,7 +275,7 @@ msgstr ""
 msgid "Separator"
 msgstr ""
 
-#: functions.php:211 inc/customizer/customizer.php:671
+#: functions.php:213 inc/customizer/customizer.php:671
 #: inc/customizer/customizer.php:700 inc/customizer/customizer.php:729
 #: inc/customizer/customizer.php:758 inc/customizer/customizer.php:787
 #: inc/customizer/customizer.php:816 inc/customizer/customizer.php:845
@@ -286,7 +286,7 @@ msgstr ""
 msgid "Skills"
 msgstr ""
 
-#: functions.php:212 inc/customizer/customizer.php:672
+#: functions.php:214 inc/customizer/customizer.php:672
 #: inc/customizer/customizer.php:701 inc/customizer/customizer.php:730
 #: inc/customizer/customizer.php:759 inc/customizer/customizer.php:788
 #: inc/customizer/customizer.php:817 inc/customizer/customizer.php:846
@@ -299,7 +299,7 @@ msgstr ""
 msgid "Portfolio"
 msgstr ""
 
-#: functions.php:213 inc/customizer/customizer.php:673
+#: functions.php:215 inc/customizer/customizer.php:673
 #: inc/customizer/customizer.php:702 inc/customizer/customizer.php:731
 #: inc/customizer/customizer.php:760 inc/customizer/customizer.php:789
 #: inc/customizer/customizer.php:818 inc/customizer/customizer.php:847
@@ -310,7 +310,7 @@ msgstr ""
 msgid "Subscribe"
 msgstr ""
 
-#: functions.php:214 inc/customizer/customizer.php:674
+#: functions.php:216 inc/customizer/customizer.php:674
 #: inc/customizer/customizer.php:703 inc/customizer/customizer.php:732
 #: inc/customizer/customizer.php:761 inc/customizer/customizer.php:790
 #: inc/customizer/customizer.php:819 inc/customizer/customizer.php:848
@@ -321,7 +321,7 @@ msgstr ""
 msgid "Pricing"
 msgstr ""
 
-#: functions.php:215 inc/customizer/customizer.php:675
+#: functions.php:217 inc/customizer/customizer.php:675
 #: inc/customizer/customizer.php:704 inc/customizer/customizer.php:733
 #: inc/customizer/customizer.php:762 inc/customizer/customizer.php:791
 #: inc/customizer/customizer.php:820 inc/customizer/customizer.php:849
@@ -332,7 +332,7 @@ msgstr ""
 msgid "Testimonials"
 msgstr ""
 
-#: functions.php:216 inc/customizer/customizer.php:676
+#: functions.php:218 inc/customizer/customizer.php:676
 #: inc/customizer/customizer.php:705 inc/customizer/customizer.php:734
 #: inc/customizer/customizer.php:763 inc/customizer/customizer.php:792
 #: inc/customizer/customizer.php:821 inc/customizer/customizer.php:850
@@ -343,7 +343,7 @@ msgstr ""
 msgid "Blog"
 msgstr ""
 
-#: functions.php:217 inc/customizer/customizer.php:677
+#: functions.php:219 inc/customizer/customizer.php:677
 #: inc/customizer/customizer.php:706 inc/customizer/customizer.php:735
 #: inc/customizer/customizer.php:764 inc/customizer/customizer.php:793
 #: inc/customizer/customizer.php:822 inc/customizer/customizer.php:851
@@ -353,7 +353,7 @@ msgstr ""
 msgid "Map"
 msgstr ""
 
-#: functions.php:218 inc/customizer/customizer.php:678
+#: functions.php:220 inc/customizer/customizer.php:678
 #: inc/customizer/customizer.php:707 inc/customizer/customizer.php:736
 #: inc/customizer/customizer.php:765 inc/customizer/customizer.php:794
 #: inc/customizer/customizer.php:823 inc/customizer/customizer.php:852
@@ -364,28 +364,28 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: functions.php:235
+#: functions.php:237
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:235 functions.php:259
+#: functions.php:237 functions.php:261
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:247
+#: functions.php:249
 #, php-format
 msgid "<span>%s </span><span class=\"says\">says:</span>"
 msgstr ""
 
-#: functions.php:250
+#: functions.php:252
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:255
+#: functions.php:257
 msgid "l, F j, Y, g:i a"
 msgstr ""
 
-#: functions.php:256
+#: functions.php:258
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
