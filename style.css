@@ -118,7 +118,6 @@ textarea:focus {
 	outline: 0px none;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(102, 175, 233, 0.6);
 }
-
 /*
  * PRE LOADER
  */
@@ -282,7 +281,7 @@ img.alignright,
 	background: #F5F5F5;
 }
 .about .row {
-	padding: 50px;
+	padding: 50px 75px;
 }
 .about .about-header {
 	padding-bottom: 50px;
@@ -470,7 +469,7 @@ img.alignright,
 	margin-top: 0;
 }
 .skills .skill-box {
-	margin: 5px 0;
+	padding: 0 25px;
 }
 .skills .skillbar {
 	position:relative;
@@ -549,7 +548,7 @@ img.alignright,
 	background: #F5F5F5;
 }
 .portfolio-gird .row {
-	padding: 50px 0;
+	padding: 50px 60px;
 }
 .portfolio-gird .portfolio-header {
 	text-align: center;
@@ -698,7 +697,7 @@ img.alignright,
 	background: #F5F5F5;
 }
 .pricing  .row {
-	padding: 50px;
+	padding: 50px 75px;
 }
 .pricing .pricing-header {
 	text-align: center;
@@ -814,7 +813,8 @@ img.alignright,
 	margin-top: 0;
 }
 .swiper-container {
-	width: 80%;
+	width: 100%;
+	max-width: 960px;
 }
 .testimonials-slide blockquote {
 	font-family: "Sanchez",sans-serif;
@@ -1283,7 +1283,7 @@ img.alignright,
 	background: #F5F5F5;
 }
 .blogposts .row {
-	padding: 50px 0;
+	padding: 50px;
 }
 .blogposts .blog-header {
 	text-align: center;
@@ -1300,18 +1300,22 @@ img.alignright,
 	margin-top: 0;
 }
 .blogposts .blog-item {
-	padding: 10px;
+	padding: 0 25px;
 	overflow: hidden;
-	margin-bottom: 10px
+	margin-bottom: 10px;
 }
 .blogposts .blog-item .item {
 	background: #FFF;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	margin-top: 0;
 	padding: 0;
 }
 .blogposts .blog-item .item .item-featured-image img{
 	width: 100%;
 	max-height: 339px;
+}
+.blogposts .blog-item .item a {
+	font-size: 20px;
 }
 .blogposts .blog-item .item-meta {
 	padding: 20px;
@@ -1341,7 +1345,7 @@ img.alignright,
 	color: #FFF;
 }
 .contact .row {
-	padding: 50px;
+	padding: 50px 60px;
 	text-align: center;
 }
 .contact-header {
@@ -1839,11 +1843,6 @@ input.searchform-button:active {
 		height: 150px;
 	}
 }
-@media screen and (max-width: 900px) {
-	.pricing .pricing-plans .pricing-plan {
-		float: left;
-	}
-}
 
 @media screen and (min-width: 768px) {
 	.intro {
@@ -1864,21 +1863,50 @@ input.searchform-button:active {
 	.about .row {
 		padding: 50px 20px;
 	}
+	.services .row {
+		padding: 50px 20px;
+	}
+	.services .service-box {
+		padding: 25px 0;
+	}
+	.skills .row {
+		padding: 50px 20px;
+	}
+	.skills .skill-box {
+		padding: 0;
+	}
+	.portfolio-gird .row {
+		padding: 50px 5px;
+	}
+	.subscribe .row {
+		padding: 50px 40px;
+		text-align: center;
+	}
+	.pricing .row {
+		padding: 50px 20px;
+	}
+	.blogposts .row {
+		padding: 50px 0;
+	}
+	.blogposts .blog-item {
+		padding: 20px;
+    }
+	.contact .row {
+		padding: 50px 5px;
+	}
 }
 
 @media screen and (min-width: 992px) {
 	.cover-container {
 		width: 700px;
 	}
-	
-	.pricing .pricing-plans .pricing-plan {
-		margin: 20px;
-	}
 }
 
 @media screen and (min-width: 1025px) {
 	.pricing .pricing-plans .pricing-plan {
-		padding: 0;
+		padding: 15;
+		margin: 0;
+		width: 33%;
 		float: none;
 		display: inline-block;
 		-webkit-transition: all .25s;

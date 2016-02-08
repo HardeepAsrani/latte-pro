@@ -81,9 +81,9 @@
 				break;
 
 				case "section_skills":
-						if( isset($latte_skills_display) && $latte_skills_display != 1 ):
-							get_template_part( 'sections/skills' );
-						endif;
+					if( isset($latte_skills_display) && $latte_skills_display != 1 ):
+						get_template_part( 'sections/skills' );
+					endif;
 				break;
 
 				case "section_portfolio":
@@ -92,13 +92,13 @@
 					endif;
 				break;
 
-				case "section_portfolio":
+				case "section_subscribe":
 					if( isset($latte_subscribe_display) && $latte_subscribe_display != 1 ):
 						get_template_part( 'sections/subscribe' );
 					endif;
 				break;
 
-				case "section_portfolio":
+				case "section_pricing":
 					if( isset($latte_pricing_display) && $latte_pricing_display != 1 ):
 						get_template_part( 'sections/pricing' );
 					endif;

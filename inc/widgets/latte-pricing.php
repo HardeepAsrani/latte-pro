@@ -62,7 +62,7 @@ class latte_pricing_widget extends WP_Widget {
 		extract( $args );
 		?>
 			<?php echo $before_widget; ?>
-					<div data-sr="ease-in-out wait 0.25s" class="pricing-plan col-md-3 col-sm-6 col-xs-12">
+					<div data-sr="ease-in-out wait 0.25s" class="pricing-plan col-md-4 col-sm-6 col-xs-12">
 						<ul class="pricing-container">
 						<?php if(!empty($instance['title']) || !empty($instance['subtitle'])) : ?>
 							<li class="title">
