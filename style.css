@@ -1314,11 +1314,14 @@ img.alignright,
 	width: 100%;
 	max-height: 339px;
 }
-.blogposts .blog-item .item a {
+.blogposts .blog-item .item-meta .post-title a {
 	font-size: 20px;
 }
 .blogposts .blog-item .item-meta {
 	padding: 20px;
+}
+.blogposts .blog-item .item-meta p {
+	font-size: 14px;
 }
 
 /*
