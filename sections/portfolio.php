@@ -25,7 +25,7 @@
 					<?php endif; ?>
 					<?php if ( $loop->have_posts() ) : ?>
 						<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-						<div data-sr="ease-in-out wait 0.25s" class="col-md-4 col-sm-6 portfolio-item">
+						<div data-sr="ease-in-out wait 0.25s" class="col-md-4 col-sm-6 portfolio-item clearfix">
 							<a href="<?php the_permalink(); ?>" class="portfolio-link" >
 								<div class="portfolio-hover">
 									<div class="portfolio-hover-content">

@@ -30,7 +30,7 @@
 								<?php if ( has_post_thumbnail($post->ID) ) : ?>
 									<a class="item-featured-image" href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail($post->ID, 'latte-blogposts'); ?></a>
 								<?php else: ?>
-									<a class="item-featured-image" href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri().'/assets/images/423x339.png'; ?>"/></a>
+									<a class="item-featured-image" href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri().'/assets/images/287x230.png'; ?>"/></a>
 								<?php endif; ?>
 								<div class="item-meta">
 									<h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
