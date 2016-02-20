@@ -61,8 +61,8 @@ function latte_setup() {
 	));
 	
 	// Adding image sizes. https://developer.wordpress.org/reference/functions/add_image_size/
-	add_image_size( 'latte-portfolio', 400, 289, true );
-	add_image_size( 'latte-blogposts', 423, 339, true );
+	add_image_size( 'latte-portfolio', 300, 217, true );
+	add_image_size( 'latte-blogposts', 287, 230, true );
 	
 	// This theme styles the visual editor to resemble the theme style. https://codex.wordpress.org/Function_Reference/add_editor_style
 	$font_lora = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Lato:300,400,700' );
