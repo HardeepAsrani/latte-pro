@@ -134,6 +134,8 @@ jQuery(document).ready(function($) {
 	});
 <?php endif; ?>
 
+<?php if( is_page_template( 'template-home.php' ) ) : ?>
+
 	/* Apply matchHeight to match services grid */
 	var byRow = $('body').hasClass('pmenu-push');
 	$('.col-md-12').each(function() {
@@ -148,6 +150,8 @@ jQuery(document).ready(function($) {
 	$('.wpcf7-form').each(function() {
 		$(this).find('*').addClass('contact-form');
 	});
+
+<?php endif; ?>
 
 <?php if( isset($latte_testimonials_display) && $latte_testimonials_display != 1 ) : ?>
 	/* Enable Swiper for Testimonials */
