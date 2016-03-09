@@ -53,40 +53,40 @@ jQuery(document).ready(function($) {
 
 	/* Parallax */
 <?php if(!empty($latte_intro_background)) : ?>
-	$('.intro').parallax({imageSrc: '<?php echo $latte_intro_background; ?>', bleed: '10', androidFix: 'false'});
+	$('.intro').parallax({imageSrc: '<?php echo esc_url($latte_intro_background); ?>', bleed: '10', androidFix: 'false'});
 <?php endif; ?>
 <?php if(!empty($latte_about_background)) : ?>
-	$('.about').parallax({imageSrc: '<?php echo $latte_about_background; ?>', bleed: '10', androidFix: 'false'});
+	$('.about').parallax({imageSrc: '<?php echo esc_url($latte_about_background); ?>', bleed: '10', androidFix: 'false'});
 <?php endif; ?>
 <?php if(!empty($latte_social_background)) : ?>
-	$('.social').parallax({imageSrc: '<?php echo $latte_social_background; ?>', bleed: '10', androidFix: 'false'});
+	$('.social').parallax({imageSrc: '<?php echo esc_url($latte_social_background); ?>', bleed: '10', androidFix: 'false'});
 <?php endif; ?>
 <?php if(!empty($latte_services_background)) : ?>
-	$('.services').parallax({imageSrc: '<?php echo $latte_services_background; ?>', bleed: '10', androidFix: 'false'});
+	$('.services').parallax({imageSrc: '<?php echo esc_url($latte_services_background); ?>', bleed: '10', androidFix: 'false'});
 <?php endif; ?>
 <?php if(!empty($latte_separator_background)) : ?>
-	$('.separator').parallax({imageSrc: '<?php echo $latte_separator_background; ?>', bleed: '10', androidFix: 'false'});
+	$('.separator').parallax({imageSrc: '<?php echo esc_url($latte_separator_background); ?>', bleed: '10', androidFix: 'false'});
 <?php endif; ?>
 <?php if(!empty($latte_skills_background)) : ?>
-	$('.skills').parallax({imageSrc: '<?php echo $latte_skills_background; ?>', bleed: '10', androidFix: 'false'});
+	$('.skills').parallax({imageSrc: '<?php echo esc_url($latte_skills_background); ?>', bleed: '10', androidFix: 'false'});
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_background)) : ?>
-	$('.portfolio').parallax({imageSrc: '<?php echo $latte_portfolio_background; ?>', bleed: '10', androidFix: 'false'});
+	$('.portfolio').parallax({imageSrc: '<?php echo esc_url($latte_portfolio_background); ?>', bleed: '10', androidFix: 'false'});
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_background)) : ?>
-	$('.subscribe').parallax({imageSrc: '<?php echo $latte_subscribe_background; ?>', bleed: '10', androidFix: 'false'});
+	$('.subscribe').parallax({imageSrc: '<?php echo esc_url($latte_subscribe_background); ?>', bleed: '10', androidFix: 'false'});
 <?php endif; ?>
 <?php if(!empty($latte_pricing_background)) : ?>
-	$('.pricing').parallax({imageSrc: '<?php echo $latte_pricing_background; ?>', bleed: '10', androidFix: 'false'});
+	$('.pricing').parallax({imageSrc: '<?php echo esc_url($latte_pricing_background); ?>', bleed: '10', androidFix: 'false'});
 <?php endif; ?>
 <?php if(!empty($latte_testimonials_background)) : ?>
-	$('.testimonials').parallax({imageSrc: '<?php echo $latte_testimonials_background; ?>', bleed: '10', androidFix: 'false'});
+	$('.testimonials').parallax({imageSrc: '<?php echo esc_url($latte_testimonials_background); ?>', bleed: '10', androidFix: 'false'});
 <?php endif; ?>
 <?php if(!empty($latte_blogposts_background)) : ?>
-	$('.blogposts').parallax({imageSrc: '<?php echo $latte_blogposts_background; ?>', bleed: '10', androidFix: 'false'});
+	$('.blogposts').parallax({imageSrc: '<?php echo esc_url($latte_blogposts_background); ?>', bleed: '10', androidFix: 'false'});
 <?php endif; ?>
 <?php if(!empty($latte_contact_background)) : ?>
-	$('.contact').parallax({imageSrc: '<?php echo $latte_contact_background; ?>', bleed: '50', androidFix: 'false'});
+	$('.contact').parallax({imageSrc: '<?php echo esc_url($latte_contact_background); ?>', bleed: '50', androidFix: 'false'});
 <?php endif; ?>
 <?php endif; ?>
 
