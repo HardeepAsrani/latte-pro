@@ -9,10 +9,10 @@
 				<?php if(!empty($latte_pricing_title) || !empty($latte_pricing_subtitle)) : ?>
 					<header data-sr="ease-in-out wait 0.25s" class="pricing-header">
 					<?php if(!empty($latte_pricing_title)) : ?>
-						<h2><?php echo $latte_pricing_title; ?></h2>
+						<h2><?php echo esc_html($latte_pricing_title); ?></h2>
 					<?php endif; ?>
 					<?php if(!empty($latte_pricing_subtitle)) : ?>
-						<h3><?php echo $latte_pricing_subtitle; ?></h3>
+						<h3><?php echo esc_html($latte_pricing_subtitle); ?></h3>
 					<?php endif; ?>
 					</header>
 				<?php endif; ?>
@@ -26,26 +26,44 @@
 								'after_widget' => '',
 							);
 							the_widget( 'latte_pricing_widget', array(
-								'title' => __('Package One', 'latte'),
-								'subtitle' => __('Package Subtitle.', 'latte'),
+								'title' => esc_html__('Package One', 'latte'),
+								'subtitle' => esc_html__('Package Subtitle.', 'latte'),
 								'price' => '$0.00',
-								'optionsAr' =>  array(__('Options 1', 'latte'), __('Options 2', 'latte'), __('Options 3', 'latte'), __('Options 4', 'latte'), __('Options 5', 'latte'),),
+								'optionsAr' =>  array(
+									esc_html__('Options 1', 'latte'),
+									esc_html__('Options 2', 'latte'),
+									esc_html__('Options 3', 'latte'),
+									esc_html__('Options 4', 'latte'),
+									esc_html__('Options 5', 'latte'),
+								),
 								'buttontext' => 'Buy',
 								'buttonlink' => '#'
 							), $args );
 							the_widget( 'latte_pricing_widget', array(
-								'title' => __('Package Two', 'latte'),
-								'subtitle' => __('Package Subtitle.', 'latte'),
+								'title' => esc_html__('Package Two', 'latte'),
+								'subtitle' => esc_html__('Package Subtitle.', 'latte'),
 								'price' => '$9.99',
-								'optionsAr' =>  array(__('Options 1', 'latte'), __('Options 2', 'latte'), __('Options 3', 'latte'), __('Options 4', 'latte'), __('Options 5', 'latte'),),
+								'optionsAr' =>  array(
+									esc_html__('Options 1', 'latte'),
+									esc_html__('Options 2', 'latte'),
+									esc_html__('Options 3', 'latte'),
+									esc_html__('Options 4', 'latte'),
+									esc_html__('Options 5', 'latte'),
+								),
 								'buttontext' => 'Buy',
 								'buttonlink' => '#'
 							), $args );
 							the_widget( 'latte_pricing_widget', array(
-								'title' => __('Package Three', 'latte'),
-								'subtitle' => __('Package Subtitle.', 'latte'),
+								'title' => esc_html__('Package Three', 'latte'),
+								'subtitle' => esc_html__('Package Subtitle.', 'latte'),
 								'price' => '$19.99',
-								'optionsAr' =>  array(__('Options 1', 'latte'), __('Options 2', 'latte'), __('Options 3', 'latte'), __('Options 4', 'latte'), __('Options 5', 'latte'),),
+								'optionsAr' =>  array(
+									esc_html__('Options 1', 'latte'),
+									esc_html__('Options 2', 'latte'),
+									esc_html__('Options 3', 'latte'),
+									esc_html__('Options 4', 'latte'),
+									esc_html__('Options 5', 'latte'),
+								),
 								'buttontext' => 'Buy',
 								'buttonlink' => '#'
 							), $args );

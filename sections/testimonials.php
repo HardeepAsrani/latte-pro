@@ -9,10 +9,10 @@
 					<?php if(!empty($latte_testimonials_title) || !empty($latte_testimonials_subtitle)) : ?>
 						<header data-sr="ease-in-out wait 0.25s" class="testimonials-header">
 						<?php if(!empty($latte_testimonials_title)) : ?>
-							<h2><?php echo $latte_testimonials_title; ?></h2>
+							<h2><?php echo esc_html($latte_testimonials_title); ?></h2>
 						<?php endif; ?>
 						<?php if(!empty($latte_testimonials_subtitle)) : ?>
-							<h3><?php echo $latte_testimonials_subtitle; ?></h3>
+							<h3><?php echo esc_html($latte_testimonials_subtitle); ?></h3>
 						<?php endif; ?>
 						</header>
 					<?php endif; ?>
@@ -28,19 +28,19 @@
 										'after_widget' => '',
 									);
 									the_widget( 'latte_testimonials_widget', array(
-										'testimonial' => __('"Design is not just what it looks like and feels like. Design is how it works."', 'latte'),
-										'name' => __('Steve Jobs', 'latte'),
-										'company' => __('Apple', 'latte'),
+										'testimonial' => esc_html__('"Design is not just what it looks like and feels like. Design is how it works."', 'latte'),
+										'name' => esc_html__('Steve Jobs', 'latte'),
+										'company' => esc_html__('Apple', 'latte'),
 									), $args );
 									the_widget( 'latte_testimonials_widget', array(
-										'testimonial' => __('"Your most unhappy customers are your greatest source of learning."', 'latte'),
-										'name' => __('Bill Gates', 'latte'),
-										'company' => __('Microsoft', 'latte'),
+										'testimonial' => esc_html__('"Your most unhappy customers are your greatest source of learning."', 'latte'),
+										'name' => esc_html__('Bill Gates', 'latte'),
+										'company' => esc_html__('Microsoft', 'latte'),
 									), $args );
 									the_widget( 'latte_testimonials_widget', array(
-										'testimonial' => __('"I\'ve actually not read any books on time management."', 'latte'),
-										'name' => __('Elon Musk', 'latte'),
-										'company' => __('Tesla Motors', 'latte'),
+										'testimonial' => esc_html__('"I\'ve actually not read any books on time management."', 'latte'),
+										'name' => esc_html__('Elon Musk', 'latte'),
+										'company' => esc_html__('Tesla Motors', 'latte'),
 									), $args );	
 							endif;
 							?>
