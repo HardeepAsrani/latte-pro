@@ -20,41 +20,41 @@ class latte_pricing_widget extends WP_Widget {
 	function form($instance) {
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'latte'); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php if( !empty($instance['title']) ): echo $instance['title']; endif; ?>" />
+			<label for="<?php echo esc_attr( $this->get_field_id('title') ); ?>"><?php esc_html_e('Title', 'latte'); ?></label> 
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id('title') ); ?>" name="<?php echo esc_attr( $this->get_field_name('title') ); ?>" type="text" value="<?php if( !empty($instance['title']) ): echo esc_html( $instance['title'] ); endif; ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('subtitle'); ?>"><?php _e('Subtitle', 'latte'); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id('subtitle'); ?>" name="<?php echo $this->get_field_name('subtitle'); ?>" type="text" value="<?php if( !empty($instance['subtitle']) ): echo $instance['subtitle']; endif; ?>" />
+			<label for="<?php echo esc_attr( $this->get_field_id('subtitle') ); ?>"><?php esc_html_e('Subtitle', 'latte'); ?></label> 
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id('subtitle') ); ?>" name="<?php echo esc_attr( $this->get_field_name('subtitle') ); ?>" type="text" value="<?php if( !empty($instance['subtitle']) ): echo esc_html( $instance['subtitle'] ); endif; ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('price'); ?>"><?php _e('Price (Amount/Time)', 'latte'); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id('price'); ?>" name="<?php echo $this->get_field_name('price'); ?>" type="text" value="<?php if( !empty($instance['price']) ): echo $instance['price']; endif; ?>" />
+			<label for="<?php echo esc_attr( $this->get_field_id('price') ); ?>"><?php esc_html_e('Price (Amount/Time)', 'latte'); ?></label> 
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id('price') ); ?>" name="<?php echo esc_attr( $this->get_field_name('price') ); ?>" type="text" value="<?php if( !empty($instance['price']) ): echo esc_html( $instance['price'] ); endif; ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('options'); ?>"><?php _e('Options (One per line)', 'latte'); ?></label> 
-			<textarea class="widefat" id="<?php echo $this->get_field_id('options'); ?>" name="<?php echo $this->get_field_name('options'); ?>"><?php if( !empty($instance['options']) ): echo $instance['options']; endif; ?></textarea>
+			<label for="<?php echo esc_attr( $this->get_field_id('options') ); ?>"><?php esc_html_e('Options (One per line)', 'latte'); ?></label> 
+			<textarea class="widefat" id="<?php echo esc_attr( $this->get_field_id('options') ); ?>" name="<?php echo esc_attr( $this->get_field_name('options') ); ?>"><?php if( !empty($instance['options']) ): echo esc_html( $instance['options'] ); endif; ?></textarea>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('buttontext'); ?>"><?php _e('Button Text', 'latte'); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id('buttontext'); ?>" name="<?php echo $this->get_field_name('buttontext'); ?>" type="text" value="<?php if( !empty($instance['buttontext']) ): echo $instance['buttontext']; endif; ?>" />
+			<label for="<?php echo esc_attr( $this->get_field_id('buttontext') ); ?>"><?php esc_html_e('Button Text', 'latte'); ?></label> 
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id('buttontext') ); ?>" name="<?php echo esc_attr( $this->get_field_name('buttontext') ); ?>" type="text" value="<?php if( !empty($instance['buttontext']) ): echo esc_html( $instance['buttontext'] ); endif; ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('buttonlink'); ?>"><?php _e('Button Link', 'latte'); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id('buttonlink'); ?>" name="<?php echo $this->get_field_name('buttonlink'); ?>" type="url" value="<?php if( !empty($instance['buttonlink']) ): echo $instance['buttonlink']; endif; ?>" />
+			<label for="<?php echo esc_attr( $this->get_field_id('buttonlink') ); ?>"><?php esc_html_e('Button Link', 'latte'); ?></label> 
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id('buttonlink') ); ?>" name="<?php echo esc_attr( $this->get_field_name('buttonlink') ); ?>" type="url" value="<?php if( !empty($instance['buttonlink']) ): echo esc_url( $instance['buttonlink'] ); endif; ?>" />
 		</p>
 		<?php 
 	}
 
 	function update($new_instance, $old_instance) {
 		$instance = $old_instance;
-		$instance['title'] = strip_tags($new_instance['title']);
-		$instance['subtitle'] = strip_tags($new_instance['subtitle']);
-		$instance['price'] = strip_tags($new_instance['price']);
+		$instance['title'] = esc_html($new_instance['title']);
+		$instance['subtitle'] = esc_html($new_instance['subtitle']);
+		$instance['price'] = esc_html($new_instance['price']);
 		$instance['options'] = trim($new_instance['options']);
-		$instance['optionsAr'] = explode("\n", str_replace("\r", "", $instance['options']));
-		$instance['buttontext'] = trim($new_instance['buttontext']);
-		$instance['buttonlink'] = trim($new_instance['buttonlink']);
+		$instance['optionsAr'] = explode("\n", str_replace("\r", "", wp_kses_post( force_balance_tags( $instance['options'] ))));
+		$instance['buttontext'] = esc_html($new_instance['buttontext']);
+		$instance['buttonlink'] = esc_url($new_instance['buttonlink']);
 		return $instance;
 	}
  
@@ -67,27 +67,27 @@ class latte_pricing_widget extends WP_Widget {
 						<?php if(!empty($instance['title']) || !empty($instance['subtitle'])) : ?>
 							<li class="title">
 							<?php if( !empty($instance['title']) ): ?>
-								<h2><?php echo $instance['title']; ?></h2>
+								<h2><?php echo esc_html($instance['title']); ?></h2>
 							<?php endif; ?>
 							<?php if( !empty($instance['subtitle']) ): ?>
-								<h3><?php echo $instance['subtitle']; ?></h3>
+								<h3><?php echo esc_html($instance['subtitle']); ?></h3>
 							<?php endif; ?>
 							</li>
 						<?php endif; ?>
 						<?php if( !empty($instance['price']) ): ?>
-							<li class="price"><p><?php echo $instance['price']; ?></p></li>
+							<li class="price"><p><?php echo esc_html($instance['price']); ?></p></li>
 						<?php endif; ?>
 						<?php if( !empty($instance['optionsAr']) ): ?>
 							<li>
 								<ul class="options">
 								<?php foreach ($instance['optionsAr'] as $line) : ?>
-									<li><?php if( !empty($line) ): echo $line; endif; ?></li>
+									<li><?php if( !empty($line) ): echo wp_kses_post( force_balance_tags( $line ) ); endif; ?></li>
 								<?php endforeach; ?>
 								</ul>
 							</li>
 						<?php endif; ?>
 						<?php if( !empty($instance['buttontext']) ): ?>
-							<li class="button"><a href="<?php if( !empty($instance['buttonlink']) ): echo $instance['buttonlink']; endif; ?>"><?php if( !empty($instance['buttontext']) ): echo $instance['buttontext']; endif; ?></a></li>
+							<li class="button"><a href="<?php if( !empty($instance['buttonlink']) ): echo esc_html($instance['buttonlink']); endif; ?>"><?php if( !empty($instance['buttontext']) ): echo esc_html($instance['buttontext']); endif; ?></a></li>
 						<?php endif; ?>
 						</ul>
 					</div>

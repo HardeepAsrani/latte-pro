@@ -10,10 +10,10 @@
 				<?php if(!empty($latte_portfolio_title) || !empty($latte_portfolio_subtitle)) : ?>
 					<header data-sr="ease-in-out wait 0.25s" class="portfolio-header">
 					<?php if(!empty($latte_portfolio_title)) : ?>
-						<h2><?php echo $latte_portfolio_title; ?></h2>
+						<h2><?php echo esc_html($latte_portfolio_title); ?></h2>
 					<?php endif; ?>
 					<?php if(!empty($latte_portfolio_subtitle)) : ?>
-						<h3><?php echo $latte_portfolio_subtitle; ?></h3>
+						<h3><?php echo esc_html($latte_portfolio_subtitle); ?></h3>
 					<?php endif; ?>
 					</header>
 				<?php endif; ?>
@@ -26,7 +26,7 @@
 					<?php if ( $loop->have_posts() ) : ?>
 						<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 						<div data-sr="ease-in-out wait 0.25s" class="col-md-4 col-sm-6 portfolio-item clearfix">
-							<a href="<?php the_permalink(); ?>" class="portfolio-link" >
+							<a href="<?php esc_url( the_permalink() ); ?>" class="portfolio-link" >
 								<div class="portfolio-hover">
 									<div class="portfolio-hover-content">
 										<i class="fa fa-plus fa-3x"></i>
@@ -39,7 +39,7 @@
 								<?php endif; ?>
 							</a>
 							<div class="portfolio-caption">
-								<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
+								<a href="<?php esc_url( the_permalink() ); ?>"><h4><?php the_title(); ?></h4></a>
 								<?php $latte_categories = get_the_terms( $post->ID , 'portfolio_category' ); ?>
 								<?php if (!empty( $latte_categories )) : ?>
 										<?php echo '<h5>'.$latte_categories[0]->name.'</h5>'; ?>

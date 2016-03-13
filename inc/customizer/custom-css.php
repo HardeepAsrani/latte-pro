@@ -120,12 +120,12 @@ function latte_custom_css() {
 <?php if( isset($latte_preloader_display) && $latte_preloader_display != 1 ) : ?>
 <?php if(!empty($latte_preloader_image)) : ?>
 .status {
-	background-image: url('<?php echo $latte_preloader_image; ?>');
+	background-image: url('<?php echo esc_url($latte_preloader_image); ?>');
 }
 <?php endif; ?>
 <?php if(!empty($latte_preloader_background)) : ?>
 .preloader {
-	background: <?php echo $latte_preloader_background; ?>;
+	background: <?php echo esc_html($latte_preloader_background); ?>;
 }
 <?php endif; ?>
 <?php endif; ?>
@@ -133,164 +133,164 @@ function latte_custom_css() {
 <?php if(!empty($latte_menu_icon_color) || !empty($latte_menu_icon_background)) : ?>
 #showLeftPush {
 <?php if(!empty($latte_menu_icon_color)) : ?>
-	color: <?php echo $latte_menu_icon_color; ?>;
+	color: <?php echo esc_html($latte_menu_icon_color); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_menu_icon_background)) : ?>
-	background: <?php echo $latte_menu_icon_background; ?>;
+	background: <?php echo esc_html($latte_menu_icon_background); ?>;
 <?php endif; ?>
 }
 <?php endif; ?>
 <?php if(!empty($latte_menu_background)) : ?>
 .pmenu {
-	background: <?php echo $latte_menu_background; ?>;
+	background: <?php echo esc_html($latte_menu_background); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_menu_header_background)) : ?>
 .pmenu h3,
 .pmenu a:hover {
-	background: <?php echo $latte_menu_header_background; ?>;
+	background: <?php echo esc_html($latte_menu_header_background); ?>;
 }
 .pmenu-vertical a {
-	border-bottom: 2px solid <?php echo $latte_menu_header_background; ?>;
+	border-bottom: 2px solid <?php echo esc_html($latte_menu_header_background); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_menu_text_color)) : ?>
 .pmenu h3,
 .pmenu a,
 .pmenu a:hover {
-	color: <?php echo $latte_menu_text_color; ?>;
+	color: <?php echo esc_html($latte_menu_text_color); ?>;
 }
 <?php endif; ?>
 <?php endif; ?>
 <?php if(!empty($latte_footer_background) || !empty($latte_services_widget_text_color)) : ?>
 .footer {
 <?php if(!empty($latte_footer_background)) : ?>
-	background: <?php echo $latte_footer_background; ?>;
+	background: <?php echo esc_html($latte_footer_background); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_footer_text)) : ?>
-	color: <?php echo $latte_footer_text; ?>;
+	color: <?php echo esc_html($latte_footer_text); ?>;
 <?php endif; ?>
 }
 <?php endif; ?>
 <?php if(!empty($latte_footer_text)) : ?>
 .footer a {
-	color: <?php echo $latte_footer_text; ?>;
+	color: <?php echo esc_html($latte_footer_text); ?>;
 }
 <?php endif; ?>
 <?php if( is_page_template( 'template-home.php' ) ) : ?>
 <?php if( isset($latte_intro_display) && $latte_intro_display != 1 ) : ?>
 <?php if(!empty($latte_intro_background_color)) : ?>
 .intro {
-	background: <?php echo $latte_intro_background_color; ?>;
+	background: <?php echo esc_html($latte_intro_background_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_intro_title_color)) : ?>
 .intro .cover-heading {
-	color: <?php echo $latte_intro_title_color; ?>;
+	color: <?php echo esc_html($latte_intro_title_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_intro_description_color)) : ?>
 .intro .lead {
-	color: <?php echo $latte_intro_description_color; ?>;
+	color: <?php echo esc_html($latte_intro_description_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_intro_anchor_color)) : ?>
 .intro .arrow .fa {
-	color: <?php echo $latte_intro_anchor_color; ?>;
+	color: <?php echo esc_html($latte_intro_anchor_color); ?>;
 }
 <?php endif; ?>
 <?php endif; ?>
 <?php if( isset($latte_about_display) && $latte_about_display != 1 ) : ?>
 <?php if(!empty($latte_about_background_color)) : ?>
 .about {
-	background: <?php echo $latte_about_background_color; ?>;
+	background: <?php echo esc_html($latte_about_background_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_about_title_color)) : ?>
 .about .about-header h2 {
-	color: <?php echo $latte_about_title_color; ?>;
+	color: <?php echo esc_html($latte_about_title_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_about_subtitle_color)) : ?>
 .about .about-header h3 {
-	color: <?php echo $latte_about_subtitle_color; ?>;
+	color: <?php echo esc_html($latte_about_subtitle_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_about_name_color)) : ?>
 .about .name {
-	color: <?php echo $latte_about_name_color; ?>;
+	color: <?php echo esc_html($latte_about_name_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_about_position_color)) : ?>
 .about span.text-muted {
-	color: <?php echo $latte_about_position_color; ?>;
+	color: <?php echo esc_html($latte_about_position_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_about_content_color)) : ?>
 .about .lead {
-	color: <?php echo $latte_about_content_color; ?>;
+	color: <?php echo esc_html($latte_about_content_color); ?>;
 }
 <?php endif; ?>
 <?php endif; ?>
 <?php if( isset($latte_social_display) && $latte_social_display != 1 ) : ?>
 <?php if(!empty($latte_social_background_color)) : ?>
 .social {
-	background: <?php echo $latte_social_background_color; ?>;
+	background: <?php echo esc_html($latte_social_background_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_social_title_color)) : ?>
 .social .social-header h2 {
-	color: <?php echo $latte_social_title_color; ?>;
+	color: <?php echo esc_html($latte_social_title_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_social_color)) : ?>
 .social .icon-item .icon i,
 .social .icon-item span {
-	color: <?php echo $latte_social_color; ?>;
+	color: <?php echo esc_html($latte_social_color); ?>;
 }
 .social .icon-item .icon {
-	border: 4px solid <?php echo $latte_social_color; ?>;
+	border: 4px solid <?php echo esc_html($latte_social_color); ?>;
 }
 <?php endif; ?>
 <?php endif; ?>
 <?php if( isset($latte_services_display) && $latte_services_display != 1 ) : ?>
 <?php if(!empty($latte_services_background_color)) : ?>
 .services {
-	background: <?php echo $latte_services_background_color; ?>;
+	background: <?php echo esc_html($latte_services_background_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_services_title_color)) : ?>
 .services .services-header h2 {
-	color: <?php echo $latte_services_title_color; ?>;
+	color: <?php echo esc_html($latte_services_title_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_services_subtitle_color)) : ?>
 .services .services-header h3 {
-	color: <?php echo $latte_services_subtitle_color; ?>;
+	color: <?php echo esc_html($latte_services_subtitle_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_services_widget_icon_background)) : ?>
 .services .service-icon {
-	background: <?php echo $latte_services_widget_icon_background; ?>;
+	background: <?php echo esc_html($latte_services_widget_icon_background); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_services_widget_icon_color)) : ?>
 .services .service-icon .fa {
-	color: <?php echo $latte_services_widget_icon_color; ?>;
+	color: <?php echo esc_html($latte_services_widget_icon_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_services_widget_title_color)) : ?>
 .services .service-icon h3 {
-	color: <?php echo $latte_services_widget_title_color; ?>;
+	color: <?php echo esc_html($latte_services_widget_title_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_services_widget_text_background) || !empty($latte_services_widget_text_color)) : ?>
 .services .service-box p {
 <?php if(!empty($latte_services_widget_text_background)) : ?>
-	background: <?php echo $latte_services_widget_text_background; ?>;
+	background: <?php echo esc_html($latte_services_widget_text_background); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_services_widget_text_color)) : ?>
-	color: <?php echo $latte_services_widget_text_color; ?>;
+	color: <?php echo esc_html($latte_services_widget_text_color); ?>;
 <?php endif; ?>
 }
 <?php endif; ?>
@@ -298,31 +298,31 @@ function latte_custom_css() {
 <?php if( isset($latte_separator_display) && $latte_separator_display != 1 ) : ?>
 <?php if(!empty($latte_separator_background_color)) : ?>
 .separator {
-	background: <?php echo $latte_separator_background_color; ?>;
+	background: <?php echo esc_html($latte_separator_background_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_separator_color)) : ?>
 .separator h2 {
-	color: <?php echo $latte_separator_color; ?>;
+	color: <?php echo esc_html($latte_separator_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_separator_button_color) || !empty($latte_separator_button_background)) : ?>
 .separator .btn {
 <?php if(!empty($latte_separator_button_color)) : ?>
-	color: <?php echo $latte_separator_button_color; ?>;
+	color: <?php echo esc_html($latte_separator_button_color); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_separator_button_background)) : ?>
-	background: <?php echo $latte_separator_button_background; ?>;
+	background: <?php echo esc_html($latte_separator_button_background); ?>;
 <?php endif; ?>
 }
 <?php endif; ?>
 <?php if(!empty($latte_separator_button_hover_color) || !empty($latte_separator_button_hover_background)) : ?>
 .separator .btn:hover {
 <?php if(!empty($latte_separator_button_hover_color)) : ?>
-	color: <?php echo $latte_separator_button_hover_color; ?>;
+	color: <?php echo esc_html($latte_separator_button_hover_color); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_separator_button_hover_background)) : ?>
-	background: <?php echo $latte_separator_button_hover_background; ?>;
+	background: <?php echo esc_html($latte_separator_button_hover_background); ?>;
 <?php endif; ?>
 }
 <?php endif; ?>
@@ -330,115 +330,115 @@ function latte_custom_css() {
 <?php if( isset($latte_skills_display) && $latte_skills_display != 1 ) : ?>
 <?php if(!empty($latte_skills_background_color)) : ?>
 .skills {
-	background: <?php echo $latte_skills_background_color; ?>;
+	background: <?php echo esc_html($latte_skills_background_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_skills_title_color)) : ?>
 .skills .skills-header h2 {
-	color: <?php echo $latte_skills_title_color; ?>;
+	color: <?php echo esc_html($latte_skills_title_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_skills_subtitle_color)) : ?>
 .skills .skills-header h3 {
-	color: <?php echo $latte_skills_subtitle_color; ?>;
+	color: <?php echo esc_html($latte_skills_subtitle_color); ?>;
 }
 <?php endif; ?>
 <?php endif; ?>
 <?php if( isset($latte_portfolio_display) && $latte_portfolio_display != 1 ) : ?>
 <?php if(!empty($latte_portfolio_background_color)) : ?>
 .portfolio-gird {
-	background: <?php echo $latte_portfolio_background_color; ?>;
+	background: <?php echo esc_html($latte_portfolio_background_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_title_color)) : ?>
 .portfolio-gird .portfolio-header h2 {
-	color: <?php echo $latte_portfolio_title_color; ?>;
+	color: <?php echo esc_html($latte_portfolio_title_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_subtitle_color)) : ?>
 .portfolio-gird .portfolio-header h3 {
-	color: <?php echo $latte_portfolio_subtitle_color; ?>;
+	color: <?php echo esc_html($latte_portfolio_subtitle_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_item_background)) : ?>
 .portfolio-gird .portfolio-item .portfolio-caption {
-	background: <?php echo $latte_portfolio_item_background; ?>;
+	background: <?php echo esc_html($latte_portfolio_item_background); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_item_title)) : ?>
 .portfolio-gird .portfolio-item .portfolio-caption h4 {
-	color: <?php echo $latte_portfolio_item_title; ?>;
+	color: <?php echo esc_html($latte_portfolio_item_title); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_item_category)) : ?>
 .portfolio-gird .portfolio-item .portfolio-caption h5 {
-	color: <?php echo $latte_portfolio_item_category; ?>;
+	color: <?php echo esc_html($latte_portfolio_item_category); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_item_hover)) : ?>
 .portfolio-gird .portfolio-item .portfolio-link .portfolio-hover {
-	background: <?php echo $latte_portfolio_item_hover; ?>;
+	background: <?php echo esc_html($latte_portfolio_item_hover); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_item_hover_icon)) : ?>
 .portfolio-gird .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
-	color: <?php echo $latte_portfolio_item_hover_icon; ?>;
+	color: <?php echo esc_html($latte_portfolio_item_hover_icon); ?>;
 }
 <?php endif; ?>
 <?php endif; ?>
 <?php if( isset($latte_subscribe_display) && $latte_subscribe_display != 1 ) : ?>
 <?php if(!empty($latte_subscribe_background_color)) : ?>
 .subscribe {
-	background: <?php echo $latte_subscribe_background_color; ?>;
+	background: <?php echo esc_html($latte_subscribe_background_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_title_color)) : ?>
 .subscribe .subscribe-header h2 {
-	color: <?php echo $latte_subscribe_title_color; ?>;
+	color: <?php echo esc_html($latte_subscribe_title_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_subtitle_color)) : ?>
 .subscribe .subscribe-header h3 {
-	color: <?php echo $latte_subscribe_subtitle_color; ?>;
+	color: <?php echo esc_html($latte_subscribe_subtitle_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_text)) : ?>
 .subscribe p,
 .subscribe .sendinbluetitle {
-	color: <?php echo $latte_subscribe_text; ?>;
+	color: <?php echo esc_html($latte_subscribe_text); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_field_background) || !empty($latte_subscribe_field_text) || !empty($latte_subscribe_field_border)) : ?>
 .subscribe .sib_signup_form .sib_signup_box_inside .sib-email-area,
 .subscribe .sib_signup_form .sib_signup_box_inside .sib-NAME-area {
 <?php if(!empty($latte_subscribe_field_background)) : ?>
-	background: <?php echo $latte_subscribe_field_background; ?>;
+	background: <?php echo esc_html($latte_subscribe_field_background); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_field_text)) : ?>
-	color: <?php echo $latte_subscribe_field_text; ?>;
+	color: <?php echo esc_html($latte_subscribe_field_text); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_field_border)) : ?>
-	border-color: <?php echo $latte_subscribe_field_border; ?> !important;
+	border-color: <?php echo esc_html($latte_subscribe_field_border); ?> !important;
 <?php endif; ?>
 }
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_button_text) || !empty($latte_subscribe_button_background)) : ?>
 .subscribe .sib_signup_form .sib_signup_box_inside .sib-default-btn {
 <?php if(!empty($latte_subscribe_button_text)) : ?>
-	color: <?php echo $latte_subscribe_button_text; ?> !important;
+	color: <?php echo esc_html($latte_subscribe_button_text); ?> !important;
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_button_background)) : ?>
-	background: <?php echo $latte_subscribe_button_background; ?> !important;
+	background: <?php echo esc_html($latte_subscribe_button_background); ?> !important;
 <?php endif; ?>
 }
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_button_text_hover) || !empty($latte_subscribe_button_background_hover)) : ?>
 .subscribe .sib_signup_form .sib_signup_box_inside .sib-default-btn:hover {
 <?php if(!empty($latte_subscribe_button_text_hover)) : ?>
-	color: <?php echo $latte_subscribe_button_text_hover; ?> !important;
+	color: <?php echo esc_html($latte_subscribe_button_text_hover); ?> !important;
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_button_background_hover)) : ?>
-	background: <?php echo $latte_subscribe_button_background_hover; ?> !important;
+	background: <?php echo esc_html($latte_subscribe_button_background_hover); ?> !important;
 <?php endif; ?>
 }
 <?php endif; ?>
@@ -446,72 +446,72 @@ function latte_custom_css() {
 <?php if( isset($latte_pricing_display) && $latte_pricing_display != 1 ) : ?>
 <?php if(!empty($latte_pricing_background_color)) : ?>
 .pricing {
-	background: <?php echo $latte_pricing_background_color; ?>;
+	background: <?php echo esc_html($latte_pricing_background_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_pricing_title_color)) : ?>
 .pricing .pricing-header h2 {
-	color: <?php echo $latte_pricing_title_color; ?>;
+	color: <?php echo esc_html($latte_pricing_title_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_pricing_subtitle_color)) : ?>
 .pricing .pricing-header h3 {
-	color: <?php echo $latte_pricing_subtitle_color; ?>;
+	color: <?php echo esc_html($latte_pricing_subtitle_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_pricing_table_background)) : ?>
 .pricing .pricing-plans .pricing-plan .pricing-container {
-	background: <?php echo $latte_pricing_table_background; ?>;
+	background: <?php echo esc_html($latte_pricing_table_background); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_pricing_table_title)) : ?>
 .pricing-container .title h2 {
-	color: <?php echo $latte_pricing_table_title; ?>;
+	color: <?php echo esc_html($latte_pricing_table_title); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_pricing_table_subtitle)) : ?>
 .pricing-container .title h3 {
-	color: <?php echo $latte_pricing_table_subtitle; ?>;
+	color: <?php echo esc_html($latte_pricing_table_subtitle); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_pricing_table_price_background) || !empty($latte_pricing_table_price_text)) : ?>
 .pricing-container .price p {
 <?php if(!empty($latte_pricing_table_price_background)) : ?>
-	background: <?php echo $latte_pricing_table_price_background; ?>;
+	background: <?php echo esc_html($latte_pricing_table_price_background); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_pricing_table_price_text)) : ?>
-	color: <?php echo $latte_pricing_table_price_text; ?>;
+	color: <?php echo esc_html($latte_pricing_table_price_text); ?>;
 <?php endif; ?>
 }
 <?php endif; ?>
 <?php if(!empty($latte_pricing_table_features)) : ?>
 .pricing-container .options li {
-	color: <?php echo $latte_pricing_table_features; ?>;
+	color: <?php echo esc_html($latte_pricing_table_features); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_pricing_table_button_background) || !empty($latte_pricing_table_button_border) || !empty($latte_pricing_table_button_text)) : ?>
 .pricing-container .button a {
 <?php if(!empty($latte_pricing_table_button_background)) : ?>
-	background: <?php echo $latte_pricing_table_button_background; ?>;
+	background: <?php echo esc_html($latte_pricing_table_button_background); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_pricing_table_button_border)) : ?>
-	border: 2px solid <?php echo $latte_pricing_table_button_border; ?>;
+	border: 2px solid <?php echo esc_html($latte_pricing_table_button_border); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_pricing_table_button_text)) : ?>
-	color: <?php echo $latte_pricing_table_button_text; ?>;
+	color: <?php echo esc_html($latte_pricing_table_button_text); ?>;
 <?php endif; ?>
 }
 <?php endif; ?>
 <?php if(!empty($latte_pricing_table_button_background_hover) || !empty($latte_pricing_table_button_border_hover) || !empty($latte_pricing_table_button_text_hover)) : ?>
 .pricing-container .button a:hover {
 <?php if(!empty($latte_pricing_table_button_background_hover)) : ?>
-	background: <?php echo $latte_pricing_table_button_background_hover; ?>;
+	background: <?php echo esc_html($latte_pricing_table_button_background_hover); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_pricing_table_button_border_hover)) : ?>
-	border: 2px solid <?php echo $latte_pricing_table_button_border_hover; ?>;
+	border: 2px solid <?php echo esc_html($latte_pricing_table_button_border_hover); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_pricing_table_button_text_hover)) : ?>
-	color: <?php echo $latte_pricing_table_button_text_hover; ?>;
+	color: <?php echo esc_html($latte_pricing_table_button_text_hover); ?>;
 <?php endif; ?>
 }
 <?php endif; ?>
@@ -519,88 +519,88 @@ function latte_custom_css() {
 <?php if( isset($latte_testimonials_display) && $latte_testimonials_display != 1 ) : ?>
 <?php if(!empty($latte_testimonials_background_color)) : ?>
 .testimonials {
-	background: <?php echo $latte_testimonials_background_color; ?>;
+	background: <?php echo esc_html($latte_testimonials_background_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_testimonials_title_color)) : ?>
 .testimonials .testimonials-header h2 {
-	color: <?php echo $latte_testimonials_title_color; ?>;
+	color: <?php echo esc_html($latte_testimonials_title_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_testimonials_subtitle_color)) : ?>
 .testimonials .testimonials-header h3 {
-	color: <?php echo $latte_testimonials_subtitle_color; ?>;
+	color: <?php echo esc_html($latte_testimonials_subtitle_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_testimonials_main_color)) : ?>
 .testimonials .testimonials-slide blockquote {
-	color: <?php echo $latte_testimonials_main_color; ?>;
+	color: <?php echo esc_html($latte_testimonials_main_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_testimonials_meta_color)) : ?>
 .testimonials .testimonials-slide span {
-	color: <?php echo $latte_testimonials_meta_color; ?>;
+	color: <?php echo esc_html($latte_testimonials_meta_color); ?>;
 }
 <?php endif; ?>
 <?php endif; ?>
 <?php if( isset($latte_blogposts_display) && $latte_blogposts_display != 1 ) : ?>
 <?php if(!empty($latte_blogposts_background_color)) : ?>
 .blogposts {
-	background: <?php echo $latte_blogposts_background_color; ?>;
+	background: <?php echo esc_html($latte_blogposts_background_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_blogposts_title_color)) : ?>
 .blogposts .blog-header h2 {
-	color: <?php echo $latte_blogposts_title_color; ?>;
+	color: <?php echo esc_html($latte_blogposts_title_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_blogposts_subtitle_color)) : ?>
 .blogposts .blog-header h3 {
-	color: <?php echo $latte_blogposts_subtitle_color; ?>;
+	color: <?php echo esc_html($latte_blogposts_subtitle_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_blogposts_item_background) || !empty($latte_blogposts_item_text)) : ?>
 .blogposts .blog-item .item {
 <?php if(!empty($latte_blogposts_item_background)) : ?>
-	background: <?php echo $latte_blogposts_item_background; ?>;
+	background: <?php echo esc_html($latte_blogposts_item_background); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_blogposts_item_text)) : ?>
-	color: <?php echo $latte_blogposts_item_text; ?>;
+	color: <?php echo esc_html($latte_blogposts_item_text); ?>;
 <?php endif; ?>
 }
 <?php endif; ?>
 <?php if(!empty($latte_blogposts_item_link)) : ?>
 .blogposts .blog-item .item a { 
-	color: <?php echo $latte_blogposts_item_link; ?>;
+	color: <?php echo esc_html($latte_blogposts_item_link); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_blogposts_item_link_hover)) : ?>
 .blogposts .blog-item .item a:hover {
-	color: <?php echo $latte_blogposts_item_link_hover; ?>;
+	color: <?php echo esc_html($latte_blogposts_item_link_hover); ?>;
 }
 <?php endif; ?>
 <?php endif; ?>
 <?php if( isset($latte_map_display) && $latte_map_display != 1 ) : ?>
 <?php if(!empty($latte_map_background_color)) : ?>
 .map {
-	background: <?php echo $latte_map_background_color; ?>;
+	background: <?php echo esc_html($latte_map_background_color); ?>;
 }
 <?php endif; ?>
 <?php endif; ?>
 <?php if( isset($latte_contact_display) && $latte_contact_display != 1 ) : ?>
 <?php if(!empty($latte_contact_background_color)) : ?>
 .contact {
-	background: <?php echo $latte_contact_background_color; ?>;
+	background: <?php echo esc_html($latte_contact_background_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_contact_title_color)) : ?>
 .contact .contact-header h2 {
-	color: <?php echo $latte_contact_title_color; ?>;
+	color: <?php echo esc_html($latte_contact_title_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_contact_subtitle_color)) : ?>
 .contact .contact-header h3 {
-	color: <?php echo $latte_contact_subtitle_color; ?>;
+	color: <?php echo esc_html($latte_contact_subtitle_color); ?>;
 }
 <?php endif; ?>
 <?php endif; ?>
@@ -612,18 +612,18 @@ function latte_custom_css() {
 <?php endif; ?>
 <?php if(!empty($latte_blog_title_color)) : ?>
 .archive-header .cover-heading {
-	color: <?php echo $latte_blog_title_color; ?>;
+	color: <?php echo esc_html($latte_blog_title_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_blog_description_color)) : ?>
 .archive-header .lead {
-	color: <?php echo $latte_blog_description_color; ?>;
+	color: <?php echo esc_html($latte_blog_description_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_blog_heading_color)) : ?>
 .container .item .post-title,
 .sidebar h3 {
-	color: <?php echo $latte_blog_heading_color; ?>;
+	color: <?php echo esc_html($latte_blog_heading_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_blog_text_color)) : ?>
@@ -633,18 +633,18 @@ h2.comments-title,
 .comment-list .comment-author .fn a,
 .container .pager li > a,
 .container .pager a > li > span {
-	color: <?php echo $latte_blog_text_color; ?>;
+	color: <?php echo esc_html($latte_blog_text_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_blog_meta_color)) : ?>
 .container .item .post-meta,
 .comment-list .comment-author .says {
-	color: <?php echo $latte_blog_meta_color; ?>;
+	color: <?php echo esc_html($latte_blog_meta_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_blog_meta_link_color)) : ?>
 .container .item .post-meta a, {
-	color: <?php echo $latte_blog_meta_link_color; ?>;
+	color: <?php echo esc_html($latte_blog_meta_link_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_blog_link_color)) : ?>
@@ -652,7 +652,7 @@ a,
 .container .item .post-content a,
 .container .item .post-subtitle a,
 .comment-list .comment-content a {
-	color: <?php echo $latte_blog_link_color; ?>;
+	color: <?php echo esc_html($latte_blog_link_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_blog_link_hover_color)) : ?>
@@ -666,7 +666,7 @@ a:focus,
 .container .pager li > a:hover,
 .container .pager li > span:hover,
 .comment-list .comment-content a:hover,
-	color: <?php echo $latte_blog_link_hover_color; ?>;
+	color: <?php echo esc_html($latte_blog_link_hover_color); ?>;
 }
 <?php endif; ?>
 </style>

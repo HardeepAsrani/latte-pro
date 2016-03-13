@@ -8,7 +8,7 @@
 				<?php if(!empty($latte_footer_content)) : ?>
 					<?php echo '<p>' . $latte_footer_content . '</p>'; ?>
 				<?php else: ?>
-					<?php echo '<p>' . __( '<a target="_blank" href="http://www.hardeepasrani.com/portfolio/latte/">Latte</a><br/>Proudly powered by WordPress', 'latte' ) . '</p>'; ?>
+					<?php echo '<p><a target="_blank" href="http://www.hardeepasrani.com/portfolio/latte/">Latte</a><br/>'.__('Proudly powered by','latte').' WordPress</p>'; ?>
 				<?php endif; ?>
 				</div>
 			</div>
