@@ -31,7 +31,6 @@ jQuery(document).ready(function($) {
 
 		/* Parallax */
 		if( latte_script_var.latte_intro_display != 1 && latte_script_var.latte_intro_background != '' ) {
-			alert(1);
 			$('#intro').parallax({imageSrc: latte_script_var.latte_intro_background, bleed: '10', androidFix: 'false'});
 		}
 		if( latte_script_var.latte_about_display != 1 && latte_script_var.latte_about_background != '' ) {

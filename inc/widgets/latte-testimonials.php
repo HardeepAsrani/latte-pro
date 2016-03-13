@@ -20,25 +20,25 @@ class latte_testimonials_widget extends WP_Widget {
 	function form($instance) {
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id('testimonial'); ?>"><?php _e('Testimonial', 'latte'); ?></label> 
-			<textarea class="widefat" id="<?php echo $this->get_field_id('testimonial'); ?>" name="<?php echo $this->get_field_name('testimonial'); ?>"><?php if( !empty($instance['testimonial']) ): echo $instance['testimonial']; endif; ?></textarea>
+			<label for="<?php echo esc_attr( $this->get_field_id('testimonial') ); ?>"><?php esc_html_e('Testimonial', 'latte'); ?></label> 
+			<textarea class="widefat" id="<?php echo esc_attr( $this->get_field_id('testimonial') ); ?>" name="<?php echo esc_attr( $this->get_field_name('testimonial') ); ?>"><?php if( !empty($instance['testimonial']) ): echo wp_kses_post( force_balance_tags( $instance['testimonial'] ) ); endif; ?></textarea>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('name'); ?>"><?php _e('Name', 'latte'); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id('name'); ?>" name="<?php echo $this->get_field_name('name'); ?>" type="text" value="<?php if( !empty($instance['name']) ): echo $instance['name']; endif; ?>" />
+			<label for="<?php echo esc_attr( $this->get_field_id('name') ); ?>"><?php esc_html_e('Name', 'latte'); ?></label> 
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id('name') ); ?>" name="<?php echo esc_attr( $this->get_field_name('name') ); ?>" type="text" value="<?php if( !empty($instance['name']) ): echo esc_html($instance['name']); endif; ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('company'); ?>"><?php _e('Position/Company', 'latte'); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id('company'); ?>" name="<?php echo $this->get_field_name('company'); ?>" type="text" value="<?php if( !empty($instance['company']) ): echo $instance['company']; endif; ?>" />
+			<label for="<?php echo esc_attr( $this->get_field_id('company') ); ?>"><?php esc_html_e('Position/Company', 'latte'); ?></label> 
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id('company') ); ?>" name="<?php echo esc_attr( $this->get_field_name('company') ); ?>" type="text" value="<?php if( !empty($instance['company']) ): echo esc_html($instance['company']); endif; ?>" />
 		</p>
 		<?php 
 	}
 
 	function update($new_instance, $old_instance) {
 		$instance = $old_instance;
-		$instance['testimonial'] = strip_tags($new_instance['testimonial']);
-		$instance['name'] = strip_tags($new_instance['name']);
-		$instance['company'] = strip_tags($new_instance['company']);
+		$instance['testimonial'] = wp_kses_post( force_balance_tags( $new_instance['testimonial'] ) );
+		$instance['name'] = esc_html($new_instance['name']);
+		$instance['company'] = esc_html($new_instance['company']);
 		return $instance;
 	}
  
@@ -48,10 +48,10 @@ class latte_testimonials_widget extends WP_Widget {
 			<?php echo $before_widget; ?>
 							<div class="swiper-slide testimonials-slide">
 							<?php if( !empty($instance['testimonial']) ): ?>
-								<blockquote><?php echo $instance['testimonial']; ?></blockquote>
+								<blockquote><?php echo wp_kses_post( force_balance_tags( $instance['testimonial'] ) ); ?></blockquote>
 							<?php endif; ?>
 							<?php if( !empty($instance['name']) ): ?>
-								<span><?php echo $instance['name']; ?><?php if( !empty($instance['company']) ): ?>, <i><?php echo $instance['company']; ?></i><?php endif; ?></span>
+								<span><?php echo esc_html($instance['name']); ?><?php if( !empty($instance['company']) ): ?>, <i><?php echo esc_html($instance['company']); ?></i><?php endif; ?></span>
 							<?php endif; ?>
 							</div>
 			<?php echo $after_widget; ?>
