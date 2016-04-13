@@ -8,7 +8,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-					<?php if(!empty($latte_separator_content)) : ?>
+					<?php if(!empty($latte_separator_content) || is_customize_preview() ) : ?>
 						<h2 data-sr="enter top wait 0.25s"><?php echo esc_html($latte_separator_content); ?></h2>
 					<?php endif; ?>
 					<?php if(!empty($latte_separator_button)) : ?>

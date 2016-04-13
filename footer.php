@@ -4,7 +4,7 @@
 
 		<footer class="footer" id="footer">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12 credits">
 				<?php if(!empty($latte_footer_content)) : ?>
 					<?php echo '<p>' . $latte_footer_content . '</p>'; ?>
 				<?php else: ?>
