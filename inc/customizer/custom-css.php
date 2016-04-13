@@ -101,6 +101,7 @@ function latte_custom_css() {
 	$latte_blogposts_subtitle_color = get_theme_mod('latte_blogposts_subtitle_color', '#9F8E8E' );
 	$latte_blogposts_item_background = get_theme_mod('latte_blogposts_item_background', '#FFF' );
 	$latte_blogposts_item_text = get_theme_mod('latte_blogposts_item_text', '#333' );
+	$latte_blogposts_item_meta_text = get_theme_mod('latte_blogposts_item_meta_text', '#808080' );
 	$latte_blogposts_item_link = get_theme_mod('latte_blogposts_item_link', '#337AB7' );
 	$latte_blogposts_item_link_hover = get_theme_mod('latte_blogposts_item_link_hover', '#23527C' );
 	$latte_map_background_color = get_theme_mod('latte_map_background_color', 'rgba(0, 0, 0, 0.7)' );
@@ -346,42 +347,42 @@ function latte_custom_css() {
 <?php endif; ?>
 <?php if( isset($latte_portfolio_display) && $latte_portfolio_display != 1 ) : ?>
 <?php if(!empty($latte_portfolio_background_color)) : ?>
-.portfolio-gird {
+.portfolio-grid {
 	background: <?php echo esc_html($latte_portfolio_background_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_title_color)) : ?>
-.portfolio-gird .portfolio-header h2 {
+.portfolio-grid .portfolio-header h2 {
 	color: <?php echo esc_html($latte_portfolio_title_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_subtitle_color)) : ?>
-.portfolio-gird .portfolio-header h3 {
+.portfolio-grid .portfolio-header h3 {
 	color: <?php echo esc_html($latte_portfolio_subtitle_color); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_item_background)) : ?>
-.portfolio-gird .portfolio-item .portfolio-caption {
+.portfolio-grid .portfolio-item .portfolio-caption {
 	background: <?php echo esc_html($latte_portfolio_item_background); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_item_title)) : ?>
-.portfolio-gird .portfolio-item .portfolio-caption h4 {
+.portfolio-grid .portfolio-item .portfolio-caption h4 {
 	color: <?php echo esc_html($latte_portfolio_item_title); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_item_category)) : ?>
-.portfolio-gird .portfolio-item .portfolio-caption h5 {
+.portfolio-grid .portfolio-item .portfolio-caption h5 {
 	color: <?php echo esc_html($latte_portfolio_item_category); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_item_hover)) : ?>
-.portfolio-gird .portfolio-item .portfolio-link .portfolio-hover {
+.portfolio-grid .portfolio-item .portfolio-link .portfolio-hover {
 	background: <?php echo esc_html($latte_portfolio_item_hover); ?>;
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_item_hover_icon)) : ?>
-.portfolio-gird .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+.portfolio-grid .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
 	color: <?php echo esc_html($latte_portfolio_item_hover_icon); ?>;
 }
 <?php endif; ?>
@@ -409,8 +410,8 @@ function latte_custom_css() {
 }
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_field_background) || !empty($latte_subscribe_field_text) || !empty($latte_subscribe_field_border)) : ?>
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-email-area,
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-NAME-area {
+section#subscribe form.sib_signup_form div.sib_signup_box_inside input[type="text"].sib-NAME-area,
+section#subscribe form.sib_signup_form div.sib_signup_box_inside input[type="email"].sib-email-area {
 <?php if(!empty($latte_subscribe_field_background)) : ?>
 	background: <?php echo esc_html($latte_subscribe_field_background); ?>;
 <?php endif; ?>
@@ -418,27 +419,27 @@ function latte_custom_css() {
 	color: <?php echo esc_html($latte_subscribe_field_text); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_field_border)) : ?>
-	border-color: <?php echo esc_html($latte_subscribe_field_border); ?> !important;
+	border: 1px solid <?php echo esc_html($latte_subscribe_field_border); ?>;
 <?php endif; ?>
 }
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_button_text) || !empty($latte_subscribe_button_background)) : ?>
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-default-btn {
+section#subscribe form.sib_signup_form div.sib_signup_box_inside .sib-default-btn {
 <?php if(!empty($latte_subscribe_button_text)) : ?>
-	color: <?php echo esc_html($latte_subscribe_button_text); ?> !important;
+	color: <?php echo esc_html($latte_subscribe_button_text); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_button_background)) : ?>
-	background: <?php echo esc_html($latte_subscribe_button_background); ?> !important;
+	background: <?php echo esc_html($latte_subscribe_button_background); ?>;
 <?php endif; ?>
 }
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_button_text_hover) || !empty($latte_subscribe_button_background_hover)) : ?>
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-default-btn:hover {
+section#subscribe form.sib_signup_form div.sib_signup_box_inside .sib-default-btn:hover {
 <?php if(!empty($latte_subscribe_button_text_hover)) : ?>
-	color: <?php echo esc_html($latte_subscribe_button_text_hover); ?> !important;
+	color: <?php echo esc_html($latte_subscribe_button_text_hover); ?>;
 <?php endif; ?>
 <?php if(!empty($latte_subscribe_button_background_hover)) : ?>
-	background: <?php echo esc_html($latte_subscribe_button_background_hover); ?> !important;
+	background: <?php echo esc_html($latte_subscribe_button_background_hover); ?>;
 <?php endif; ?>
 }
 <?php endif; ?>
@@ -569,6 +570,11 @@ function latte_custom_css() {
 <?php endif; ?>
 }
 <?php endif; ?>
+<?php if(!empty($latte_blogposts_item_meta_text)) : ?>
+.blogposts .blog-item .item .post-meta {
+	color: <?php echo esc_html($latte_blogposts_item_meta_text); ?>;
+}
+<?php endif; ?>
 <?php if(!empty($latte_blogposts_item_link)) : ?>
 .blogposts .blog-item .item a { 
 	color: <?php echo esc_html($latte_blogposts_item_link); ?>;
@@ -643,7 +649,7 @@ h2.comments-title,
 }
 <?php endif; ?>
 <?php if(!empty($latte_blog_meta_link_color)) : ?>
-.container .item .post-meta a, {
+.container .item .post-meta a {
 	color: <?php echo esc_html($latte_blog_meta_link_color); ?>;
 }
 <?php endif; ?>
@@ -656,16 +662,15 @@ a,
 }
 <?php endif; ?>
 <?php if(!empty($latte_blog_link_hover_color)) : ?>
-a,
 a:hover,
 a:focus,
-.container .item a .post-title:hover,
+.container .item h2.post-title:hover,
 .container .item .post-meta a:hover,
 .container .item a:hover,
 .container .pager li > span,
-.container .pager li > a:hover,
 .container .pager li > span:hover,
-.comment-list .comment-content a:hover,
+.container .pager li > a:hover,
+.comment-list .comment-content a:hover {
 	color: <?php echo esc_html($latte_blog_link_hover_color); ?>;
 }
 <?php endif; ?>

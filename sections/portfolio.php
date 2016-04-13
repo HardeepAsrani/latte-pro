@@ -4,7 +4,7 @@
 	$latte_portfolio_items = get_theme_mod('latte_portfolio_items', 6);
 ?>
 
-		<section class="portfolio-gird" id="portfolio">
+		<section class="portfolio-grid" id="portfolio">
 			<div class="container">
 				<div class="row">
 				<?php if(!empty($latte_portfolio_title) || !empty($latte_portfolio_subtitle)) : ?>
