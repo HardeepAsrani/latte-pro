@@ -15,6 +15,9 @@ require_once( trailingslashit( get_template_directory() ) . "/inc/other/portfoli
 require_once( trailingslashit( get_template_directory() ) . "/inc/other/post-formats.php" );
 require_once( trailingslashit( get_template_directory() ) . "/inc/other/theme-layout.php" );
 require_once( trailingslashit( get_template_directory() ) . "/inc/other/update.php" );
+if ( is_admin() ) {
+	require get_template_directory() . '/inc/admin/welcome-screen/welcome-screen.php';
+}
 
 if (!function_exists('latte_setup')) {
 	function latte_setup() {
