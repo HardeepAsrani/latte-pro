@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Latte\n"
-"POT-Creation-Date: 2016-02-09 04:29+0530\n"
-"PO-Revision-Date: 2016-02-09 04:29+0530\n"
+"POT-Creation-Date: 2016-04-13 11:43+0530\n"
+"PO-Revision-Date: 2016-04-13 11:43+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -29,8 +29,8 @@ msgstr ""
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:75 inc/customizer/customizer.php:1205
-#: inc/customizer/customizer.php:1283 inc/widgets/latte-testimonials.php:27
+#: comments.php:75 inc/customizer/customizer.php:1235
+#: inc/customizer/customizer.php:1319
 msgid "Name"
 msgstr ""
 
@@ -46,95 +46,46 @@ msgstr ""
 msgid "Comment"
 msgstr ""
 
-#: content-aside.php:4
+#: content-aside.php:6
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Aside published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
+msgid "Aside published by %1$s on %2$s"
 msgstr ""
 
-#: content-aside.php:23 content-audio.php:23 content-chat.php:26
-#: content-gallery.php:26 content-image.php:23 content-link.php:23
-#: content-quote.php:23 content-status.php:24 content-video.php:23
-#: content.php:23
+#: content-aside.php:29 content-chat.php:32 content-link.php:29
+#: content-quote.php:29 content-status.php:30 content-video.php:29
+#: content.php:29
 msgid "Categories:"
 msgstr ""
 
-#: content-aside.php:24 content-audio.php:24 content-chat.php:27
-#: content-gallery.php:27 content-image.php:24 content-link.php:24
-#: content-quote.php:24 content-status.php:25 content-video.php:24
-#: content.php:24
+#: content-aside.php:30 content-chat.php:33 content-link.php:30
+#: content-quote.php:30 content-status.php:31 content-video.php:30
+#: content.php:30
 msgid "Tags: "
 msgstr ""
 
-#: content-audio.php:4
+#: content-chat.php:6
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Audio published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
+msgid "Chat published by %1$s on %2$s"
 msgstr ""
 
-#: content-audio.php:38
+#: content-chat.php:49
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Audio published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
+msgid "Chat published by %1$s on %2$s | %3$s"
 msgstr ""
 
-#: content-chat.php:4
-#, php-format
-msgid ""
-"<div class=\"post-meta\">Chat published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
+#: content-chat.php:52 content-link.php:42 content-quote.php:47
+#: content-video.php:50 content.php:49
+msgid "Permalink"
 msgstr ""
 
-#: content-chat.php:41
+#: content-link.php:6
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Chat published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
+msgid "Link published by %1$s on %2$s"
 msgstr ""
 
-#: content-gallery.php:4
+#: content-link.php:39
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Gallery published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
-msgstr ""
-
-#: content-gallery.php:41
-#, php-format
-msgid ""
-"<div class=\"post-meta\">Gallery published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
-msgstr ""
-
-#: content-image.php:4
-#, php-format
-msgid ""
-"<div class=\"post-meta\">Image published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
-msgstr ""
-
-#: content-image.php:34
-#, php-format
-msgid ""
-"<div class=\"post-meta\">Image published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
-msgstr ""
-
-#: content-link.php:4
-#, php-format
-msgid ""
-"<div class=\"post-meta\">Link published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
-msgstr ""
-
-#: content-link.php:31
-#, php-format
-msgid ""
-"<div class=\"post-meta\">Link published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
+msgid "Link published by %1$s on %2$s | %3$s"
 msgstr ""
 
 #: content-none.php:4
@@ -147,261 +98,285 @@ msgstr ""
 msgid "But hey, you can always use our search form:"
 msgstr ""
 
-#: content-quote.php:4
+#: content-quote.php:6
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Quote published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
+msgid "Quote published by %1$s on %2$s"
 msgstr ""
 
-#: content-quote.php:36
+#: content-quote.php:44
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Quote published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
+msgid "Quote published by %1$s on %2$s | %3$s"
 msgstr ""
 
-#: content-status.php:4
+#: content-status.php:6
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Status published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
+msgid "Status published by %1$s on %2$s"
 msgstr ""
 
-#: content-video.php:4
+#: content-video.php:6
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Video published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
+msgid "Video published by %1$s on %2$s"
 msgstr ""
 
-#: content-video.php:39
+#: content-video.php:47
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Video published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
+msgid "Video published by %1$s on %2$s | %3$s"
 msgstr ""
 
-#: content.php:4
+#: content.php:6
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Published by <a href=\"%2$s\">%1$s</a> on <time>"
-"%3$s</time></div>"
+msgid "Published by %1$s on %2$s"
 msgstr ""
 
-#: content.php:38
+#: content.php:46
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Published by <a href=\"%2$s\">%1$s</a> on <time>"
-"%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
+msgid "Published by %1$s on %2$s | %3$s"
 msgstr ""
 
 #: footer.php:11
-msgid ""
-"<a target=\"_blank\" href=\"http://www.hardeepasrani.com/portfolio/latte/"
-"\">Latte</a><br/>Proudly powered by WordPress"
+msgid "Proudly powered by"
 msgstr ""
 
-#: functions.php:60 header.php:30
+#: functions.php:63 header.php:30
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:100
+#: functions.php:104
 msgid "Sidear"
 msgstr ""
 
-#: functions.php:109 inc/customizer/customizer.php:145
+#: functions.php:113 inc/customizer/customizer.php:150
 msgid "Services Section"
 msgstr ""
 
-#: functions.php:118 inc/customizer/customizer.php:159
+#: functions.php:122 inc/customizer/customizer.php:164
 msgid "Skills Section"
 msgstr ""
 
-#: functions.php:127 inc/customizer/customizer.php:173
+#: functions.php:131 inc/customizer/customizer.php:178
 msgid "Subscribe Section"
 msgstr ""
 
-#: functions.php:136 inc/customizer/customizer.php:180
+#: functions.php:140 inc/customizer/customizer.php:185
 msgid "Pricing Section"
 msgstr ""
 
-#: functions.php:145 inc/customizer/customizer.php:187
+#: functions.php:149 inc/customizer/customizer.php:192
 msgid "Testimonials Section"
 msgstr ""
 
-#: functions.php:208
+#: functions.php:250
 msgid "Home"
 msgstr ""
 
-#: functions.php:209 inc/customizer/customizer.php:667
-#: inc/customizer/customizer.php:696 inc/customizer/customizer.php:725
-#: inc/customizer/customizer.php:754 inc/customizer/customizer.php:783
-#: inc/customizer/customizer.php:812 inc/customizer/customizer.php:841
-#: inc/customizer/customizer.php:870 inc/customizer/customizer.php:899
-#: inc/customizer/customizer.php:928 inc/customizer/customizer.php:957
-#: inc/customizer/customizer.php:986 inc/customizer/customizer.php:1015
+#: functions.php:251 inc/customizer/customizer.php:688
+#: inc/customizer/customizer.php:717 inc/customizer/customizer.php:746
+#: inc/customizer/customizer.php:775 inc/customizer/customizer.php:804
+#: inc/customizer/customizer.php:833 inc/customizer/customizer.php:862
+#: inc/customizer/customizer.php:891 inc/customizer/customizer.php:920
+#: inc/customizer/customizer.php:949 inc/customizer/customizer.php:978
+#: inc/customizer/customizer.php:1007 inc/customizer/customizer.php:1036
 msgid "About"
 msgstr ""
 
-#: functions.php:210 inc/customizer/customizer.php:668
-#: inc/customizer/customizer.php:697 inc/customizer/customizer.php:726
-#: inc/customizer/customizer.php:755 inc/customizer/customizer.php:784
-#: inc/customizer/customizer.php:813 inc/customizer/customizer.php:842
-#: inc/customizer/customizer.php:871 inc/customizer/customizer.php:900
-#: inc/customizer/customizer.php:929 inc/customizer/customizer.php:958
-#: inc/customizer/customizer.php:987 inc/customizer/customizer.php:1016
-#: inc/customizer/customizer.php:1341 sections/social.php:2
+#: functions.php:252 inc/customizer/customizer.php:689
+#: inc/customizer/customizer.php:718 inc/customizer/customizer.php:747
+#: inc/customizer/customizer.php:776 inc/customizer/customizer.php:805
+#: inc/customizer/customizer.php:834 inc/customizer/customizer.php:863
+#: inc/customizer/customizer.php:892 inc/customizer/customizer.php:921
+#: inc/customizer/customizer.php:950 inc/customizer/customizer.php:979
+#: inc/customizer/customizer.php:1008 inc/customizer/customizer.php:1037
+#: inc/customizer/customizer.php:1379 sections/social.php:2
 msgid "Social"
 msgstr ""
 
-#: functions.php:211 inc/customizer/customizer.php:669
-#: inc/customizer/customizer.php:698 inc/customizer/customizer.php:727
-#: inc/customizer/customizer.php:756 inc/customizer/customizer.php:785
-#: inc/customizer/customizer.php:814 inc/customizer/customizer.php:843
-#: inc/customizer/customizer.php:872 inc/customizer/customizer.php:901
-#: inc/customizer/customizer.php:930 inc/customizer/customizer.php:959
-#: inc/customizer/customizer.php:988 inc/customizer/customizer.php:1017
-#: inc/customizer/customizer.php:1482 sections/services.php:2
+#: functions.php:253 inc/customizer/customizer.php:690
+#: inc/customizer/customizer.php:719 inc/customizer/customizer.php:748
+#: inc/customizer/customizer.php:777 inc/customizer/customizer.php:806
+#: inc/customizer/customizer.php:835 inc/customizer/customizer.php:864
+#: inc/customizer/customizer.php:893 inc/customizer/customizer.php:922
+#: inc/customizer/customizer.php:951 inc/customizer/customizer.php:980
+#: inc/customizer/customizer.php:1009 inc/customizer/customizer.php:1038
+#: inc/customizer/customizer.php:1524 sections/services.php:2
 msgid "Services"
 msgstr ""
 
-#: functions.php:212 inc/customizer/customizer.php:670
-#: inc/customizer/customizer.php:699 inc/customizer/customizer.php:728
-#: inc/customizer/customizer.php:757 inc/customizer/customizer.php:786
-#: inc/customizer/customizer.php:815 inc/customizer/customizer.php:844
-#: inc/customizer/customizer.php:873 inc/customizer/customizer.php:902
-#: inc/customizer/customizer.php:931 inc/customizer/customizer.php:960
-#: inc/customizer/customizer.php:989 inc/customizer/customizer.php:1018
+#: functions.php:254 inc/customizer/customizer.php:691
+#: inc/customizer/customizer.php:720 inc/customizer/customizer.php:749
+#: inc/customizer/customizer.php:778 inc/customizer/customizer.php:807
+#: inc/customizer/customizer.php:836 inc/customizer/customizer.php:865
+#: inc/customizer/customizer.php:894 inc/customizer/customizer.php:923
+#: inc/customizer/customizer.php:952 inc/customizer/customizer.php:981
+#: inc/customizer/customizer.php:1010 inc/customizer/customizer.php:1039
 msgid "Separator"
 msgstr ""
 
-#: functions.php:213 inc/customizer/customizer.php:671
-#: inc/customizer/customizer.php:700 inc/customizer/customizer.php:729
-#: inc/customizer/customizer.php:758 inc/customizer/customizer.php:787
-#: inc/customizer/customizer.php:816 inc/customizer/customizer.php:845
-#: inc/customizer/customizer.php:874 inc/customizer/customizer.php:903
-#: inc/customizer/customizer.php:932 inc/customizer/customizer.php:961
-#: inc/customizer/customizer.php:990 inc/customizer/customizer.php:1019
-#: inc/customizer/customizer.php:1778 sections/skills.php:2
+#: functions.php:255 inc/customizer/customizer.php:692
+#: inc/customizer/customizer.php:721 inc/customizer/customizer.php:750
+#: inc/customizer/customizer.php:779 inc/customizer/customizer.php:808
+#: inc/customizer/customizer.php:837 inc/customizer/customizer.php:866
+#: inc/customizer/customizer.php:895 inc/customizer/customizer.php:924
+#: inc/customizer/customizer.php:953 inc/customizer/customizer.php:982
+#: inc/customizer/customizer.php:1011 inc/customizer/customizer.php:1040
+#: inc/customizer/customizer.php:1838 sections/skills.php:2
 msgid "Skills"
 msgstr ""
 
-#: functions.php:214 inc/customizer/customizer.php:672
-#: inc/customizer/customizer.php:701 inc/customizer/customizer.php:730
-#: inc/customizer/customizer.php:759 inc/customizer/customizer.php:788
-#: inc/customizer/customizer.php:817 inc/customizer/customizer.php:846
-#: inc/customizer/customizer.php:875 inc/customizer/customizer.php:904
-#: inc/customizer/customizer.php:933 inc/customizer/customizer.php:962
-#: inc/customizer/customizer.php:991 inc/customizer/customizer.php:1020
-#: inc/customizer/customizer.php:1868 inc/other/portfolio.php:10
+#: functions.php:256 inc/customizer/customizer.php:693
+#: inc/customizer/customizer.php:722 inc/customizer/customizer.php:751
+#: inc/customizer/customizer.php:780 inc/customizer/customizer.php:809
+#: inc/customizer/customizer.php:838 inc/customizer/customizer.php:867
+#: inc/customizer/customizer.php:896 inc/customizer/customizer.php:925
+#: inc/customizer/customizer.php:954 inc/customizer/customizer.php:983
+#: inc/customizer/customizer.php:1012 inc/customizer/customizer.php:1041
+#: inc/customizer/customizer.php:1933 inc/other/portfolio.php:10
 #: inc/other/portfolio.php:11 inc/other/portfolio.php:12
 #: inc/other/portfolio.php:26 sections/portfolio.php:2
 msgid "Portfolio"
 msgstr ""
 
-#: functions.php:215 inc/customizer/customizer.php:673
-#: inc/customizer/customizer.php:702 inc/customizer/customizer.php:731
-#: inc/customizer/customizer.php:760 inc/customizer/customizer.php:789
-#: inc/customizer/customizer.php:818 inc/customizer/customizer.php:847
-#: inc/customizer/customizer.php:876 inc/customizer/customizer.php:905
-#: inc/customizer/customizer.php:934 inc/customizer/customizer.php:963
-#: inc/customizer/customizer.php:992 inc/customizer/customizer.php:1021
-#: inc/customizer/customizer.php:2046 sections/subscribe.php:2
+#: functions.php:257 inc/customizer/customizer.php:694
+#: inc/customizer/customizer.php:723 inc/customizer/customizer.php:752
+#: inc/customizer/customizer.php:781 inc/customizer/customizer.php:810
+#: inc/customizer/customizer.php:839 inc/customizer/customizer.php:868
+#: inc/customizer/customizer.php:897 inc/customizer/customizer.php:926
+#: inc/customizer/customizer.php:955 inc/customizer/customizer.php:984
+#: inc/customizer/customizer.php:1013 inc/customizer/customizer.php:1042
+#: inc/customizer/customizer.php:2121 sections/subscribe.php:2
 msgid "Subscribe"
 msgstr ""
 
-#: functions.php:216 inc/customizer/customizer.php:674
-#: inc/customizer/customizer.php:703 inc/customizer/customizer.php:732
-#: inc/customizer/customizer.php:761 inc/customizer/customizer.php:790
-#: inc/customizer/customizer.php:819 inc/customizer/customizer.php:848
-#: inc/customizer/customizer.php:877 inc/customizer/customizer.php:906
-#: inc/customizer/customizer.php:935 inc/customizer/customizer.php:964
-#: inc/customizer/customizer.php:993 inc/customizer/customizer.php:1022
-#: inc/customizer/customizer.php:2247 sections/pricing.php:2
+#: functions.php:258 inc/customizer/customizer.php:695
+#: inc/customizer/customizer.php:724 inc/customizer/customizer.php:753
+#: inc/customizer/customizer.php:782 inc/customizer/customizer.php:811
+#: inc/customizer/customizer.php:840 inc/customizer/customizer.php:869
+#: inc/customizer/customizer.php:898 inc/customizer/customizer.php:927
+#: inc/customizer/customizer.php:956 inc/customizer/customizer.php:985
+#: inc/customizer/customizer.php:1014 inc/customizer/customizer.php:1043
+#: inc/customizer/customizer.php:2335 sections/pricing.php:2
 msgid "Pricing"
 msgstr ""
 
-#: functions.php:217 inc/customizer/customizer.php:675
-#: inc/customizer/customizer.php:704 inc/customizer/customizer.php:733
-#: inc/customizer/customizer.php:762 inc/customizer/customizer.php:791
-#: inc/customizer/customizer.php:820 inc/customizer/customizer.php:849
-#: inc/customizer/customizer.php:878 inc/customizer/customizer.php:907
-#: inc/customizer/customizer.php:936 inc/customizer/customizer.php:965
-#: inc/customizer/customizer.php:994 inc/customizer/customizer.php:1023
-#: inc/customizer/customizer.php:2493 sections/testimonials.php:2
+#: functions.php:259 inc/customizer/customizer.php:696
+#: inc/customizer/customizer.php:725 inc/customizer/customizer.php:754
+#: inc/customizer/customizer.php:783 inc/customizer/customizer.php:812
+#: inc/customizer/customizer.php:841 inc/customizer/customizer.php:870
+#: inc/customizer/customizer.php:899 inc/customizer/customizer.php:928
+#: inc/customizer/customizer.php:957 inc/customizer/customizer.php:986
+#: inc/customizer/customizer.php:1015 inc/customizer/customizer.php:1044
+#: inc/customizer/customizer.php:2598 sections/testimonials.php:2
 msgid "Testimonials"
 msgstr ""
 
-#: functions.php:218 inc/customizer/customizer.php:676
-#: inc/customizer/customizer.php:705 inc/customizer/customizer.php:734
-#: inc/customizer/customizer.php:763 inc/customizer/customizer.php:792
-#: inc/customizer/customizer.php:821 inc/customizer/customizer.php:850
-#: inc/customizer/customizer.php:879 inc/customizer/customizer.php:908
-#: inc/customizer/customizer.php:937 inc/customizer/customizer.php:966
-#: inc/customizer/customizer.php:995 inc/customizer/customizer.php:1024
-#: inc/customizer/customizer.php:2608 sections/blogposts.php:2
+#: functions.php:260 inc/customizer/customizer.php:697
+#: inc/customizer/customizer.php:726 inc/customizer/customizer.php:755
+#: inc/customizer/customizer.php:784 inc/customizer/customizer.php:813
+#: inc/customizer/customizer.php:842 inc/customizer/customizer.php:871
+#: inc/customizer/customizer.php:900 inc/customizer/customizer.php:929
+#: inc/customizer/customizer.php:958 inc/customizer/customizer.php:987
+#: inc/customizer/customizer.php:1016 inc/customizer/customizer.php:1045
+#: inc/customizer/customizer.php:2720 sections/blogposts.php:2
 msgid "Blog"
 msgstr ""
 
-#: functions.php:219 inc/customizer/customizer.php:677
-#: inc/customizer/customizer.php:706 inc/customizer/customizer.php:735
-#: inc/customizer/customizer.php:764 inc/customizer/customizer.php:793
-#: inc/customizer/customizer.php:822 inc/customizer/customizer.php:851
-#: inc/customizer/customizer.php:880 inc/customizer/customizer.php:909
-#: inc/customizer/customizer.php:938 inc/customizer/customizer.php:967
-#: inc/customizer/customizer.php:996 inc/customizer/customizer.php:1025
+#: functions.php:261 inc/customizer/customizer.php:698
+#: inc/customizer/customizer.php:727 inc/customizer/customizer.php:756
+#: inc/customizer/customizer.php:785 inc/customizer/customizer.php:814
+#: inc/customizer/customizer.php:843 inc/customizer/customizer.php:872
+#: inc/customizer/customizer.php:901 inc/customizer/customizer.php:930
+#: inc/customizer/customizer.php:959 inc/customizer/customizer.php:988
+#: inc/customizer/customizer.php:1017 inc/customizer/customizer.php:1046
 msgid "Map"
 msgstr ""
 
-#: functions.php:220 inc/customizer/customizer.php:678
-#: inc/customizer/customizer.php:707 inc/customizer/customizer.php:736
-#: inc/customizer/customizer.php:765 inc/customizer/customizer.php:794
-#: inc/customizer/customizer.php:823 inc/customizer/customizer.php:852
-#: inc/customizer/customizer.php:881 inc/customizer/customizer.php:910
-#: inc/customizer/customizer.php:939 inc/customizer/customizer.php:968
-#: inc/customizer/customizer.php:997 inc/customizer/customizer.php:1026
-#: inc/customizer/customizer.php:2811 sections/contact.php:2
+#: functions.php:262 inc/customizer/customizer.php:699
+#: inc/customizer/customizer.php:728 inc/customizer/customizer.php:757
+#: inc/customizer/customizer.php:786 inc/customizer/customizer.php:815
+#: inc/customizer/customizer.php:844 inc/customizer/customizer.php:873
+#: inc/customizer/customizer.php:902 inc/customizer/customizer.php:931
+#: inc/customizer/customizer.php:960 inc/customizer/customizer.php:989
+#: inc/customizer/customizer.php:1018 inc/customizer/customizer.php:1047
+#: inc/customizer/customizer.php:2947 sections/contact.php:2
 msgid "Contact"
 msgstr ""
 
-#: functions.php:237
+#: functions.php:279
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:237 functions.php:261
+#: functions.php:279 functions.php:303
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:249
+#: functions.php:291
 #, php-format
 msgid "<span>%s </span><span class=\"says\">says:</span>"
 msgstr ""
 
-#: functions.php:252
+#: functions.php:294
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:257
+#: functions.php:299
 msgid "l, F j, Y, g:i a"
 msgstr ""
 
-#: functions.php:258
+#: functions.php:300
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: header.php:26 inc/customizer/customizer.php:245
+#: header.php:26 inc/customizer/customizer.php:258
 msgid "Menu"
 msgstr ""
 
-#: inc/customizer/customizer.php:65
+#: inc/admin/welcome-screen/content/content.php:22
+#, php-format
+msgid "What's new in %s?"
+msgstr ""
+
+#: inc/admin/welcome-screen/content/content.php:23
+msgid "Take a look at everything that's new in the latest version:"
+msgstr ""
+
+#: inc/admin/welcome-screen/content/content.php:25
+msgid ""
+"<strong>Customizer Improvements:</strong> Preview your changes without "
+"refreshing Customizer."
+msgstr ""
+
+#: inc/admin/welcome-screen/content/content.php:26
+msgid ""
+"<strong>Welcome Panel:</strong> This version adds a Welcome Panel to the "
+"theme which tells you everything that you need to know about the theme."
+msgstr ""
+
+#: inc/admin/welcome-screen/content/content.php:33
+msgid ""
+"WordPress 4.5 update broke some little things so we had to push this update "
+"as soon as possible. Originally we were planning to add more features but "
+"this update is out way before it was supposed to be. Hope you like the new "
+"features. :)"
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:23
+#, php-format
+msgid ""
+"Thanks for choosing Latte! You can read hints and tips on how get the most "
+"out of your new theme on the %swelcome screen%s."
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:24
+msgid "Get started with Latte"
+msgstr ""
+
+#: inc/customizer/customizer.php:70
 msgid ""
 "The main content of this section is customizable in: Portfolio > Add New, in "
 "your WordPress dashboard."
 msgstr ""
 
-#: inc/customizer/customizer.php:70
+#: inc/customizer/customizer.php:75
 msgid ""
 "The main content of this section is customizable in: Customize > Subscribe "
 "Section > Subscribe Section. There you must add the \"SendinBlue Newsletter."
@@ -409,731 +384,733 @@ msgid ""
 "plugins/mailin/\" target=\"_blank\">SendinBlue plugin</a>."
 msgstr ""
 
-#: inc/customizer/customizer.php:72
+#: inc/customizer/customizer.php:77
 msgid ""
 "After installing the plugin, you need to navigate to Sendinblue > Home, and "
 "configure the plugin."
 msgstr ""
 
-#: inc/customizer/customizer.php:74
+#: inc/customizer/customizer.php:79
 msgid ""
 "And then you need to navigate to its Settings, and use the following in "
 "Subscription form:"
 msgstr ""
 
-#: inc/customizer/customizer.php:77
+#: inc/customizer/customizer.php:82
 msgid ""
 "<input placeholder=\"Email Address\" class=\"sib-email-area\" name=\"email\" "
 "required=\"required\" type=\"email\">"
 msgstr ""
 
-#: inc/customizer/customizer.php:78
+#: inc/customizer/customizer.php:83
 msgid ""
 "<input placeholder=\"Name\" class=\"sib-NAME-area\" name=\"NAME\" type=\"text"
 "\">"
 msgstr ""
 
-#: inc/customizer/customizer.php:79
+#: inc/customizer/customizer.php:84
 msgid ""
 "<input class=\"sib-default-btn btn btn-lg btn-success\" value=\"Subscribe\" "
 "type=\"submit\">"
 msgstr ""
 
-#: inc/customizer/customizer.php:85
+#: inc/customizer/customizer.php:90
 msgid ""
 "The main content of this section is customizable in: Posts > Add New, in "
 "your WordPress dashboard."
 msgstr ""
 
-#: inc/customizer/customizer.php:90
+#: inc/customizer/customizer.php:95
 msgid ""
 "In order to add a Contact form to your front page, you will have to install "
 "Contact form 7 plugin to your WordPress, from Plugins > Add New, in your "
 "WordPress dashboard."
 msgstr ""
 
-#: inc/customizer/customizer.php:92
+#: inc/customizer/customizer.php:97
 msgid ""
 "After installing the plugin, create a new form and use the following code in "
 "it:."
 msgstr ""
 
-#: inc/customizer/customizer.php:96
+#: inc/customizer/customizer.php:101
 msgid "[text* name id:name class:form-control class:name placeholder \"Name\"]"
 msgstr ""
 
-#: inc/customizer/customizer.php:99
+#: inc/customizer/customizer.php:104
 msgid ""
 "[email* email- id:email class:form-control class:email placeholder \"Email\"]"
 msgstr ""
 
-#: inc/customizer/customizer.php:102
+#: inc/customizer/customizer.php:107
 msgid ""
 "[text* subject id:subject class:form-control class:subject placeholder "
 "\"Subject\"]"
 msgstr ""
 
-#: inc/customizer/customizer.php:105
+#: inc/customizer/customizer.php:110
 msgid ""
 "[textarea* message id:message class:form-control class:message placeholder "
 "\"Hi,\"]"
 msgstr ""
 
-#: inc/customizer/customizer.php:108
+#: inc/customizer/customizer.php:113
 msgid "[submit id:submit class:button \"Send\"]"
 msgstr ""
 
-#: inc/customizer/customizer.php:117
+#: inc/customizer/customizer.php:122
 msgid "General Settings"
 msgstr ""
 
-#: inc/customizer/customizer.php:118
+#: inc/customizer/customizer.php:123
 msgid "This section allows you to configure general settings."
 msgstr ""
 
-#: inc/customizer/customizer.php:124
+#: inc/customizer/customizer.php:129
 msgid "Intro Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:125
+#: inc/customizer/customizer.php:130
 msgid "This section allows you to configure Intro section."
 msgstr ""
 
-#: inc/customizer/customizer.php:131
+#: inc/customizer/customizer.php:136
 msgid "About Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:132
+#: inc/customizer/customizer.php:137
 msgid "This section allows you to configure About section."
 msgstr ""
 
-#: inc/customizer/customizer.php:138
+#: inc/customizer/customizer.php:143
 msgid "Social Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:139
+#: inc/customizer/customizer.php:144
 msgid "This section allows you to configure Social section."
 msgstr ""
 
-#: inc/customizer/customizer.php:146
+#: inc/customizer/customizer.php:151
 msgid "This section allows you to configure Services section."
 msgstr ""
 
-#: inc/customizer/customizer.php:152
+#: inc/customizer/customizer.php:157
 msgid "Separator Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:153
+#: inc/customizer/customizer.php:158
 msgid "This section allows you to configure Separator section."
 msgstr ""
 
-#: inc/customizer/customizer.php:160
+#: inc/customizer/customizer.php:165
 msgid "This section allows you to configure Skills section."
 msgstr ""
 
-#: inc/customizer/customizer.php:166
+#: inc/customizer/customizer.php:171
 msgid "Portfolio Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:167
+#: inc/customizer/customizer.php:172
 msgid "This section allows you to configure Portfolio section."
 msgstr ""
 
-#: inc/customizer/customizer.php:174
+#: inc/customizer/customizer.php:179
 msgid "This section allows you to configure Subscribe section."
 msgstr ""
 
-#: inc/customizer/customizer.php:181
+#: inc/customizer/customizer.php:186
 msgid "This section allows you to configure Pricing section."
 msgstr ""
 
-#: inc/customizer/customizer.php:188
+#: inc/customizer/customizer.php:193
 msgid "This section allows you to configure Testimonials section."
 msgstr ""
 
-#: inc/customizer/customizer.php:194
+#: inc/customizer/customizer.php:199
 msgid "Blog Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:195
+#: inc/customizer/customizer.php:200
 msgid "This section allows you to configure Blog section."
 msgstr ""
 
-#: inc/customizer/customizer.php:201
+#: inc/customizer/customizer.php:206
 msgid "Map Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:202
+#: inc/customizer/customizer.php:207
 msgid "This section allows you to configure Map section."
 msgstr ""
 
-#: inc/customizer/customizer.php:208
+#: inc/customizer/customizer.php:213
 msgid "Contact Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:209
+#: inc/customizer/customizer.php:214
 msgid "This section allows you to configure Contact section."
 msgstr ""
 
-#: inc/customizer/customizer.php:215
+#: inc/customizer/customizer.php:220
 msgid "Blog Page"
 msgstr ""
 
-#: inc/customizer/customizer.php:216
+#: inc/customizer/customizer.php:221
 msgid "This section allows you to configure Blog page."
 msgstr ""
 
-#: inc/customizer/customizer.php:223 inc/customizer/customizer.php:572
+#: inc/customizer/customizer.php:228 inc/customizer/customizer.php:588
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:229
+#: inc/customizer/customizer.php:234
 msgid "Header"
 msgstr ""
 
-#: inc/customizer/customizer.php:239
+#: inc/customizer/customizer.php:252
 msgid "Preloader"
 msgstr ""
 
-#: inc/customizer/customizer.php:251
+#: inc/customizer/customizer.php:264
 msgid "Scroll Animations"
 msgstr ""
 
-#: inc/customizer/customizer.php:257
+#: inc/customizer/customizer.php:270
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer/customizer.php:263
+#: inc/customizer/customizer.php:276
 msgid "Sections Order"
 msgstr ""
 
-#: inc/customizer/customizer.php:264
+#: inc/customizer/customizer.php:277
 msgid "Here is where you can rearrange the homepage sections."
 msgstr ""
 
-#: inc/customizer/customizer.php:269 inc/customizer/customizer.php:287
-#: inc/customizer/customizer.php:305 inc/customizer/customizer.php:323
-#: inc/customizer/customizer.php:335 inc/customizer/customizer.php:353
-#: inc/customizer/customizer.php:365 inc/customizer/customizer.php:383
-#: inc/customizer/customizer.php:401 inc/customizer/customizer.php:413
-#: inc/customizer/customizer.php:425 inc/customizer/customizer.php:443
-#: inc/customizer/customizer.php:461
+#: inc/customizer/customizer.php:282 inc/customizer/customizer.php:300
+#: inc/customizer/customizer.php:318 inc/customizer/customizer.php:336
+#: inc/customizer/customizer.php:348 inc/customizer/customizer.php:366
+#: inc/customizer/customizer.php:378 inc/customizer/customizer.php:396
+#: inc/customizer/customizer.php:414 inc/customizer/customizer.php:426
+#: inc/customizer/customizer.php:438 inc/customizer/customizer.php:456
+#: inc/customizer/customizer.php:474
 msgid "Settings"
 msgstr ""
 
-#: inc/customizer/customizer.php:275 inc/customizer/customizer.php:293
-#: inc/customizer/customizer.php:311 inc/customizer/customizer.php:341
-#: inc/customizer/customizer.php:371 inc/customizer/customizer.php:431
-#: inc/customizer/customizer.php:449 inc/customizer/customizer.php:467
-#: inc/customizer/customizer.php:622 inc/customizer/customizer.php:1230
-#: inc/customizer/customizer.php:1309 inc/customizer/customizer.php:1642
+#: inc/customizer/customizer.php:288 inc/customizer/customizer.php:306
+#: inc/customizer/customizer.php:324 inc/customizer/customizer.php:354
+#: inc/customizer/customizer.php:384 inc/customizer/customizer.php:444
+#: inc/customizer/customizer.php:462 inc/customizer/customizer.php:480
+#: inc/customizer/customizer.php:641 inc/customizer/customizer.php:1262
+#: inc/customizer/customizer.php:1347 inc/customizer/customizer.php:1695
 msgid "Content"
 msgstr ""
 
-#: inc/customizer/customizer.php:281 inc/customizer/customizer.php:299
-#: inc/customizer/customizer.php:317 inc/customizer/customizer.php:329
-#: inc/customizer/customizer.php:347 inc/customizer/customizer.php:359
-#: inc/customizer/customizer.php:377 inc/customizer/customizer.php:395
-#: inc/customizer/customizer.php:407 inc/customizer/customizer.php:419
-#: inc/customizer/customizer.php:437 inc/customizer/customizer.php:455
-#: inc/customizer/customizer.php:473 inc/customizer/customizer.php:485
+#: inc/customizer/customizer.php:294 inc/customizer/customizer.php:312
+#: inc/customizer/customizer.php:330 inc/customizer/customizer.php:342
+#: inc/customizer/customizer.php:360 inc/customizer/customizer.php:372
+#: inc/customizer/customizer.php:390 inc/customizer/customizer.php:408
+#: inc/customizer/customizer.php:420 inc/customizer/customizer.php:432
+#: inc/customizer/customizer.php:450 inc/customizer/customizer.php:468
+#: inc/customizer/customizer.php:486 inc/customizer/customizer.php:498
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer/customizer.php:389
+#: inc/customizer/customizer.php:402
 msgid "Instructions"
 msgstr ""
 
-#: inc/customizer/customizer.php:479 inc/customizer/customizer.php:3007
+#: inc/customizer/customizer.php:492 inc/customizer/customizer.php:3156
 #: inc/other/theme-layout.php:8
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer/customizer.php:496
+#: inc/customizer/customizer.php:509
 msgid "Disable Preloader"
 msgstr ""
 
-#: inc/customizer/customizer.php:508
+#: inc/customizer/customizer.php:521
 msgid "Preloader Image"
 msgstr ""
 
-#: inc/customizer/customizer.php:521
+#: inc/customizer/customizer.php:534
 msgid "Preloader Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:534
+#: inc/customizer/customizer.php:547
 msgid "Disable Menu"
 msgstr ""
 
-#: inc/customizer/customizer.php:546 inc/customizer/customizer.php:1451
-#: inc/customizer/customizer.php:1566 inc/widgets/latte-services.php:29
+#: inc/customizer/customizer.php:560 inc/customizer/customizer.php:1493
+#: inc/customizer/customizer.php:1615
 msgid "Icon"
 msgstr ""
 
-#: inc/customizer/customizer.php:559
+#: inc/customizer/customizer.php:574
 msgid "Icon Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:585
+#: inc/customizer/customizer.php:602
 msgid "Header Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:598 inc/customizer/customizer.php:649
-#: inc/customizer/customizer.php:1605 inc/customizer/customizer.php:1695
-#: inc/customizer/customizer.php:2942 inc/widgets/latte-services.php:47
+#: inc/customizer/customizer.php:616 inc/customizer/customizer.php:670
+#: inc/customizer/customizer.php:1657 inc/customizer/customizer.php:1751
+#: inc/customizer/customizer.php:3087
 msgid "Text"
 msgstr ""
 
-#: inc/customizer/customizer.php:611
+#: inc/customizer/customizer.php:629
 msgid "Disable Scroll Animations"
 msgstr ""
 
-#: inc/customizer/customizer.php:636
+#: inc/customizer/customizer.php:656
 msgid "Footer Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:663
+#: inc/customizer/customizer.php:684
 msgid "First Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:666 inc/customizer/customizer.php:695
-#: inc/customizer/customizer.php:724 inc/customizer/customizer.php:753
-#: inc/customizer/customizer.php:782 inc/customizer/customizer.php:811
-#: inc/customizer/customizer.php:840 inc/customizer/customizer.php:869
-#: inc/customizer/customizer.php:898 inc/customizer/customizer.php:927
-#: inc/customizer/customizer.php:956 inc/customizer/customizer.php:985
-#: inc/customizer/customizer.php:1014
+#: inc/customizer/customizer.php:687 inc/customizer/customizer.php:716
+#: inc/customizer/customizer.php:745 inc/customizer/customizer.php:774
+#: inc/customizer/customizer.php:803 inc/customizer/customizer.php:832
+#: inc/customizer/customizer.php:861 inc/customizer/customizer.php:890
+#: inc/customizer/customizer.php:919 inc/customizer/customizer.php:948
+#: inc/customizer/customizer.php:977 inc/customizer/customizer.php:1006
+#: inc/customizer/customizer.php:1035
 msgid "Intro"
 msgstr ""
 
-#: inc/customizer/customizer.php:692
+#: inc/customizer/customizer.php:713
 msgid "Second Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:721
+#: inc/customizer/customizer.php:742
 msgid "Third Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:750
+#: inc/customizer/customizer.php:771
 msgid "Fourth Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:779
+#: inc/customizer/customizer.php:800
 msgid "Fifth Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:808
+#: inc/customizer/customizer.php:829
 msgid "Sixth Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:837
+#: inc/customizer/customizer.php:858
 msgid "Seventh Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:866
+#: inc/customizer/customizer.php:887
 msgid "Eighth Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:895
+#: inc/customizer/customizer.php:916
 msgid "Ninth Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:924
+#: inc/customizer/customizer.php:945
 msgid "Tenth Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:953
+#: inc/customizer/customizer.php:974
 msgid "Eleventh Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:982
+#: inc/customizer/customizer.php:1003
 msgid "Twelfth Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:1011
+#: inc/customizer/customizer.php:1032
 msgid "Thirteenth Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:1039
+#: inc/customizer/customizer.php:1060
 msgid "Disable Intro Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:1051 inc/customizer/customizer.php:1153
-#: inc/customizer/customizer.php:1334 inc/customizer/customizer.php:1475
-#: inc/customizer/customizer.php:1630 inc/customizer/customizer.php:1771
-#: inc/customizer/customizer.php:1861 inc/customizer/customizer.php:2039
-#: inc/customizer/customizer.php:2240 inc/customizer/customizer.php:2486
-#: inc/customizer/customizer.php:2601 inc/customizer/customizer.php:2804
+#: inc/customizer/customizer.php:1072 inc/customizer/customizer.php:1179
+#: inc/customizer/customizer.php:1372 inc/customizer/customizer.php:1517
+#: inc/customizer/customizer.php:1682 inc/customizer/customizer.php:1831
+#: inc/customizer/customizer.php:1926 inc/customizer/customizer.php:2114
+#: inc/customizer/customizer.php:2328 inc/customizer/customizer.php:2591
+#: inc/customizer/customizer.php:2713 inc/customizer/customizer.php:2940
 msgid "Background Image"
 msgstr ""
 
-#: inc/customizer/customizer.php:1064
+#: inc/customizer/customizer.php:1086
 msgid "Avatar Image"
 msgstr ""
 
-#: inc/customizer/customizer.php:1077
+#: inc/customizer/customizer.php:1099
 msgid "Scroll Anchor"
 msgstr ""
 
-#: inc/customizer/customizer.php:1090 inc/customizer/customizer.php:1244
-#: inc/customizer/customizer.php:1425 inc/customizer/customizer.php:1514
-#: inc/customizer/customizer.php:1682 inc/customizer/customizer.php:1810
-#: inc/customizer/customizer.php:1922 inc/customizer/customizer.php:2086
-#: inc/customizer/customizer.php:2279 inc/customizer/customizer.php:2525
-#: inc/customizer/customizer.php:2662 inc/customizer/customizer.php:2778
-#: inc/customizer/customizer.php:2864
+#: inc/customizer/customizer.php:1113 inc/customizer/customizer.php:1277
+#: inc/customizer/customizer.php:1465 inc/customizer/customizer.php:1559
+#: inc/customizer/customizer.php:1737 inc/customizer/customizer.php:1873
+#: inc/customizer/customizer.php:1990 inc/customizer/customizer.php:2164
+#: inc/customizer/customizer.php:2370 inc/customizer/customizer.php:2633
+#: inc/customizer/customizer.php:2777 inc/customizer/customizer.php:2914
+#: inc/customizer/customizer.php:3003
 msgid "Background Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:1103 inc/customizer/customizer.php:1257
-#: inc/customizer/customizer.php:1438 inc/customizer/customizer.php:1527
-#: inc/customizer/customizer.php:1579 inc/customizer/customizer.php:1823
-#: inc/customizer/customizer.php:1935 inc/customizer/customizer.php:2099
-#: inc/customizer/customizer.php:2292 inc/customizer/customizer.php:2538
-#: inc/customizer/customizer.php:2675 inc/customizer/customizer.php:2877
-#: inc/customizer/customizer.php:2903 inc/customizer/customizer.php:2929
-#: inc/widgets/latte-pricing.php:23 inc/widgets/latte-services.php:25
+#: inc/customizer/customizer.php:1127 inc/customizer/customizer.php:1291
+#: inc/customizer/customizer.php:1479 inc/customizer/customizer.php:1573
+#: inc/customizer/customizer.php:1629 inc/customizer/customizer.php:1887
+#: inc/customizer/customizer.php:2004 inc/customizer/customizer.php:2178
+#: inc/customizer/customizer.php:2384 inc/customizer/customizer.php:2647
+#: inc/customizer/customizer.php:2791 inc/customizer/customizer.php:3017
+#: inc/customizer/customizer.php:3045 inc/customizer/customizer.php:3073
 msgid "Title"
 msgstr ""
 
-#: inc/customizer/customizer.php:1116 inc/customizer/customizer.php:2916
+#: inc/customizer/customizer.php:1141 inc/customizer/customizer.php:3059
 msgid "Description"
 msgstr ""
 
-#: inc/customizer/customizer.php:1129
+#: inc/customizer/customizer.php:1155
 msgid "Anchor"
 msgstr ""
 
-#: inc/customizer/customizer.php:1142
+#: inc/customizer/customizer.php:1168
 msgid "Disable About Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:1160 sections/about.php:2
+#: inc/customizer/customizer.php:1186 sections/about.php:2
 msgid "About Me"
 msgstr ""
 
-#: inc/customizer/customizer.php:1166 inc/customizer/customizer.php:1347
-#: inc/customizer/customizer.php:1488 inc/customizer/customizer.php:1784
-#: inc/customizer/customizer.php:1874 inc/customizer/customizer.php:2052
-#: inc/customizer/customizer.php:2253 inc/customizer/customizer.php:2499
-#: inc/customizer/customizer.php:2614 inc/customizer/customizer.php:2817
+#: inc/customizer/customizer.php:1193 inc/customizer/customizer.php:1386
+#: inc/customizer/customizer.php:1531 inc/customizer/customizer.php:1845
+#: inc/customizer/customizer.php:1940 inc/customizer/customizer.php:2128
+#: inc/customizer/customizer.php:2342 inc/customizer/customizer.php:2605
+#: inc/customizer/customizer.php:2727 inc/customizer/customizer.php:2954
 msgid "Section Title"
 msgstr ""
 
-#: inc/customizer/customizer.php:1173 sections/about.php:3
+#: inc/customizer/customizer.php:1200 sections/about.php:3
 msgid "Here are some things that you should know about me."
 msgstr ""
 
-#: inc/customizer/customizer.php:1179 inc/customizer/customizer.php:1501
-#: inc/customizer/customizer.php:1797 inc/customizer/customizer.php:1887
-#: inc/customizer/customizer.php:2065 inc/customizer/customizer.php:2266
-#: inc/customizer/customizer.php:2512 inc/customizer/customizer.php:2627
-#: inc/customizer/customizer.php:2830
+#: inc/customizer/customizer.php:1207 inc/customizer/customizer.php:1545
+#: inc/customizer/customizer.php:1859 inc/customizer/customizer.php:1954
+#: inc/customizer/customizer.php:2142 inc/customizer/customizer.php:2356
+#: inc/customizer/customizer.php:2619 inc/customizer/customizer.php:2741
+#: inc/customizer/customizer.php:2968
 msgid "Section Subtitle"
 msgstr ""
 
-#: inc/customizer/customizer.php:1192
+#: inc/customizer/customizer.php:1221
 msgid "Image"
 msgstr ""
 
-#: inc/customizer/customizer.php:1199 sections/about.php:5
+#: inc/customizer/customizer.php:1228 sections/about.php:5
 msgid "John Doe"
 msgstr ""
 
-#: inc/customizer/customizer.php:1212 sections/about.php:6
+#: inc/customizer/customizer.php:1242 sections/about.php:6
 msgid "Web Designer"
 msgstr ""
 
-#: inc/customizer/customizer.php:1218 inc/customizer/customizer.php:1296
+#: inc/customizer/customizer.php:1249 inc/customizer/customizer.php:1333
 msgid "Position"
 msgstr ""
 
-#: inc/customizer/customizer.php:1270 inc/customizer/customizer.php:1540
-#: inc/customizer/customizer.php:1836 inc/customizer/customizer.php:1948
-#: inc/customizer/customizer.php:2112 inc/customizer/customizer.php:2305
-#: inc/customizer/customizer.php:2551 inc/customizer/customizer.php:2688
-#: inc/customizer/customizer.php:2890 inc/widgets/latte-pricing.php:27
+#: inc/customizer/customizer.php:1305 inc/customizer/customizer.php:1587
+#: inc/customizer/customizer.php:1901 inc/customizer/customizer.php:2018
+#: inc/customizer/customizer.php:2192 inc/customizer/customizer.php:2398
+#: inc/customizer/customizer.php:2661 inc/customizer/customizer.php:2805
+#: inc/customizer/customizer.php:3031
 msgid "Subtitle"
 msgstr ""
 
-#: inc/customizer/customizer.php:1322
+#: inc/customizer/customizer.php:1360
 msgid "Disable Social Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:1360
+#: inc/customizer/customizer.php:1399
 msgid "Facebook URL"
 msgstr ""
 
-#: inc/customizer/customizer.php:1373
+#: inc/customizer/customizer.php:1412
 msgid "Twitter URL"
 msgstr ""
 
-#: inc/customizer/customizer.php:1386
+#: inc/customizer/customizer.php:1425
 msgid "Google + URL"
 msgstr ""
 
-#: inc/customizer/customizer.php:1399
+#: inc/customizer/customizer.php:1438
 msgid "Instagram URL"
 msgstr ""
 
-#: inc/customizer/customizer.php:1412
+#: inc/customizer/customizer.php:1451
 msgid "Github URL"
 msgstr ""
 
-#: inc/customizer/customizer.php:1464
+#: inc/customizer/customizer.php:1506
 msgid "Disable Services Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:1495 sections/services.php:3
+#: inc/customizer/customizer.php:1538 sections/services.php:3
 msgid "Things that I work on."
 msgstr ""
 
-#: inc/customizer/customizer.php:1553
+#: inc/customizer/customizer.php:1601
 msgid "Icon/Title Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:1592
+#: inc/customizer/customizer.php:1643
 msgid "Text Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:1618
+#: inc/customizer/customizer.php:1670
 msgid "Disable Separator Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:1650 sections/separator.php:3
+#: inc/customizer/customizer.php:1703 sections/separator.php:3
 msgid "Join Now!"
 msgstr ""
 
-#: inc/customizer/customizer.php:1656
+#: inc/customizer/customizer.php:1710
 msgid "Button Label"
 msgstr ""
 
-#: inc/customizer/customizer.php:1669 inc/widgets/latte-pricing.php:43
+#: inc/customizer/customizer.php:1723
 msgid "Button Link"
 msgstr ""
 
-#: inc/customizer/customizer.php:1708 inc/customizer/customizer.php:2422
-#: inc/widgets/latte-pricing.php:39
+#: inc/customizer/customizer.php:1765 inc/customizer/customizer.php:2524
 msgid "Button Text"
 msgstr ""
 
-#: inc/customizer/customizer.php:1721 inc/customizer/customizer.php:2461
+#: inc/customizer/customizer.php:1779 inc/customizer/customizer.php:2566
 msgid "Button Text Hover"
 msgstr ""
 
-#: inc/customizer/customizer.php:1734 inc/customizer/customizer.php:2396
+#: inc/customizer/customizer.php:1793 inc/customizer/customizer.php:2496
 msgid "Button Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:1747 inc/customizer/customizer.php:2435
+#: inc/customizer/customizer.php:1807 inc/customizer/customizer.php:2538
 msgid "Button Background Hover"
 msgstr ""
 
-#: inc/customizer/customizer.php:1760
+#: inc/customizer/customizer.php:1820
 msgid "Disable Skills Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:1791 sections/skills.php:3
+#: inc/customizer/customizer.php:1852 sections/skills.php:3
 msgid "Things that I'm good at."
 msgstr ""
 
-#: inc/customizer/customizer.php:1850
+#: inc/customizer/customizer.php:1915
 msgid "Disable Portfolio Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:1881 sections/portfolio.php:3
+#: inc/customizer/customizer.php:1947 sections/portfolio.php:3
 msgid "Some of my recent work."
 msgstr ""
 
-#: inc/customizer/customizer.php:1900 inc/customizer/customizer.php:2640
+#: inc/customizer/customizer.php:1967 inc/customizer/customizer.php:2754
 msgid "Number of Items"
 msgstr ""
 
-#: inc/customizer/customizer.php:1961 inc/customizer/customizer.php:2701
+#: inc/customizer/customizer.php:2032 inc/customizer/customizer.php:2819
 msgid "Item Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:1974
+#: inc/customizer/customizer.php:2046
 msgid "Item Title"
 msgstr ""
 
-#: inc/customizer/customizer.php:1987
+#: inc/customizer/customizer.php:2060
 msgid "Item Category"
 msgstr ""
 
-#: inc/customizer/customizer.php:2000
+#: inc/customizer/customizer.php:2074
 msgid "Item Hover Box"
 msgstr ""
 
-#: inc/customizer/customizer.php:2013
+#: inc/customizer/customizer.php:2088
 msgid "Item Hover Box Icon"
 msgstr ""
 
-#: inc/customizer/customizer.php:2027
+#: inc/customizer/customizer.php:2102
 msgid "Disable Subscribe Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:2059 sections/subscribe.php:3
+#: inc/customizer/customizer.php:2135 sections/subscribe.php:3
 msgid "I won't spam you, promise!"
 msgstr ""
 
-#: inc/customizer/customizer.php:2125
+#: inc/customizer/customizer.php:2206
 msgid "Section Text"
 msgstr ""
 
-#: inc/customizer/customizer.php:2138
+#: inc/customizer/customizer.php:2220
 msgid "SendinBlue Field Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:2151
+#: inc/customizer/customizer.php:2234
 msgid "SendinBlue Field Text"
 msgstr ""
 
-#: inc/customizer/customizer.php:2164
+#: inc/customizer/customizer.php:2248
 msgid "SendinBlue Field Border"
 msgstr ""
 
-#: inc/customizer/customizer.php:2177
+#: inc/customizer/customizer.php:2262
 msgid "SendinBlue Button Text"
 msgstr ""
 
-#: inc/customizer/customizer.php:2190
+#: inc/customizer/customizer.php:2276
 msgid "SendinBlue Button Text Hover"
 msgstr ""
 
-#: inc/customizer/customizer.php:2203
+#: inc/customizer/customizer.php:2290
 msgid "SendinBlue Button Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:2216
+#: inc/customizer/customizer.php:2304
 msgid "SendinBlue Button Background Hover"
 msgstr ""
 
-#: inc/customizer/customizer.php:2229
+#: inc/customizer/customizer.php:2317
 msgid "Disable Pricing Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:2260 sections/pricing.php:3
+#: inc/customizer/customizer.php:2349 sections/pricing.php:3
 msgid "Order before it's too late!"
 msgstr ""
 
-#: inc/customizer/customizer.php:2318
+#: inc/customizer/customizer.php:2412
 msgid "Table Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:2331
+#: inc/customizer/customizer.php:2426
 msgid "Table Title"
 msgstr ""
 
-#: inc/customizer/customizer.php:2344
+#: inc/customizer/customizer.php:2440
 msgid "Table Subitle"
 msgstr ""
 
-#: inc/customizer/customizer.php:2357
+#: inc/customizer/customizer.php:2454
 msgid "Price Tag Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:2370
+#: inc/customizer/customizer.php:2468
 msgid "Price Tag Text"
 msgstr ""
 
-#: inc/customizer/customizer.php:2383
+#: inc/customizer/customizer.php:2482
 msgid "Features"
 msgstr ""
 
-#: inc/customizer/customizer.php:2409
+#: inc/customizer/customizer.php:2510
 msgid "Button Border"
 msgstr ""
 
-#: inc/customizer/customizer.php:2448
+#: inc/customizer/customizer.php:2552
 msgid "Button Border Hover"
 msgstr ""
 
-#: inc/customizer/customizer.php:2474
+#: inc/customizer/customizer.php:2579
 msgid "Disable Testimonials Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:2506 sections/testimonials.php:3
+#: inc/customizer/customizer.php:2612 sections/testimonials.php:3
 msgid "Here's what the clients have to say."
 msgstr ""
 
-#: inc/customizer/customizer.php:2564
+#: inc/customizer/customizer.php:2675
 msgid "Testimonial Text"
 msgstr ""
 
-#: inc/customizer/customizer.php:2577
+#: inc/customizer/customizer.php:2689
 msgid "Testimonial Meta"
 msgstr ""
 
-#: inc/customizer/customizer.php:2590
+#: inc/customizer/customizer.php:2702
 msgid "Disable Blog Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:2621 sections/blogposts.php:3
+#: inc/customizer/customizer.php:2734 sections/blogposts.php:3
 msgid "My thoughts."
 msgstr ""
 
-#: inc/customizer/customizer.php:2714
+#: inc/customizer/customizer.php:2833
 msgid "Item Text"
 msgstr ""
 
-#: inc/customizer/customizer.php:2727
+#: inc/customizer/customizer.php:2847
+msgid "Item Meta Text"
+msgstr ""
+
+#: inc/customizer/customizer.php:2861
 msgid "Item Link"
 msgstr ""
 
-#: inc/customizer/customizer.php:2740
+#: inc/customizer/customizer.php:2875
 msgid "Item Link Hover"
 msgstr ""
 
-#: inc/customizer/customizer.php:2753
+#: inc/customizer/customizer.php:2888
 msgid "Disable Map Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:2759 sections/map.php:2
+#: inc/customizer/customizer.php:2894 sections/map.php:2
 msgid "Madison Square Garden"
 msgstr ""
 
-#: inc/customizer/customizer.php:2765
+#: inc/customizer/customizer.php:2900
 msgid "Map Location"
 msgstr ""
 
-#: inc/customizer/customizer.php:2792
+#: inc/customizer/customizer.php:2928
 msgid "Disable Contact Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:2824 sections/contact.php:3
+#: inc/customizer/customizer.php:2961 sections/contact.php:3
 msgid "Let's talk."
 msgstr ""
 
-#: inc/customizer/customizer.php:2842
+#: inc/customizer/customizer.php:2980
 msgid "Shortcode"
 msgstr ""
 
-#: inc/customizer/customizer.php:2955
+#: inc/customizer/customizer.php:3101
 msgid "Meta"
 msgstr ""
 
-#: inc/customizer/customizer.php:2968
+#: inc/customizer/customizer.php:3115
 msgid "Meta Link"
 msgstr ""
 
-#: inc/customizer/customizer.php:2981 inc/widgets/latte-services.php:38
+#: inc/customizer/customizer.php:3129
 msgid "Link"
 msgstr ""
 
-#: inc/customizer/customizer.php:2994
+#: inc/customizer/customizer.php:3143
 msgid "Link Hover"
 msgstr ""
 
-#: inc/customizer/customizer.php:3011 inc/other/theme-layout.php:26
+#: inc/customizer/customizer.php:3160 inc/other/theme-layout.php:26
 msgid "Full Width"
 msgstr ""
 
-#: inc/customizer/customizer.php:3012 inc/other/theme-layout.php:27
+#: inc/customizer/customizer.php:3161 inc/other/theme-layout.php:27
 msgid "Left Sidebar"
 msgstr ""
 
-#: inc/customizer/customizer.php:3013 inc/other/theme-layout.php:28
+#: inc/customizer/customizer.php:3162 inc/other/theme-layout.php:28
 msgid "Right Sidebar"
 msgstr ""
 
@@ -1302,14 +1279,6 @@ msgstr ""
 msgid "Pricing widget for Latte theme's Pricing section."
 msgstr ""
 
-#: inc/widgets/latte-pricing.php:31
-msgid "Price (Amount/Time)"
-msgstr ""
-
-#: inc/widgets/latte-pricing.php:35
-msgid "Options (One per line)"
-msgstr ""
-
 #: inc/widgets/latte-services.php:12
 msgid "Latte - Services Widget"
 msgstr ""
@@ -1322,10 +1291,6 @@ msgstr ""
 msgid "Click here to see a list of icons."
 msgstr ""
 
-#: inc/widgets/latte-services.php:42
-msgid "Open In New Window?"
-msgstr ""
-
 #: inc/widgets/latte-skills.php:12
 msgid "Latte - Skills Widget"
 msgstr ""
@@ -1334,40 +1299,12 @@ msgstr ""
 msgid "Skills widget for Latte theme's Skills section."
 msgstr ""
 
-#: inc/widgets/latte-skills.php:23
-msgid "Skill"
-msgstr ""
-
-#: inc/widgets/latte-skills.php:27
-msgid "Percentage"
-msgstr ""
-
-#: inc/widgets/latte-skills.php:31
-msgid "Title Color"
-msgstr ""
-
-#: inc/widgets/latte-skills.php:36
-msgid "Title Background"
-msgstr ""
-
-#: inc/widgets/latte-skills.php:41
-msgid "Bar Background"
-msgstr ""
-
 #: inc/widgets/latte-testimonials.php:12
 msgid "Latte - Testimonials Widget"
 msgstr ""
 
 #: inc/widgets/latte-testimonials.php:13
 msgid "Testimonials widget for Latte theme's Testimonials section."
-msgstr ""
-
-#: inc/widgets/latte-testimonials.php:23
-msgid "Testimonial"
-msgstr ""
-
-#: inc/widgets/latte-testimonials.php:31
-msgid "Position/Company"
 msgstr ""
 
 #: search.php:26
@@ -1396,35 +1333,35 @@ msgstr ""
 msgid "Package One"
 msgstr ""
 
-#: sections/pricing.php:30 sections/pricing.php:38 sections/pricing.php:46
+#: sections/pricing.php:30 sections/pricing.php:44 sections/pricing.php:58
 msgid "Package Subtitle."
 msgstr ""
 
-#: sections/pricing.php:32 sections/pricing.php:40 sections/pricing.php:48
+#: sections/pricing.php:33 sections/pricing.php:47 sections/pricing.php:61
 msgid "Options 1"
 msgstr ""
 
-#: sections/pricing.php:32 sections/pricing.php:40 sections/pricing.php:48
+#: sections/pricing.php:34 sections/pricing.php:48 sections/pricing.php:62
 msgid "Options 2"
 msgstr ""
 
-#: sections/pricing.php:32 sections/pricing.php:40 sections/pricing.php:48
+#: sections/pricing.php:35 sections/pricing.php:49 sections/pricing.php:63
 msgid "Options 3"
 msgstr ""
 
-#: sections/pricing.php:32 sections/pricing.php:40 sections/pricing.php:48
+#: sections/pricing.php:36 sections/pricing.php:50 sections/pricing.php:64
 msgid "Options 4"
 msgstr ""
 
-#: sections/pricing.php:32 sections/pricing.php:40 sections/pricing.php:48
+#: sections/pricing.php:37 sections/pricing.php:51 sections/pricing.php:65
 msgid "Options 5"
 msgstr ""
 
-#: sections/pricing.php:37
+#: sections/pricing.php:43
 msgid "Package Two"
 msgstr ""
 
-#: sections/pricing.php:45
+#: sections/pricing.php:57
 msgid "Package Three"
 msgstr ""
 
