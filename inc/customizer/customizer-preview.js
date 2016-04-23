@@ -214,6 +214,76 @@
 		} );
 	} );
 
+	// Social Section > Content > 1. Icon URL
+	wp.customize( 'latte_social_facebook', function( value ) {
+		value.bind( function( newval ) {
+			$('.it-first .icon a').attr( 'href', newval );
+		} );
+	} );
+
+	// Social Section > Content > 1. Icon Title
+	wp.customize( 'latte_social_facebook_title', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .it-first span').text( newval );
+		} );
+	} );
+
+	// Social Section > Content > 2. Icon URL
+	wp.customize( 'latte_social_twitter', function( value ) {
+		value.bind( function( newval ) {
+			$('.it-second .icon a').attr( 'href', newval );
+		} );
+	} );
+
+	// Social Section > Content > 2. Icon Title
+	wp.customize( 'latte_social_twitter_title', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .it-second span').text( newval );
+		} );
+	} );
+
+	// Social Section > Content > 3. Icon URL
+	wp.customize( 'latte_social_google_plus', function( value ) {
+		value.bind( function( newval ) {
+			$('.it-third .icon a').attr( 'href', newval );
+		} );
+	} );
+
+	// Social Section > Content > 3. Icon Title
+	wp.customize( 'latte_social_google_plus_title', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .it-third span').text( newval );
+		} );
+	} );
+
+	// Social Section > Content > 4. Icon URL
+	wp.customize( 'latte_social_instagram', function( value ) {
+		value.bind( function( newval ) {
+			$('.it-fourth .icon a').attr( 'href', newval );
+		} );
+	} );
+
+	// Social Section > Content > 4. Icon Title
+	wp.customize( 'latte_social_instagram_title', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .it-fourth span').text( newval );
+		} );
+	} );
+
+	// Social Section > Content > 5. Icon URL
+	wp.customize( 'latte_social_github', function( value ) {
+		value.bind( function( newval ) {
+			$('.it-fifth .icon a').attr( 'href', newval );
+		} );
+	} );
+
+	// Social Section > Content > 5. Icon Title
+	wp.customize( 'latte_social_github_title', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .it-fifth span').text( newval );
+		} );
+	} );
+
 	// Social Section > Colors > Background Color
 	wp.customize( 'latte_social_background_color', function( value ) {
 		value.bind( function( newval ) {
@@ -234,6 +304,61 @@
 			$('.social .icon-item .icon i').css( 'color', newval );
 			$('.social .icon-item span').css( 'color', newval );
 			$('.social .icon-item .icon').css( 'border', '4px solid' +newval );
+		} );
+	} );
+
+	// Social Section > Colors > 1. Icon Hover Background
+	wp.customize( 'latte_social_facebook_background', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .row .social-box .it-first .icon').hover(function(){
+				$(this).css('background', newval );
+			},function(){
+				$(this).css('background', 'transparent' );
+			});
+		} );
+	} );
+
+	// Social Section > Colors > 2. Icon Hover Background
+	wp.customize( 'latte_social_twitter_background', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .row .social-box .it-second .icon').hover(function(){
+				$(this).css('background', newval );
+			},function(){
+				$(this).css('background', 'transparent' );
+			});
+		} );
+	} );
+
+	// Social Section > Colors > 3. Icon Hover Background
+	wp.customize( 'latte_social_google_plus_background', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .row .social-box .it-third .icon').hover(function(){
+				$(this).css('background', newval );
+			},function(){
+				$(this).css('background', 'transparent' );
+			});
+		} );
+	} );
+
+	// Social Section > Colors > 4. Icon Hover Background
+	wp.customize( 'latte_social_instagram_background', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .row .social-box .it-fourth .icon').hover(function(){
+				$(this).css('background', newval );
+			},function(){
+				$(this).css('background', 'transparent' );
+			});
+		} );
+	} );
+
+	// Social Section > Colors > 5. Icon Hover Background
+	wp.customize( 'latte_social_github_background', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .row .social-box .it-fifth .icon').hover(function(){
+				$(this).css('background', newval );
+			},function(){
+				$(this).css('background', 'transparent' );
+			});
 		} );
 	} );
 

@@ -40,6 +40,11 @@ function latte_custom_css() {
 	$latte_social_background_color = get_theme_mod('latte_social_background_color', 'rgba(0, 0, 0, 0.7)' );
 	$latte_social_title_color = get_theme_mod('latte_social_title_color', '#FFF' );
 	$latte_social_color = get_theme_mod('latte_social_color', '#FFF' );
+	$latte_social_facebook_background = get_theme_mod('latte_social_facebook_background', '#3B5998' );
+	$latte_social_twitter_background = get_theme_mod('latte_social_twitter_background', '#0084B4' );
+	$latte_social_google_plus_background = get_theme_mod('latte_social_google_plus_background', '#D34836' );
+	$latte_social_instagram_background = get_theme_mod('latte_social_instagram_background', '#3F729B' );
+	$latte_social_github_background = get_theme_mod('latte_social_github_background', '#000' );
 	$latte_services_background_color = get_theme_mod('latte_services_background_color', '#F5F5F5' );
 	$latte_services_title_color = get_theme_mod('latte_services_title_color', '#333' );
 	$latte_services_subtitle_color = get_theme_mod('latte_services_subtitle_color', '#9F8E8E' );
@@ -251,6 +256,31 @@ function latte_custom_css() {
 }
 .social .icon-item .icon {
 	border: 4px solid <?php echo esc_html($latte_social_color); ?>;
+}
+<?php endif; ?>
+<?php if(!empty($latte_social_facebook_background)) : ?>
+.social .row .social-box .it-first .icon:hover {
+	background: <?php echo esc_html($latte_social_facebook_background); ?>;
+}
+<?php endif; ?>
+<?php if(!empty($latte_social_twitter_background)) : ?>
+.social .row .social-box .it-second .icon:hover {
+	background: <?php echo esc_html($latte_social_twitter_background); ?>;
+}
+<?php endif; ?>
+<?php if(!empty($latte_social_google_plus_background)) : ?>
+.social .row .social-box .it-third .icon:hover {
+	background: <?php echo esc_html($latte_social_google_plus_background); ?>;
+}
+<?php endif; ?>
+<?php if(!empty($latte_social_instagram_background)) : ?>
+.social .row .social-box .it-fourth .icon:hover {
+	background: <?php echo esc_html($latte_social_instagram_background); ?>;
+}
+<?php endif; ?>
+<?php if(!empty($latte_social_github_background)) : ?>
+.social .row .social-box .it-fifth .icon:hover {
+	background: <?php echo esc_html($latte_social_github_background); ?>;
 }
 <?php endif; ?>
 <?php endif; ?>
