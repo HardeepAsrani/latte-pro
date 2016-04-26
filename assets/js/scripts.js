@@ -31,39 +31,43 @@ jQuery(document).ready(function($) {
 
 		/* Parallax */
 		if( latte_script_var.latte_intro_display != 1 && latte_script_var.latte_intro_background != '' ) {
-			$('#intro').parallax({imageSrc: latte_script_var.latte_intro_background, bleed: '10', androidFix: 'false'});
+			if( latte_script_var.latte_intro_background_full_page != 1 ) {
+				$('#intro').parallax({imageSrc: latte_script_var.latte_intro_background, bleed: '10', androidFix: 'false'});
+			} else {
+				$('.site-wrapper').parallax({imageSrc: latte_script_var.latte_intro_background, bleed: '10', androidFix: 'false'});
+			}
 		}
-		if( latte_script_var.latte_about_display != 1 && latte_script_var.latte_about_background != '' ) {
+		if( latte_script_var.latte_intro_background_full_page != 1 && latte_script_var.latte_about_display != 1 && latte_script_var.latte_about_background != '' ) {
 			$('#about').parallax({imageSrc: latte_script_var.latte_about_background, bleed: '10', androidFix: 'false'});
 		}
-		if( latte_script_var.latte_social_display != 1 && latte_script_var.latte_social_background != '' ) {
+		if( latte_script_var.latte_intro_background_full_page != 1 && latte_script_var.latte_social_display != 1 && latte_script_var.latte_social_background != '' ) {
 			$('#social').parallax({imageSrc: latte_script_var.latte_social_background, bleed: '10', androidFix: 'false'});
 		}
-		if( latte_script_var.latte_services_display != 1 && latte_script_var.latte_services_background != '' ) {
+		if( latte_script_var.latte_intro_background_full_page != 1 && latte_script_var.latte_services_display != 1 && latte_script_var.latte_services_background != '' ) {
 			$('#services').parallax({imageSrc: latte_script_var.latte_services_background, bleed: '10', androidFix: 'false'});
 		}
-		if( latte_script_var.latte_separator_display != 1 && latte_script_var.latte_separator_background != '' ) {
+		if( latte_script_var.latte_intro_background_full_page != 1 && latte_script_var.latte_separator_display != 1 && latte_script_var.latte_separator_background != '' ) {
 			$('#separator').parallax({imageSrc: latte_script_var.latte_separator_background, bleed: '10', androidFix: 'false'});
 		}
-		if( latte_script_var.latte_skills_display != 1 && latte_script_var.latte_skills_background != '' ) {
+		if( latte_script_var.latte_intro_background_full_page != 1 && latte_script_var.latte_skills_display != 1 && latte_script_var.latte_skills_background != '' ) {
 			$('#skills').parallax({imageSrc: latte_script_var.latte_skills_background, bleed: '10', androidFix: 'false'});
 		}
-		if( latte_script_var.latte_portfolio_display != 1 && latte_script_var.latte_portfolio_background != '' ) {
+		if( latte_script_var.latte_intro_background_full_page != 1 && latte_script_var.latte_portfolio_display != 1 && latte_script_var.latte_portfolio_background != '' ) {
 			$('#portfolio').parallax({imageSrc: latte_script_var.latte_portfolio_background, bleed: '10', androidFix: 'false'});
 		}
-		if( latte_script_var.latte_subscribe_display != 1 && latte_script_var.latte_subscribe_background != '' ) {
+		if( latte_script_var.latte_intro_background_full_page != 1 && latte_script_var.latte_subscribe_display != 1 && latte_script_var.latte_subscribe_background != '' ) {
 			$('#subscribe').parallax({imageSrc: latte_script_var.latte_subscribe_background, bleed: '10', androidFix: 'false'});
 		}
-		if( latte_script_var.latte_pricing_display != 1 && latte_script_var.latte_pricing_background != '' ) {
+		if( latte_script_var.latte_intro_background_full_page != 1 && latte_script_var.latte_pricing_display != 1 && latte_script_var.latte_pricing_background != '' ) {
 			$('#pricing').parallax({imageSrc: latte_script_var.latte_pricing_background, bleed: '10', androidFix: 'false'});
 		}
-		if( latte_script_var.latte_testimonials_display != 1 && latte_script_var.latte_testimonials_background != '' ) {
+		if( latte_script_var.latte_intro_background_full_page != 1 && latte_script_var.latte_testimonials_display != 1 && latte_script_var.latte_testimonials_background != '' ) {
 			$('#testimonials').parallax({imageSrc: latte_script_var.latte_testimonials_background, bleed: '10', androidFix: 'false'});
 		}
-		if( latte_script_var.latte_blogposts_display != 1 && latte_script_var.latte_blogposts_background != '' ) {
+		if( latte_script_var.latte_intro_background_full_page != 1 && latte_script_var.latte_blogposts_display != 1 && latte_script_var.latte_blogposts_background != '' ) {
 			$('#blogposts').parallax({imageSrc: latte_script_var.latte_blogposts_background, bleed: '10', androidFix: 'false'});
 		}
-		if( latte_script_var.latte_contact_display != 1 && latte_script_var.latte_contact_background != '' ) {
+		if( latte_script_var.latte_intro_background_full_page != 1 && latte_script_var.latte_contact_display != 1 && latte_script_var.latte_contact_background != '' ) {
 			$('#contact').parallax({imageSrc: latte_script_var.latte_contact_background, bleed: '50', androidFix: 'false'});
 		}
 	}

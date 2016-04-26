@@ -1062,6 +1062,18 @@ function latte_customize_register($wp_customize) {
 		'priority' => 5
 	));
 
+	$wp_customize->add_setting( 'latte_intro_background_full_page', array(
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_checkbox'
+	));
+
+	$wp_customize->add_control('latte_intro_background_full_page',array(
+		'type' => 'checkbox',
+		'label' => __('Enable Full-page Background?','latte'),
+		'section' => 'latte_intro_settings',
+		'priority' => 10
+	));
+
 	$wp_customize->add_setting('latte_intro_background', array(
 		'default' => get_template_directory_uri().'/assets/images/intro.jpg',
 		'capability' => 'edit_theme_options',
@@ -1071,7 +1083,7 @@ function latte_customize_register($wp_customize) {
 	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'latte_intro_background', array(
 		'label' => __('Background Image', 'latte'),
 		'section' => 'latte_intro_settings',
-		'priority' => 10,
+		'priority' => 15,
 		'settings' => 'latte_intro_background'
 	)));
 
