@@ -7,12 +7,12 @@
 		<section class="portfolio-grid" id="portfolio">
 			<div class="container">
 				<div class="row">
-				<?php if(!empty($latte_portfolio_title) || !empty($latte_portfolio_subtitle)) : ?>
+				<?php if(!empty($latte_portfolio_title) || !empty($latte_portfolio_subtitle) || is_customize_preview()) : ?>
 					<header data-sr="ease-in-out wait 0.25s" class="portfolio-header">
-					<?php if(!empty($latte_portfolio_title)) : ?>
+					<?php if(!empty($latte_portfolio_title) || is_customize_preview()) : ?>
 						<h2><?php echo esc_html($latte_portfolio_title); ?></h2>
 					<?php endif; ?>
-					<?php if(!empty($latte_portfolio_subtitle)) : ?>
+					<?php if(!empty($latte_portfolio_subtitle) || is_customize_preview()) : ?>
 						<h3><?php echo esc_html($latte_portfolio_subtitle); ?></h3>
 					<?php endif; ?>
 					</header>
