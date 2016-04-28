@@ -1108,7 +1108,8 @@ function latte_customize_register($wp_customize) {
 	$wp_customize->add_setting( 'latte_intro_scroll', array(
 		'default' => '#about',
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field'
+		'sanitize_callback' => 'sanitize_text_field',
+		'transport' => 'postMessage'
 	));
 
 	$wp_customize->add_control( 'latte_intro_scroll', array(
@@ -1287,7 +1288,7 @@ function latte_customize_register($wp_customize) {
 		'settings' => 'latte_about_content',
 		'render_callback' => function() {
 			return get_theme_mod('latte_about_content');
-		},
+		}
 	));
 
 	$wp_customize->add_setting( 'latte_about_background_color', array(
@@ -1885,7 +1886,8 @@ function latte_customize_register($wp_customize) {
 	$wp_customize->add_setting( 'latte_separator_link', array(
 		'default' => '#subscribe',
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field'
+		'sanitize_callback' => 'sanitize_text_field',
+		'transport' => 'postMessage'
 	));
 
 	$wp_customize->add_control( 'latte_separator_link', array(

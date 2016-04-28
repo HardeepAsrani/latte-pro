@@ -9,6 +9,8 @@
 					<div class="inner cover col-md-12">
 					<?php if(!empty($latte_intro_avatar)) : ?>
 						<div class="avatar" style="background-image:url('<?php echo esc_url($latte_intro_avatar); ?>');"></div>
+					<?php elseif(empty($latte_intro_avatar) && is_customize_preview()) : ?>
+						<div class="avatar customizer-hidden" style="background-image:url('<?php echo esc_url($latte_intro_avatar); ?>');"></div>
 					<?php endif; ?>
 						<h1 class="cover-heading"><?php bloginfo( 'name' ); ?></h1>
 						<p class="lead"><?php bloginfo( 'description' ); ?></p>

@@ -22,7 +22,11 @@
 				<?php endif; ?>
 				<?php if(!empty($latte_about_avatar)) : ?>
 					<div data-sr="enter left wait 0.25s" class="col-md-5">
-						<img src="<?php echo esc_url($latte_about_avatar); ?>" class="about-image img-responsive">
+						<img src="<?php echo esc_url($latte_about_avatar); ?>" class="about-image img-responsive"/>
+					</div>
+				<?php elseif(empty($latte_about_avatar) && is_customize_preview()) : ?>
+					<div data-sr="enter left wait 0.25s" class="col-md-5">
+						<img src="<?php echo esc_url($latte_about_avatar); ?>" class="about-image img-responsive customizer-hidden"/>
 					</div>
 				<?php endif; ?>
 				<?php if(!empty($latte_about_avatar)) : ?>
