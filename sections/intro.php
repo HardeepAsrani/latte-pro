@@ -16,6 +16,8 @@
 						<p class="lead"><?php bloginfo( 'description' ); ?></p>
 						<?php if(!empty($latte_intro_scroll)) : ?>
 							<a href="<?php echo esc_url($latte_intro_scroll); ?>" class="arrow"><i class="fa fa-arrow-circle-down"></i></a>
+						<?php elseif(empty($latte_intro_scroll) && is_customize_preview()) : ?>
+							<a href="<?php echo esc_url($latte_intro_scroll); ?>" class="arrow customizer-hidden"><i class="fa fa-arrow-circle-down"></i></a>
 						<?php endif; ?>
 					</div>
 				</div>

@@ -97,7 +97,13 @@
 	// Intro Section > Content > Scroll Anchor
 	wp.customize( 'latte_intro_scroll', function( value ) {
 		value.bind( function( newval ) {
-			$('.intro .arrow .fa').attr( 'href', newval );
+			if ( newval == '' ) {
+				$('.intro .arrow').css( 'display', 'none' );
+			} else {
+				$('.intro .arrow').removeClass( 'customizer-hidden' );
+				$('.intro .arrow').css( 'display', 'block' );
+				$('.intro .arrow .fa').attr( 'href', newval );
+			}
 		} );
 	} );
 
