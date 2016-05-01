@@ -70,3 +70,14 @@ Copyright © 2015, epicantus, CC0 Public Domain, https://creativecommons.org/pub
 testimonials.jpg, https://pixabay.com/en/woman-working-business-woman-690036/
 Copyright © 2015, Unsplash, CC0 Public Domain, https://creativecommons.org/publicdomain/zero/1.0/deed.en
 
+# Changelog #
+
+## Version 1.0 ##
+
+- Initial Release.
+
+## Version 1.1 ##
+
+- Better Customizer support.
+- Add more social icons.
+- Allows single parallax background.

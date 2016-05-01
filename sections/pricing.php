@@ -6,12 +6,12 @@
 		<section class="pricing" id="pricing">
 			<div class="container">
 				<div class="row">
-				<?php if(!empty($latte_pricing_title) || !empty($latte_pricing_subtitle)) : ?>
+				<?php if(!empty($latte_pricing_title) || !empty($latte_pricing_subtitle) || is_customize_preview()) : ?>
 					<header data-sr="ease-in-out wait 0.25s" class="pricing-header">
-					<?php if(!empty($latte_pricing_title)) : ?>
+					<?php if(!empty($latte_pricing_title) || is_customize_preview()) : ?>
 						<h2><?php echo esc_html($latte_pricing_title); ?></h2>
 					<?php endif; ?>
-					<?php if(!empty($latte_pricing_subtitle)) : ?>
+					<?php if(!empty($latte_pricing_subtitle) || is_customize_preview()) : ?>
 						<h3><?php echo esc_html($latte_pricing_subtitle); ?></h3>
 					<?php endif; ?>
 					</header>

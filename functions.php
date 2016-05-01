@@ -191,6 +191,7 @@ function latte_scripts() {
 		'latte_animations_display' => get_theme_mod('latte_animations_display'),
 		'latte_is_homepage' => $latte_is_homepage,
 		'latte_intro_background' => get_theme_mod('latte_intro_background', get_template_directory_uri().'/assets/images/intro.jpg' ),
+		'latte_intro_background_full_page' => get_theme_mod('latte_intro_background_full_page'),
 		'latte_about_background' => get_theme_mod('latte_about_background'),
 		'latte_social_background' => get_theme_mod('latte_social_background', get_template_directory_uri().'/assets/images/social.jpg' ),
 		'latte_services_background' => get_theme_mod('latte_services_background'),

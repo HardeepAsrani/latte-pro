@@ -7,12 +7,12 @@
 		<section class="contact" id="contact">
 			<div class="container">
 				<div class="row">
-				<?php if(!empty($latte_contact_title) || !empty($latte_contact_subtitle)) : ?>
+				<?php if(!empty($latte_contact_title) || !empty($latte_contact_subtitle) || is_customize_preview()) : ?>
 					<header data-sr="ease-in-out wait 0.25s" class="contact-header">
-					<?php if(!empty($latte_contact_title)) : ?>
+					<?php if(!empty($latte_contact_title) || is_customize_preview()) : ?>
 						<h2><?php echo esc_html($latte_contact_title); ?></h2>
 					<?php endif; ?>
-					<?php if(!empty($latte_contact_subtitle)) : ?>
+					<?php if(!empty($latte_contact_subtitle) || is_customize_preview()) : ?>
 						<h3><?php echo esc_html($latte_contact_subtitle); ?></h3>
 					<?php endif; ?>
 					</header>

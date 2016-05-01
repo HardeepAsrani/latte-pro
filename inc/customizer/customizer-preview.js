@@ -84,7 +84,26 @@
 	// Intro Section > Content > Avatar Image
 	wp.customize( 'latte_intro_avatar', function( value ) {
 		value.bind( function( newval ) {
-			$('.intro .avatar').css( 'background-image', 'url(' +newval+ ')' );
+			if ( newval == '' ) {
+				$('.intro .avatar').css( 'display', 'none' );
+			} else {
+				$('.intro .avatar').removeClass( 'customizer-hidden' );
+				$('.intro .avatar').css( 'background-image', 'url(' +newval+ ')' );
+				$('.intro .avatar').css( 'display', 'block' );
+			}
+		} );
+	} );
+
+	// Intro Section > Content > Scroll Anchor
+	wp.customize( 'latte_intro_scroll', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == '' ) {
+				$('.intro .arrow').css( 'display', 'none' );
+			} else {
+				$('.intro .arrow').removeClass( 'customizer-hidden' );
+				$('.intro .arrow').css( 'display', 'block' );
+				$('.intro .arrow .fa').attr( 'href', newval );
+			}
 		} );
 	} );
 
@@ -137,6 +156,7 @@
 				$('.about .about-image').css( 'display', 'none' );
 				$('.about .col-md-7').attr( 'class', 'cold-md-12' );
 			} else {
+				$('.about .about-image').removeClass( 'customizer-hidden' );
 				$('.about .about-image').css( 'display', 'block' );
 				$('.about .col-md-12').attr( 'class', 'cold-md-7' );
 				$('.about .about-image').attr( 'src', newval );
@@ -214,6 +234,106 @@
 		} );
 	} );
 
+	// Social Section > Content > 1. Icon URL
+	wp.customize( 'latte_social_facebook', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == '' ) {
+				$('.social .sb-first').css( 'display', 'none' );
+			} else {
+				$('.social .sb-first').removeClass( 'customizer-hidden' );
+				$('.social .sb-first').css( 'display', 'inline-block' );
+				$('.it-first .icon a').attr( 'href', newval );
+			}
+		} );
+	} );
+
+	// Social Section > Content > 1. Icon Title
+	wp.customize( 'latte_social_facebook_title', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .it-first span').text( newval );
+		} );
+	} );
+
+	// Social Section > Content > 2. Icon URL
+	wp.customize( 'latte_social_twitter', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == '' ) {
+				$('.social .sb-second').css( 'display', 'none' );
+			} else {
+				$('.social .sb-second').removeClass( 'customizer-hidden' );
+				$('.social .sb-second').css( 'display', 'inline-block' );
+				$('.it-second .icon a').attr( 'href', newval );
+			}
+		} );
+	} );
+
+	// Social Section > Content > 2. Icon Title
+	wp.customize( 'latte_social_twitter_title', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .it-second span').text( newval );
+		} );
+	} );
+
+	// Social Section > Content > 3. Icon URL
+	wp.customize( 'latte_social_google_plus', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == '' ) {
+				$('.social .sb-third').css( 'display', 'none' );
+			} else {
+				$('.social .sb-third').removeClass( 'customizer-hidden' );
+				$('.social .sb-third').css( 'display', 'inline-block' );
+				$('.it-third .icon a').attr( 'href', newval );
+			}
+		} );
+	} );
+
+	// Social Section > Content > 3. Icon Title
+	wp.customize( 'latte_social_google_plus_title', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .it-third span').text( newval );
+		} );
+	} );
+
+	// Social Section > Content > 4. Icon URL
+	wp.customize( 'latte_social_instagram', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == '' ) {
+				$('.social .sb-fourth').css( 'display', 'none' );
+			} else {
+				$('.social .sb-fourth').removeClass( 'customizer-hidden' );
+				$('.social .sb-fourth').css( 'display', 'inline-block' );
+				$('.it-fourth .icon a').attr( 'href', newval );
+			}
+		} );
+	} );
+
+	// Social Section > Content > 4. Icon Title
+	wp.customize( 'latte_social_instagram_title', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .it-fourth span').text( newval );
+		} );
+	} );
+
+	// Social Section > Content > 5. Icon URL
+	wp.customize( 'latte_social_github', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == '' ) {
+				$('.social .sb-fifth').css( 'display', 'none' );
+			} else {
+				$('.social .sb-fifth').removeClass( 'customizer-hidden' );
+				$('.social .sb-fifth').css( 'display', 'inline-block' );
+				$('.it-fifth .icon a').attr( 'href', newval );
+			}
+		} );
+	} );
+
+	// Social Section > Content > 5. Icon Title
+	wp.customize( 'latte_social_github_title', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .it-fifth span').text( newval );
+		} );
+	} );
+
 	// Social Section > Colors > Background Color
 	wp.customize( 'latte_social_background_color', function( value ) {
 		value.bind( function( newval ) {
@@ -234,6 +354,61 @@
 			$('.social .icon-item .icon i').css( 'color', newval );
 			$('.social .icon-item span').css( 'color', newval );
 			$('.social .icon-item .icon').css( 'border', '4px solid' +newval );
+		} );
+	} );
+
+	// Social Section > Colors > 1. Icon Hover Background
+	wp.customize( 'latte_social_facebook_background', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .row .social-box .it-first .icon').hover(function(){
+				$(this).css('background', newval );
+			},function(){
+				$(this).css('background', 'transparent' );
+			});
+		} );
+	} );
+
+	// Social Section > Colors > 2. Icon Hover Background
+	wp.customize( 'latte_social_twitter_background', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .row .social-box .it-second .icon').hover(function(){
+				$(this).css('background', newval );
+			},function(){
+				$(this).css('background', 'transparent' );
+			});
+		} );
+	} );
+
+	// Social Section > Colors > 3. Icon Hover Background
+	wp.customize( 'latte_social_google_plus_background', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .row .social-box .it-third .icon').hover(function(){
+				$(this).css('background', newval );
+			},function(){
+				$(this).css('background', 'transparent' );
+			});
+		} );
+	} );
+
+	// Social Section > Colors > 4. Icon Hover Background
+	wp.customize( 'latte_social_instagram_background', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .row .social-box .it-fourth .icon').hover(function(){
+				$(this).css('background', newval );
+			},function(){
+				$(this).css('background', 'transparent' );
+			});
+		} );
+	} );
+
+	// Social Section > Colors > 5. Icon Hover Background
+	wp.customize( 'latte_social_github_background', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .row .social-box .it-fifth .icon').hover(function(){
+				$(this).css('background', newval );
+			},function(){
+				$(this).css('background', 'transparent' );
+			});
 		} );
 	} );
 
@@ -318,6 +493,13 @@
 	wp.customize( 'latte_separator_button', function( value ) {
 		value.bind( function( newval ) {
 			$('.separator .btn').text( newval );
+		} );
+	} );
+
+	// Separator Section > Content > Button Link
+	wp.customize( 'latte_separator_link', function( value ) {
+		value.bind( function( newval ) {
+			$('.separator .btn').attr( 'href', newval );
 		} );
 	} );
 
