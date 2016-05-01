@@ -16,21 +16,15 @@ $latte = wp_get_theme( 'latte-pro' );
 	</div>
 </div>
 
-<div class="col two-col" style="overflow: hidden;">
+<div class="col one-col" style="overflow: hidden;">
 	<div class="col">
 		<div class="boxed whatsnew">
 			<h2><?php printf( esc_html__( 'What\'s new in %s?', 'latte' ), esc_attr( $latte['Version'] ) ); ?></h2>
 			<p><?php printf( esc_html__( 'Take a look at everything that\'s new in the latest version:', 'latte' ) ); ?></p>
 			<ul>
-				<li><?php printf( __('<strong>Customizer Improvements:</strong> Preview your changes without refreshing Customizer.', 'latte') ); ?></li>
-				<li><?php printf( __('<strong>Welcome Panel:</strong> This version adds a Welcome Panel to the theme which tells you everything that you need to know about the theme.', 'latte') ); ?></li>
+				<li><?php printf( __('<strong>More Social Icons:</strong> Now add social icons just by putting its URL and theme will select the icons automatically. Is your favorite icon missing? Feel free to contact via my website.', 'latte') ); ?></li>
+				<li><?php printf( __('<strong>Single Background:</strong> Don\'t want so many images? You can now set a single image for the parallax background from Intro settings.', 'latte') ); ?></li>
 			</ul>
-		</div>
-	</div>
-	<div class="col">
-		<div class="boxed extension">
-			<h2><?php esc_html_e( 'Author\'s Note', 'latte' ); ?></h2>
-			<p><?php printf( __( 'WordPress 4.5 update broke some little things so we had to push this update as soon as possible. Originally we were planning to add more features but this update is out way before it was supposed to be. Hope you like the new features. :)', 'latte' ) ); ?></p>
 		</div>
 	</div>
 </div>
