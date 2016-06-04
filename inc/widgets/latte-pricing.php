@@ -5,7 +5,6 @@
 
 class latte_pricing_widget extends WP_Widget {
 
-
 	function __construct() {
 		parent::__construct(
 			'latte_pricing_widget',
@@ -14,8 +13,6 @@ class latte_pricing_widget extends WP_Widget {
 		);
 
 	}
-
-
 
 	function form($instance) {
 		?>
@@ -52,7 +49,7 @@ class latte_pricing_widget extends WP_Widget {
 		$instance['subtitle'] = esc_html($new_instance['subtitle']);
 		$instance['price'] = esc_html($new_instance['price']);
 		$instance['options'] = trim($new_instance['options']);
-		$instance['optionsAr'] = explode("\n", str_replace("\r", "", wp_kses_post( force_balance_tags( $instance['options'] ))));
+		$instance['optionsAr'] = explode('\n', str_replace('\r', '', wp_kses_post( force_balance_tags( $instance['options'] ))));
 		$instance['buttontext'] = esc_html($new_instance['buttontext']);
 		$instance['buttonlink'] = esc_url($new_instance['buttonlink']);
 		return $instance;

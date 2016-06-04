@@ -19,7 +19,7 @@
 				<?php endif; ?>
 					<div class="col-md-12">
 					<?php if(!empty($latte_portfolio_items)) : ?>
-						<?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => $latte_portfolio_items ) ); ?>
+						<?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => intval($latte_portfolio_items) ) ); ?>
 					<?php else: ?>
 						<?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => -1 ) ); ?>
 					<?php endif; ?>
@@ -35,14 +35,14 @@
 								<?php if ( has_post_thumbnail($post->ID) ) : ?>
 									<?php echo get_the_post_thumbnail($post->ID, 'latte-portfolio', array( 'class' => "img-responsive")); ?>
 								<?php else: ?>
-									<img src="<?php echo get_template_directory_uri().'/assets/images/400x289.png'; ?>" class="img-responsive"/>
+									<img src="<?php echo get_template_directory_uri().'/assets/images/300x217.png'; ?>" class="img-responsive"/>
 								<?php endif; ?>
 							</a>
 							<div class="portfolio-caption">
 								<a href="<?php esc_url( the_permalink() ); ?>"><h4><?php the_title(); ?></h4></a>
 								<?php $latte_categories = get_the_terms( $post->ID , 'portfolio_category' ); ?>
 								<?php if (!empty( $latte_categories )) : ?>
-										<?php echo '<h5>'.$latte_categories[0]->name.'</h5>'; ?>
+										<h5><?php echo esc_html($latte_categories[0]->name); ?></h5>
 								<?php endif; ?>
 							</div>
 						</div>

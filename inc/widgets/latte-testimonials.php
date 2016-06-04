@@ -5,7 +5,6 @@
 
 class latte_testimonials_widget extends WP_Widget {
 
-
 	function __construct() {
 		parent::__construct(
 			'latte_testimonials_widget',
@@ -14,8 +13,6 @@ class latte_testimonials_widget extends WP_Widget {
 		);
 
 	}
-
-
 
 	function form($instance) {
 		?>

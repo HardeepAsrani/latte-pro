@@ -81,3 +81,9 @@ Copyright © 2015, Unsplash, CC0 Public Domain, https://creativecommons.org/publ
 - Better Customizer support.
 - Add more social icons.
 - Allows single parallax background.
+
+## Version 1.1.1 ##
+
+- Added multilingual support for Polylang.
+- Updated FontAwesome to latest build.
+- Added more social icons.
