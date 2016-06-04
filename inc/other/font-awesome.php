@@ -1,6 +1,6 @@
 <?php
 /**
- * Font Awesome Icons Array - 4.5.0
+ * Font Awesome Icons Array - 4.6.3
  */
 
 $fontawesome = array(

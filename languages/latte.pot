@@ -1,8 +1,9 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Latte\n"
-"POT-Creation-Date: 2016-05-01 07:47+0530\n"
-"PO-Revision-Date: 2016-05-01 07:47+0530\n"
+"POT-Creation-Date: 2016-06-04 12:02+0530\n"
+"PO-Revision-Date: 2016-06-04 11:55+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -341,15 +342,15 @@ msgstr ""
 
 #: inc/admin/welcome-screen/content/content.php:25
 msgid ""
-"<strong>More Social Icons:</strong> Now add social icons just by putting its "
-"URL and theme will select the icons automatically. Is your favorite icon "
-"missing? Feel free to contact via my website."
+"<strong>Multilingual Support:</strong> You want site to be in more than just "
+"one language? No worries, you can install Polylang plugin and translate "
+"Latte in more than one language."
 msgstr ""
 
 #: inc/admin/welcome-screen/content/content.php:26
 msgid ""
-"<strong>Single Background:</strong> Don't want so many images? You can now "
-"set a single image for the parallax background from Intro settings."
+"<strong>More Icons:</strong> Added more icons to the theme, which were "
+"requested by users."
 msgstr ""
 
 #: inc/admin/welcome-screen/welcome-screen.php:23
@@ -1341,39 +1342,39 @@ msgid ""
 "Feel free to email if you face any issues with this process."
 msgstr ""
 
-#: inc/widgets/latte-pricing.php:12
+#: inc/widgets/latte-pricing.php:11
 msgid "Latte - Pricing Widget"
 msgstr ""
 
-#: inc/widgets/latte-pricing.php:13
+#: inc/widgets/latte-pricing.php:12
 msgid "Pricing widget for Latte theme's Pricing section."
 msgstr ""
 
-#: inc/widgets/latte-services.php:12
+#: inc/widgets/latte-services.php:11
 msgid "Latte - Services Widget"
 msgstr ""
 
-#: inc/widgets/latte-services.php:13
+#: inc/widgets/latte-services.php:12
 msgid "Services widget for Latte theme's Services section."
 msgstr ""
 
-#: inc/widgets/latte-services.php:35
+#: inc/widgets/latte-services.php:31
 msgid "Click here to see a list of icons."
 msgstr ""
 
-#: inc/widgets/latte-skills.php:12
+#: inc/widgets/latte-skills.php:11
 msgid "Latte - Skills Widget"
 msgstr ""
 
-#: inc/widgets/latte-skills.php:13
+#: inc/widgets/latte-skills.php:12
 msgid "Skills widget for Latte theme's Skills section."
 msgstr ""
 
-#: inc/widgets/latte-testimonials.php:12
+#: inc/widgets/latte-testimonials.php:11
 msgid "Latte - Testimonials Widget"
 msgstr ""
 
-#: inc/widgets/latte-testimonials.php:13
+#: inc/widgets/latte-testimonials.php:12
 msgid "Testimonials widget for Latte theme's Testimonials section."
 msgstr ""
 
