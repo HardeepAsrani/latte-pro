@@ -1,4 +1,7 @@
 <wpml-config>
+	<custom-types>
+		<custom-type translate="1">portfolio</custom-type>
+	</custom-types>
 	<admin-texts>
 		<key name='theme_mods_latte-pro'>
 			<key name='latte_footer_content' />
