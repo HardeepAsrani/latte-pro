@@ -414,6 +414,28 @@ img.alignright,
 .icon-item .icon a[href*="twitch.tv"] i::before {
 	content: '\f1e8';
 }
+.icon-item .icon a[href*="snapchat.com"] i::before {
+	content: '\f2ac';
+}
+.icon-item .icon a[href*="vine.co"] i::before {
+	content: '\f1ca';
+}
+.icon-item .icon a[href*="reddit.com"] i::before {
+	content: '\f281';
+}
+.icon-item .icon a[href*="medium.com"] i::before {
+	content: '\f23a';
+}
+.icon-item .icon a[href*="wordpress.com"] i::before,
+.icon-item .icon a[href*="wordpress.org"] i::before {
+	content: '\f19a';
+}
+.icon-item .icon a[href*="xing.com"] i::before {
+	content: '\f168';
+}
+.icon-item .icon a[href*="behance.com"] i::before {
+	content: '\f1b4';
+}
 
 /*
  * Section 4 - Services
