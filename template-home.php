@@ -52,79 +52,105 @@
 
 				case "section_intro":
 					if( isset($latte_intro_display) && $latte_intro_display != 1 ):
+						do_action( 'latte_intro_before' );
 						get_template_part( 'sections/intro' );
+						do_action( 'latte_intro_after' );
 					endif;
 				break;
 
 				case "section_about":
 					if( isset($latte_about_display) && $latte_about_display != 1 ):
+						do_action( 'latte_about_before' );
 						get_template_part( 'sections/about' );
+						do_action( 'latte_about_after' );
 					endif;
 				break;
 
 				case "section_social":
 					if( isset($latte_social_display) && $latte_social_display != 1 ):
+						do_action( 'latte_social_before' );
 						get_template_part( 'sections/social' );
+						do_action( 'latte_social_after' );
 					endif;
 				break;
 
 				case "section_services":
 					if( isset($latte_services_display) && $latte_services_display != 1 ):
+						do_action( 'latte_services_before' );
 						get_template_part( 'sections/services' );
+						do_action( 'latte_services_after' );
 					endif;
 				break;
 
 				case "section_separator":
 					if( isset($latte_separator_display) && $latte_separator_display != 1 ):
+						do_action( 'latte_separator_before' );
 						get_template_part( 'sections/separator' );
+						do_action( 'latte_separator_after' );
 					endif;
 				break;
 
 				case "section_skills":
 					if( isset($latte_skills_display) && $latte_skills_display != 1 ):
+						do_action( 'latte_skills_before' );
 						get_template_part( 'sections/skills' );
+						do_action( 'latte_skills_after' );
 					endif;
 				break;
 
 				case "section_portfolio":
 					if( isset($latte_portfolio_display) && $latte_portfolio_display != 1 ):
+						do_action( 'latte_portfolio_before' );
 						get_template_part( 'sections/portfolio' );
+						do_action( 'latte_portfolio_after' );
 					endif;
 				break;
 
 				case "section_subscribe":
 					if( isset($latte_subscribe_display) && $latte_subscribe_display != 1 ):
+						do_action( 'latte_subscribe_before' );
 						get_template_part( 'sections/subscribe' );
+						do_action( 'latte_subscribe_after' );
 					endif;
 				break;
 
 				case "section_pricing":
 					if( isset($latte_pricing_display) && $latte_pricing_display != 1 ):
+						do_action( 'latte_pricing_before' );
 						get_template_part( 'sections/pricing' );
+						do_action( 'latte_pricing_after' );
 					endif;
 				break;
 
 				case "section_testimonials":
 					if( isset($latte_testimonials_display) && $latte_testimonials_display != 1 ):
+						do_action( 'latte_testimonials_before' );
 						get_template_part( 'sections/testimonials' );
+						do_action( 'latte_testimonials_after' );
 					endif;
 				break;
 
 				case "section_blogposts":
 					if( isset($latte_blogposts_display) && $latte_blogposts_display != 1 ):
+						do_action( 'latte_blogposts_before' );
 						get_template_part( 'sections/blogposts' );
+						do_action( 'latte_blogposts_after' );
 					endif;
 				break;
 
 				case "section_map":
 					if( isset($latte_map_display) && $latte_map_display != 1 ):
+						do_action( 'latte_map_before' );
 						get_template_part( 'sections/map' );
+						do_action( 'latte_map_after' );
 					endif;
 				break;
 
 				case "section_contact":
 					if( isset($latte_contact_display) && $latte_contact_display != 1 ):
+						do_action( 'latte_contact_before' );
 						get_template_part( 'sections/contact' );
+						do_action( 'latte_contact_after' );
 					endif;
 				break;
 
