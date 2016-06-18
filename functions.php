@@ -5,16 +5,16 @@
  * Happy Blogging!
 */
 
-require_once( trailingslashit( get_template_directory() ) . "/inc/customizer/customizer.php" );
-require_once( trailingslashit( get_template_directory() ) . "/inc/customizer/custom-css.php" );
-require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-services.php" );
-require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-skills.php" );
-require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-pricing.php" );
-require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-testimonials.php" );
-require_once( trailingslashit( get_template_directory() ) . "/inc/other/portfolio.php" );
-require_once( trailingslashit( get_template_directory() ) . "/inc/other/post-formats.php" );
-require_once( trailingslashit( get_template_directory() ) . "/inc/other/theme-layout.php" );
-require_once( trailingslashit( get_template_directory() ) . "/inc/other/update.php" );
+require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/customizer.php' );
+require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/custom-css.php' );
+require_once( trailingslashit( get_template_directory() ) . '/inc/widgets/latte-services.php' );
+require_once( trailingslashit( get_template_directory() ) . '/inc/widgets/latte-skills.php' );
+require_once( trailingslashit( get_template_directory() ) . '/inc/widgets/latte-pricing.php' );
+require_once( trailingslashit( get_template_directory() ) . '/inc/widgets/latte-testimonials.php' );
+require_once( trailingslashit( get_template_directory() ) . '/inc/other/portfolio.php' );
+require_once( trailingslashit( get_template_directory() ) . '/inc/other/post-formats.php' );
+require_once( trailingslashit( get_template_directory() ) . '/inc/other/theme-layout.php' );
+require_once( trailingslashit( get_template_directory() ) . '/inc/other/update.php' );
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/welcome-screen/welcome-screen.php';
 }
@@ -221,12 +221,28 @@ function latte_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'latte_scripts' );
 
+// Registering and enqueuing scripts/stylesheets for admin panel.
+function latte_admin_scripts($hook) {
+	if ( 'widgets.php' != $hook ) {
+	return;
+	}
+
+	wp_enqueue_style( 'latte_font_awesome', get_template_directory_uri().'/assets/font-awesome/css/font-awesome.min.css' );
+}
+add_action( 'admin_enqueue_scripts', 'latte_admin_scripts' );
+
 // Registering and enqueuing scripts/stylesheets for Customizer controls.
 function latte_customizer_js() {
 	wp_enqueue_script( 'latte_customizer_js', get_template_directory_uri() . '/inc/customizer/customizer.js', array("jquery"), '20120206', true  );
 }
 
 add_action( 'customize_controls_enqueue_scripts', 'latte_customizer_js' );
+
+// Registering and enqueuing scripts/stylesheets for Customizer controls.
+function latte_customizer_css() {
+	wp_enqueue_style( 'latte_font_awesome', get_template_directory_uri().'/assets/font-awesome/css/font-awesome.min.css' );
+}
+add_action( 'customize_controls_print_styles', 'latte_customizer_css' );
 
 /// Import options from Latte.
 function latte_import_options() {
