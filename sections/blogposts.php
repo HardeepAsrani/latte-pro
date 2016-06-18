@@ -2,6 +2,7 @@
 	$latte_blogposts_title = get_theme_mod('latte_blogposts_title',__( 'Blog', 'latte' ));
 	$latte_blogposts_subtitle = get_theme_mod('latte_blogposts_subtitle',__( 'My thoughts.', 'latte' ));
 	$latte_blogposts_items = get_theme_mod('latte_blogposts_items', 6);
+	$latte_blogposts_category = get_theme_mod('latte_blogposts_category', 0);
 ?>
 
 		<section class="blogposts" id="blogposts">
@@ -19,9 +20,9 @@
 				<?php endif; ?>
 					<div class="col-md-12">
 					<?php if(!empty($latte_blogposts_items)) : ?>
-						<?php $loop = new WP_Query( array( 'posts_per_page' => $latte_blogposts_items ) ); ?>
+						<?php $loop = new WP_Query( array( 'posts_per_page' => $latte_blogposts_items, 'cat' => $latte_blogposts_category ) ); ?>
 					<?php else: ?>
-						<?php $loop = new WP_Query( array( 'posts_per_page' => -1 ) ); ?>
+						<?php $loop = new WP_Query( array( 'posts_per_page' => -1, 'cat' => $latte_blogposts_category ) ); ?>
 					<?php endif; ?>
 					<?php if ( $loop->have_posts() ): ?>
 						<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
