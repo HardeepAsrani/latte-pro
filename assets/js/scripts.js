@@ -122,13 +122,17 @@ jQuery(document).ready(function($) {
 			});
 		}
 		if( latte_script_var.latte_portfolio_display != 1 ) {
-			$('.col-md-12').each(function() {
-				$(this).children('.portfolio-item').matchHeight(byRow);
+			$('#portfolio').imagesLoaded( function() {
+				$('.col-md-12').each(function() {
+					$(this).children('.portfolio-item').matchHeight(byRow);
+				});
 			});
 		}
 		if( latte_script_var.latte_blogposts_display != 1 ) {
-			$('.col-md-12').each(function() {
-				$(this).children('.blog-item').matchHeight(byRow);
+			$('#blogposts').imagesLoaded( function() {
+				$('.col-md-12').each(function() {
+					$(this).children('.blog-item').matchHeight(byRow);
+				});
 			});
 		}
 		if( latte_script_var.latte_contact_display != 1 ) {
