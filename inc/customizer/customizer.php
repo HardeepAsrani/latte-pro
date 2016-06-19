@@ -4,6 +4,7 @@
 */
 
 require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/alpha-control/alpha-control.php' );
+require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/terms-dropdown-custom-control.php' );
 require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/category-dropdown-custom-control.php' );
 
 function latte_customizer_live_preview() {
@@ -2173,6 +2174,19 @@ function latte_customize_register($wp_customize) {
 
 	$wp_customize->add_control( new Latte_Portfolio_Widgets_Area( $wp_customize, 'latte_portfolio_post_type', array(
 		'section' => 'latte_portfolio_content'
+	)));
+
+	$wp_customize->add_setting( 'latte_portfolio_category', array(
+		'default' => 0,
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_text_field'
+	));
+
+	$wp_customize->add_control(new Latte_Terms_Dropdown_Control($wp_customize, 'latte_portfolio_category', array(
+		'label' => __('Display Items From:', 'latte'),
+		'section' => 'latte_portfolio_content',
+		'priority' => 10,
+		'settings' => 'latte_portfolio_category'
 	)));
 
 	$wp_customize->add_setting( 'latte_portfolio_background_color', array(
