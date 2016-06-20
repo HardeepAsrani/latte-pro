@@ -22,7 +22,9 @@ $latte = wp_get_theme( 'latte-pro' );
 			<h2><?php printf( esc_html__( 'What\'s new in %s?', 'latte' ), esc_attr( $latte['Version'] ) ); ?></h2>
 			<p><?php printf( esc_html__( 'Take a look at everything that\'s new in the latest version:', 'latte' ) ); ?></p>
 			<ul>
-				<li><?php printf( __('<strong>Multilingual Support:</strong> You want site to be in more than just one language? No worries, you can install Polylang plugin and translate Latte in more than one language.', 'latte') ); ?></li>
+				<li><?php printf( __('<strong>Added Hooks:</strong> Are you a developer? If you\'re then we\'ve added hooks to our front-page so you could customize the theme easily. Check documentation for details.', 'latte') ); ?></li>
+				<li><?php printf( __('<strong>New Options:</strong> You can display posts/items from a particular category in blog & portfolio section.', 'latte') ); ?></li>
+				<li><?php printf( __('<strong>View Services Icon:</strong> You can now view the icons in Services widget.', 'latte') ); ?></li>
 				<li><?php printf( __('<strong>More Icons:</strong> Added more icons to the theme, which were requested by users.', 'latte') ); ?></li>
 			</ul>
 		</div>
