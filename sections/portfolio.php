@@ -2,6 +2,22 @@
 	$latte_portfolio_title = get_theme_mod('latte_portfolio_title',__( 'Portfolio', 'latte' ));
 	$latte_portfolio_subtitle = get_theme_mod('latte_portfolio_subtitle',__( 'Some of my recent work.', 'latte' ));
 	$latte_portfolio_items = get_theme_mod('latte_portfolio_items', 6);
+	$latte_portfolio_category = get_theme_mod('latte_portfolio_category', 0);
+	
+	if ($latte_portfolio_category == 0) {
+		$operator = 'NOT IN';
+	}	else {
+		$operator = 'IN';
+	}
+	
+	$term = array(
+		array(
+			'taxonomy' => 'portfolio_category',
+			'field'    => 'term_id',
+			'terms'    => $latte_portfolio_category,
+			'operator' => $operator,
+		),
+	);
 ?>
 
 		<section class="portfolio-grid" id="portfolio">
@@ -19,9 +35,9 @@
 				<?php endif; ?>
 					<div class="col-md-12">
 					<?php if(!empty($latte_portfolio_items)) : ?>
-						<?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => intval($latte_portfolio_items) ) ); ?>
+						<?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => intval($latte_portfolio_items), 'tax_query' => $term ) ); ?>
 					<?php else: ?>
-						<?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => -1 ) ); ?>
+						<?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => -1, 'tax_query' => $term ) ); ?>
 					<?php endif; ?>
 					<?php if ( $loop->have_posts() ) : ?>
 						<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
