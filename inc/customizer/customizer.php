@@ -4,6 +4,7 @@
 */
 
 require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/alpha-control/alpha-control.php' );
+require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/layout-control/layout-control.php' );
 require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/terms-dropdown-custom-control.php' );
 require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/category-dropdown-custom-control.php' );
 
@@ -66,6 +67,12 @@ function latte_sanitize_section_order( $input, $setting ) {
 }
 
 function latte_customize_register($wp_customize) {
+
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$selective_sanitize = 'postMessage';
+	} else {
+		$selective_sanitize = 'refresh';
+	}
 
 	class Latte_Required_Area extends WP_Customize_Control {
 		public function render_content() {
@@ -1245,6 +1252,34 @@ function latte_customize_register($wp_customize) {
 		'priority' => 20,
 		'settings' => 'latte_about_subtitle'
 	));
+	
+	$wp_customize->add_setting( 'latte_about_layout', array(
+		'default' => 'left',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_choices',
+		'transport' => $selective_sanitize
+	));
+ 
+	$wp_customize->add_control(new Latte_Layout_Control($wp_customize, 'latte_about_layout', array(
+		'label' => __('Layout', 'latte'),
+		'section' => 'latte_about_settings',
+		'priority' => 25,
+		'choices' => array(
+			'left' => get_template_directory_uri().'/assets/images/about-layout-one.png',
+			'right' => get_template_directory_uri().'/assets/images/about-layout-two.png',
+		),
+		'settings' => 'latte_about_layout'
+	)));
+
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial('latte_about_layout', array(
+			'selector' => '.about',
+			'settings' => 'latte_about_layout',
+			'render_callback' => function() {
+				return get_template_part( 'sections/about' );
+			}
+		));
+	}
 
 	$wp_customize->add_setting( 'latte_about_avatar', array(
 		'default' => get_template_directory_uri().'/assets/images/383x383.png',
@@ -3391,7 +3426,8 @@ function latte_customize_register($wp_customize) {
 			'full' => __('Full Width', 'latte'),
 			'left' => __('Left Sidebar', 'latte'),
 			'right' => __('Right Sidebar', 'latte'),
-		)
+		),
+		'settings' => 'latte_blog_layout'
 	));
 
 }
