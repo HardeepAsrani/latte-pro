@@ -29,7 +29,7 @@ class latte_services_widget extends WP_Widget {
 			</select>
 			<label><?php _e('Save the widget before selecting icon if you change this.', 'latte'); ?></label>
 		</p>
-		<?php if( isset($instance['type']) && $instance['type'] == 0 ): ?>
+		<?php if( !isset($instance['type']) || $instance['type'] == 0 ): ?>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id('icon') ); ?>"><?php esc_html_e('Icon', 'latte'); ?></label>
 			<select class='fa widefat' id="<?php echo esc_attr( $this->get_field_id('icon') ); ?>" name="<?php echo esc_attr( $this->get_field_name('icon') ); ?>">
@@ -38,11 +38,13 @@ class latte_services_widget extends WP_Widget {
 			<?php endforeach; ?>
 			</select>
 			<label><a target="_blank" href="http://fortawesome.github.io/Font-Awesome/icons/"><?php _e('Click here to see a list of icons.', 'latte'); ?></a></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id('image') ); ?>" name="<?php echo esc_attr( $this->get_field_name('image') ); ?>" type="hidden" value="<?php if( !empty($instance['image']) ): echo esc_url($instance['image']); endif; ?>" />
 		</p>
 		<?php elseif( isset($instance['type']) && $instance['type'] == 1 ): ?>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id('image') ); ?>"><?php esc_html_e('Image URL', 'latte'); ?></label> 
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id('image') ); ?>" name="<?php echo esc_attr( $this->get_field_name('image') ); ?>" type="url" value="<?php if( !empty($instance['image']) ): echo esc_url($instance['image']); endif; ?>" />
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id('icon') ); ?>" name="<?php echo esc_attr( $this->get_field_name('icon') ); ?>" type="hidden" value="<?php if( !empty($instance['icon']) ): echo esc_html($instance['icon']); endif; ?>" />
 		</p>
 		<?php endif; ?>
 		<p>
@@ -85,7 +87,7 @@ class latte_services_widget extends WP_Widget {
 								<?php if( isset($instance['type']) && $instance['type'] == 0 ): ?>
 									<i class="fa <?php echo esc_html($instance['icon']); ?>"></i>
 								<?php elseif( isset($instance['type']) && $instance['type'] == 1 ): ?>
-									<?php if (isset($instance['image'])) : ?>
+									<?php if( !empty($instance['image']) ): ?>
 									<img src="<?php echo esc_url($instance['image']); ?>" />
 									<?php endif; ?>
 								<?php endif; ?>
