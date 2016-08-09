@@ -184,6 +184,9 @@ function latte_custom_css() {
 }
 <?php endif; ?>
 <?php if( is_page_template( 'template-home.php' ) ) : ?>
+body.custom-background {
+	background: none !important;
+}
 <?php if( isset($latte_intro_display) && $latte_intro_display != 1 ) : ?>
 <?php if(!empty($latte_intro_background_color)) : ?>
 .intro {
