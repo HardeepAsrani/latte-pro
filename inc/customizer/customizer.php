@@ -3427,7 +3427,7 @@ function latte_customize_register($wp_customize) {
 			'left' => __('Left Sidebar', 'latte'),
 			'right' => __('Right Sidebar', 'latte'),
 		),
-		'settings' => 'latte_blog_layout'
+		'settings' => 'latte_blog_sidebar'
 	));
 
 }
