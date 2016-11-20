@@ -405,7 +405,8 @@ body.custom-background {
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_item_category)) : ?>
-.portfolio-grid .portfolio-item .portfolio-caption h5 {
+.portfolio-grid .portfolio-item .portfolio-caption h5,
+.portfolio-grid .portfolio-item .portfolio-caption h5 a {
 	color: <?php echo esc_html($latte_portfolio_item_category); ?>;
 }
 <?php endif; ?>

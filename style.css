@@ -716,7 +716,9 @@ img.alignright,
 	text-transform: none;
 	margin: 0;
 }
-.portfolio-grid .portfolio-item .portfolio-caption h5 {
+.portfolio-grid .portfolio-item .portfolio-caption h5,
+.portfolio-grid .portfolio-item .portfolio-caption h5 a {
+	color: #333;
 	font-size: 12px;
 	margin: 0;
 	padding: 0;

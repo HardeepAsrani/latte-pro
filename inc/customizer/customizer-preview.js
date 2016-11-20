@@ -643,6 +643,7 @@
 	wp.customize( 'latte_portfolio_item_category', function( value ) {
 		value.bind( function( newval ) {
 			$('.portfolio-grid .portfolio-item .portfolio-caption h5').css( 'color', newval );
+			$('.portfolio-grid .portfolio-item .portfolio-caption h5 a').css( 'color', newval );
 		} );
 	} );
 

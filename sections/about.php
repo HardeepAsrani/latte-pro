@@ -21,7 +21,7 @@
 					</header>
 				<?php endif; ?>
 				<?php
-					$latte_about_layout = get_theme_mod( 'latte_about_layout', 'full' );
+					$latte_about_layout = get_theme_mod( 'latte_about_layout', 'left' );
 					if ($latte_about_layout=="left") : 
 				?>
 						<?php if(!empty($latte_about_avatar)) : ?>

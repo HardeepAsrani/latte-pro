@@ -58,7 +58,7 @@
 								<a href="<?php esc_url( the_permalink() ); ?>"><h4><?php the_title(); ?></h4></a>
 								<?php $latte_categories = get_the_terms( $post->ID , 'portfolio_category' ); ?>
 								<?php if (!empty( $latte_categories )) : ?>
-										<h5><?php echo esc_html($latte_categories[0]->name); ?></h5>
+										<h5><a href="<?php echo esc_url( get_term_link( $latte_categories[0] ) ); ?>"><?php echo esc_html($latte_categories[0]->name); ?></a></h5>
 								<?php endif; ?>
 							</div>
 						</div>
