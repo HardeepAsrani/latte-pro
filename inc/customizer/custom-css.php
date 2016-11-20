@@ -184,6 +184,9 @@ function latte_custom_css() {
 }
 <?php endif; ?>
 <?php if( is_page_template( 'template-home.php' ) ) : ?>
+body.custom-background {
+	background: none !important;
+}
 <?php if( isset($latte_intro_display) && $latte_intro_display != 1 ) : ?>
 <?php if(!empty($latte_intro_background_color)) : ?>
 .intro {
@@ -402,7 +405,8 @@ function latte_custom_css() {
 }
 <?php endif; ?>
 <?php if(!empty($latte_portfolio_item_category)) : ?>
-.portfolio-grid .portfolio-item .portfolio-caption h5 {
+.portfolio-grid .portfolio-item .portfolio-caption h5,
+.portfolio-grid .portfolio-item .portfolio-caption h5 a {
 	color: <?php echo esc_html($latte_portfolio_item_category); ?>;
 }
 <?php endif; ?>
@@ -647,7 +651,8 @@ section#subscribe form.sib_signup_form div.sib_signup_box_inside .sib-default-bt
 }
 <?php endif; ?>
 <?php if(!empty($latte_blog_title_color)) : ?>
-.archive-header .cover-heading {
+.archive-header .cover-heading,
+.archive-header .cover-heading a {
 	color: <?php echo esc_html($latte_blog_title_color); ?>;
 }
 <?php endif; ?>

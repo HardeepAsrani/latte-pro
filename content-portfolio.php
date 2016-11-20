@@ -1,11 +1,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('item'); ?>>
 		<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
 		<div class="content">
-		<?php 
-			if ( has_post_thumbnail() ) :
-				the_post_thumbnail();
-			endif;
-		?>
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="post-thumbnail">
+				<?php the_post_thumbnail(); ?>
+			</div>
+		<?php endif; ?>
 			<div class="post-content">
 				<?php the_content(); ?>
 			</div>

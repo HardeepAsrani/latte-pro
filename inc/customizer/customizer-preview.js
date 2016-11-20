@@ -643,6 +643,7 @@
 	wp.customize( 'latte_portfolio_item_category', function( value ) {
 		value.bind( function( newval ) {
 			$('.portfolio-grid .portfolio-item .portfolio-caption h5').css( 'color', newval );
+			$('.portfolio-grid .portfolio-item .portfolio-caption h5 a').css( 'color', newval );
 		} );
 	} );
 
@@ -1076,6 +1077,7 @@
 	wp.customize( 'latte_blog_title_color', function( value ) {
 		value.bind( function( newval ) {
 			$('.archive-header .cover-heading').css( 'color', newval );
+			$('.archive-header .cover-heading a').css( 'color', newval );
 		} );
 	} );
 

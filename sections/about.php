@@ -20,14 +20,19 @@
 					<?php endif; ?>
 					</header>
 				<?php endif; ?>
-				<?php if(!empty($latte_about_avatar)) : ?>
-					<div data-sr="enter left wait 0.25s" class="col-md-5">
-						<img src="<?php echo esc_url($latte_about_avatar); ?>" class="about-image img-responsive"/>
-					</div>
-				<?php elseif(empty($latte_about_avatar) && is_customize_preview()) : ?>
-					<div data-sr="enter left wait 0.25s" class="col-md-5">
-						<img src="<?php echo esc_url($latte_about_avatar); ?>" class="about-image img-responsive customizer-hidden"/>
-					</div>
+				<?php
+					$latte_about_layout = get_theme_mod( 'latte_about_layout', 'left' );
+					if ($latte_about_layout=="left") : 
+				?>
+						<?php if(!empty($latte_about_avatar)) : ?>
+							<div data-sr="enter left wait 0.25s" class="col-md-5">
+								<img src="<?php echo esc_url($latte_about_avatar); ?>" class="about-image img-responsive"/>
+							</div>
+						<?php elseif(empty($latte_about_avatar) && is_customize_preview()) : ?>
+							<div data-sr="enter left wait 0.25s" class="col-md-5">
+								<img src="<?php echo esc_url($latte_about_avatar); ?>" class="about-image img-responsive customizer-hidden"/>
+							</div>
+						<?php endif; ?>
 				<?php endif; ?>
 				<?php if(!empty($latte_about_avatar)) : ?>
 					<div data-sr="enter right wait 0.25s" class="col-md-7">
@@ -44,6 +49,20 @@
 						<div class="lead"><?php echo wp_kses_post($latte_about_content); ?></div>
 					<?php endif; ?>
 					</div>
+				<?php
+					$latte_about_layout = get_theme_mod( 'latte_about_layout', 'full' );
+					if ($latte_about_layout=="right") : 
+				?>
+						<?php if(!empty($latte_about_avatar)) : ?>
+							<div data-sr="enter left wait 0.25s" class="col-md-5">
+								<img src="<?php echo esc_url($latte_about_avatar); ?>" class="about-image img-responsive"/>
+							</div>
+						<?php elseif(empty($latte_about_avatar) && is_customize_preview()) : ?>
+							<div data-sr="enter left wait 0.25s" class="col-md-5">
+								<img src="<?php echo esc_url($latte_about_avatar); ?>" class="about-image img-responsive customizer-hidden"/>
+							</div>
+						<?php endif; ?>
+				<?php endif; ?>
 				</div>
 			</div>
 		</section>

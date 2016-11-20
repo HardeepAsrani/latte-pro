@@ -4,6 +4,7 @@
 */
 
 require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/alpha-control/alpha-control.php' );
+require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/layout-control/layout-control.php' );
 require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/terms-dropdown-custom-control.php' );
 require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/category-dropdown-custom-control.php' );
 
@@ -67,6 +68,12 @@ function latte_sanitize_section_order( $input, $setting ) {
 
 function latte_customize_register($wp_customize) {
 
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$selective_sanitize = 'postMessage';
+	} else {
+		$selective_sanitize = 'refresh';
+	}
+
 	class Latte_Required_Area extends WP_Customize_Control {
 		public function render_content() {
 			echo __('In order to use the homepage of Latte, you need to create a new page from Pages > Add New, in your WordPress Dashboard.<br/><br/>In the post editing screen, choose the \'Homepage Template\' from the Page templates. After that, set it as your homepage from Settings > Reading settings.<br/><br/>And voila! ','latte');
@@ -105,16 +112,16 @@ function latte_customize_register($wp_customize) {
 	   		echo '<br/><br/>';
 			echo '<textarea style="width:100%;height:180px;font-size:12px;" readonly="">';
 			echo '<div data-sr="enter left wait 0.25s" class="col-sm-4">' . "\n";
-			echo __('[text* name id:name class:form-control class:name placeholder "Name"]','latte') . "\n";
+			echo __('[text* your-name id:name class:form-control class:name placeholder "Name"]','latte') . "\n";
 			echo '</div>' . "\n\n";
 			echo '<div data-sr="enter left wait 0.25s" class="col-sm-4">' . "\n";
-			echo __('[email* email- id:email class:form-control class:email placeholder "Email"]','latte') . "\n";
+			echo __('[email* your-email id:email class:form-control class:email placeholder "Email"]','latte') . "\n";
 			echo '</div>' . "\n\n";
 			echo '<div data-sr="enter left wait 0.25s" class="col-sm-4">' . "\n";
-			echo __('[text* subject id:subject class:form-control class:subject placeholder "Subject"]','latte') . "\n";
+			echo __('[text* your-subject id:subject class:form-control class:subject placeholder "Subject"]','latte') . "\n";
 			echo '</div>' . "\n\n";
 			echo '<div data-sr="ease-in-out wait 0.25s" class="col-sm-12">' . "\n";
-			echo __('[textarea* message id:message class:form-control class:message placeholder "Hi,"]','latte') . "\n";
+			echo __('[textarea* your-message id:message class:form-control class:message placeholder "Hi,"]','latte') . "\n";
 			echo '</div>' . "\n\n";
 			echo '<div data-sr="ease-in-out wait 0.25s" class="col-sm-12">' . "\n";
 			echo __('[submit id:submit class:button "Send"]','latte') . "\n";
@@ -1245,6 +1252,34 @@ function latte_customize_register($wp_customize) {
 		'priority' => 20,
 		'settings' => 'latte_about_subtitle'
 	));
+	
+	$wp_customize->add_setting( 'latte_about_layout', array(
+		'default' => 'left',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'latte_sanitize_choices',
+		'transport' => $selective_sanitize
+	));
+ 
+	$wp_customize->add_control(new Latte_Layout_Control($wp_customize, 'latte_about_layout', array(
+		'label' => __('Layout', 'latte'),
+		'section' => 'latte_about_settings',
+		'priority' => 25,
+		'choices' => array(
+			'left' => get_template_directory_uri().'/assets/images/about-layout-one.png',
+			'right' => get_template_directory_uri().'/assets/images/about-layout-two.png',
+		),
+		'settings' => 'latte_about_layout'
+	)));
+
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial('latte_about_layout', array(
+			'selector' => '.about',
+			'settings' => 'latte_about_layout',
+			'render_callback' => function() {
+				return get_template_part( 'sections/about' );
+			}
+		));
+	}
 
 	$wp_customize->add_setting( 'latte_about_avatar', array(
 		'default' => get_template_directory_uri().'/assets/images/383x383.png',
@@ -3391,7 +3426,8 @@ function latte_customize_register($wp_customize) {
 			'full' => __('Full Width', 'latte'),
 			'left' => __('Left Sidebar', 'latte'),
 			'right' => __('Right Sidebar', 'latte'),
-		)
+		),
+		'settings' => 'latte_blog_sidebar'
 	));
 
 }

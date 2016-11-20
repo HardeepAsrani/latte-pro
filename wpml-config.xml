@@ -35,6 +35,6 @@
 			<key name='latte_blogposts_subtitle' />
 			<key name='latte_contact_title' />
 			<key name='latte_contact_subtitle' />
-		<key>	
+		</key>
     </admin-texts>
 </wpml-config>
