@@ -650,7 +650,8 @@ section#subscribe form.sib_signup_form div.sib_signup_box_inside .sib-default-bt
 }
 <?php endif; ?>
 <?php if(!empty($latte_blog_title_color)) : ?>
-.archive-header .cover-heading {
+.archive-header .cover-heading,
+.archive-header .cover-heading a {
 	color: <?php echo esc_html($latte_blog_title_color); ?>;
 }
 <?php endif; ?>

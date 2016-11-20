@@ -1541,6 +1541,9 @@ div.wpcf7-response-output {
 	font-size: 50px;
 	word-break: break-all;
 }
+.archive-header .cover-heading a {
+	color: #FFF;
+}
 .post-header {
 	background: transparent url('assets/images/blog.jpg') repeat scroll center center / cover;
 	vertical-align: top;
@@ -1561,6 +1564,9 @@ div.wpcf7-response-output {
 .post-header .cover-heading {
 	font-family: 'Sanchez', sans-serif;
 	font-size: 50px;
+}
+.post-header .cover-heading a {
+	color: #FFF;
 }
 .post-header .back {
 	font-size: 21px;

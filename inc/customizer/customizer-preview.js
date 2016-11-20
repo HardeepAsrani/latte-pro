@@ -1076,6 +1076,7 @@
 	wp.customize( 'latte_blog_title_color', function( value ) {
 		value.bind( function( newval ) {
 			$('.archive-header .cover-heading').css( 'color', newval );
+			$('.archive-header .cover-heading a').css( 'color', newval );
 		} );
 	} );
 
