@@ -1,6 +1,9 @@
 .appearance_page_latte-welcome .col {
 	margin-bottom: 0;
 }
+.appearance_page_latte-welcome .one-col .col {
+	width: 100%;
+}
 .appearance_page_latte-welcome .col2-set::after {
 	clear: both;
 	content: "";
@@ -101,7 +104,7 @@
 }
 .appearance_page_latte-welcome .boxed.news .col2-set h4 {
 	font-size: .857em;
-	text-tranlatteorm: uppercase;
+	text-transform: uppercase;
 	margin-top: 10px;
 	margin-bottom: 5px;
 	color: #999;

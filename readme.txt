@@ -98,3 +98,17 @@ Copyright © 2015, Unsplash, CC0 Public Domain, https://creativecommons.org/publ
 - Fixed default in Alpha Control.
 - Fixed selective refresh issue, which was causing Customizer to return in older version of WordPress.
 - Fixed text overlapping issue in mobile.
+
+## Version 2.1 ##
+
+- Added second layout for About section.
+- Added image option to Services widget
+- Added color picker to Skills widget.
+- Added category archive template.
+- Added more social icons.
+- Added a default icon for unknown links.
+- Added homepage link to site title.
+- Loading imagesloader from the core now.
+- Updated Sendinblue & Contact Form 7 instructions.
+- Fixed portfolio categories.
+- Fixed word wrapping in homepage.
